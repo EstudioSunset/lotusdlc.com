@@ -1,275 +1,227 @@
-<!DOCTYPE HTML>
-<!--
-	Twenty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Lotus DLC</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="index is-preload">
-		<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lotus — Página oficial</title>
+  <!-- SEO  -->
+  <meta name="description" content="{{META_DESCRIPTION}}" />
+  <meta property="og:title" content="Lotus – Página oficial" />
+  <meta property="og:description" content="{{META_DESCRIPTION}}" />
+  <meta property="og:image" content="{{URL_PORTADA}}" />
+  <meta property="og:type" content="website" />
 
-			<!-- Header -->
-				<header id="header" class="alt">
-					<h1 id="logo"><a href="index.html">Twenty <span>by HTML5 UP</span></a></h1>
-					<nav id="nav">
-						<ul>
-							<li class="current"><a href="index.html">Welcome</a></li>
-							<li class="submenu">
-								<a href="#">Layouts</a>
-								<ul>
-									<li><a href="left-sidebar.html">Left Sidebar</a></li>
-									<li><a href="right-sidebar.html">Right Sidebar</a></li>
-									<li><a href="no-sidebar.html">No Sidebar</a></li>
-									<li><a href="contact.html">Contact</a></li>
-									<li class="submenu">
-										<a href="#">Submenu</a>
-										<ul>
-											<li><a href="#">Dolore Sed</a></li>
-											<li><a href="#">Consequat</a></li>
-											<li><a href="#">Lorem Magna</a></li>
-											<li><a href="#">Sed Magna</a></li>
-											<li><a href="#">Ipsum Nisl</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<li><a href="#" class="button primary">Sign Up</a></li>
-						</ul>
-					</nav>
-				</header>
+  <!-- Tailwind CDN (simple setup) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            lotusDark: "#0d0d0d",
+            lotusBg: "#111827",
+            lotusNeon: "#00ff88",
+            lotusGold: "#ffd600"
+          },
+          fontFamily: {
+            heading: ['Bebas Neue', 'sans-serif'],
+            body: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-			<!-- Banner -->
-				<section id="banner">
+  <!-- Favicon -->
+  <link rel="icon" href="{{FAVICON_URL}}" />
 
-					<!--
-						".inner" is set up as an inline-block so it automatically expands
-						in both directions to fit whatever's inside it. This means it won't
-						automatically wrap lines, so be sure to use line breaks where
-						appropriate (<br />).
-					-->
-					<div class="inner">
+  <style>
+    /* Minimal custom CSS */
+    .shadow-neon { box-shadow: 0 0 8px theme('colors.lotusNeon'); }
+  </style>
+</head>
+<body class="bg-lotusDark text-gray-200 font-body scroll-smooth">
+  <!-- ================= HEADER ================= -->
+  <header class="sticky top-0 z-50 bg-lotusDark/80 backdrop-blur-sm">
+    <nav class="container mx-auto flex items-center justify-between py-4 px-6">
+      <a href="#top" class="text-lotusGold font-heading text-3xl tracking-widest">LOTUS</a>
+      <button id="menuBtn" class="md:hidden text-gray-200 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+      </button>
+      <ul id="nav" class="hidden md:flex space-x-8 font-heading text-lg">
+        <li><a href="#music" class="hover:text-lotusNeon transition">Música</a></li>
+        <li><a href="#mixtapes" class="hover:text-lotusNeon transition">Mixtapes</a></li>
+        <li><a href="#gigs" class="hover:text-lotusNeon transition">Eventos</a></li>
+        <li><a href="#contact" class="hover:text-lotusNeon transition">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-						<header>
-							<h2>TWENTY</h2>
-						</header>
-						<p>This is <strong>Twenty</strong>, a free
-						<br />
-						responsive template
-						<br />
-						by <a href="http://html5up.net">HTML5 UP</a>.</p>
-						<footer>
-							<ul class="buttons stacked">
-								<li><a href="#main" class="button fit scrolly">Tell Me More</a></li>
-							</ul>
-						</footer>
+  <!-- ================= HERO ================= -->
+  <section id="hero" class="relative h-[80vh] flex items-center justify-center text-center bg-cover bg-center" style="background-image:url('{{HERO_IMAGE_URL}}');">
+    <div class="bg-black/60 absolute inset-0"></div>
+    <div class="relative z-10 max-w-2xl px-6">
+      <h1 class="text-4xl md:text-6xl font-heading text-white mb-6 leading-tight">Beats del pantano, flow de oro.</h1>
+      <div class="space-x-4">
+        <a href="#music" class="inline-block bg-lotusNeon text-lotusDark font-bold py-3 px-6 rounded-xl transform hover:scale-105 hover:shadow-neon transition">Escucha ahora</a>
+        <a href="#contact" class="inline-block border border-lotusNeon text-white py-3 px-6 rounded-xl hover:bg-lotusNeon hover:text-lotusDark transition">Suscríbete</a>
+      </div>
+    </div>
+  </section>
 
-					</div>
+  <!-- ================= BIO ================= -->
+  <section id="bio" class="container mx-auto py-16 px-6">
+    <h2 class="font-heading text-3xl md:text-4xl text-lotusGold mb-4">¿Quién es Lotus?</h2>
+    <p class="mb-6 max-w-3xl">Lotus DLC es la voz del sur de México que convierte el caos en poesía callejera. Este es un espacio para qeu conozcas mas de su trabajo.</p>
+    <a href="{{LINK_HISTORIA_COMPLETA}}" class="text-lotusNeon underline hover:text-white">Leer historia completa →</a>
+  </section>
 
-				</section>
+  <!-- ================= MUSIC (Spotify) ================= -->
+  <section id="music" class="bg-lotusBg py-16 px-6">
+    <div class="container mx-auto">
+      <h2 class="font-heading text-3xl md:text-4xl text-lotusGold mb-8 text-center">Música</h2>
+      <div class="max-w-xl mx-auto">
+        <!-- Replace {{SPOTIFY_ARTIST_ID}} -->
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/{{SPOTIFY_ARTIST_ID}}?utm_source=generator" width="100%" height="380" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
 
-			<!-- Main -->
-				<article id="main">
+  <!-- ================= MIXTAPES ================= -->
+  <section id="mixtapes" class="container mx-auto py-16 px-6">
+    <div class="flex items-center justify-between mb-8">
+      <h2 class="font-heading text-3xl md:text-4xl text-lotusGold">Mixtapes</h2>
+      <button onclick="createPicker()" class="bg-lotusNeon text-lotusDark font-bold py-2 px-4 rounded-xl transform hover:scale-105 hover:shadow-neon transition">Subir Mixtape</button>
+    </div>
+    <div id="mixtapeList" class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <!-- JS will inject cards here -->
+      <div class="border border-gray-700 rounded-xl p-4 flex flex-col items-center justify-between" hidden>
+        <!-- Template for cloning -->
+        <img src="{{THUMBNAIL_URL}}" alt="Cover" class="w-full h-40 object-cover rounded-lg mb-4">
+        <h3 class="font-heading text-xl mb-2">{{MIXTAPE_TITLE}}</h3>
+        <p class="text-sm text-gray-400 mb-4">{{MIXTAPE_DESC}}</p>
+        <a href="{{DOWNLOAD_URL}}" class="bg-lotusNeon text-lotusDark w-full text-center py-2 rounded-lg font-semibold" download>Descargar</a>
+      </div>
+    </div>
+  </section>
 
-					<header class="special container">
-						<span class="icon solid fa-chart-bar"></span>
-						<h2>As this is my <strong>twentieth</strong> freebie for HTML5 UP
-						<br />
-						I decided to give it a really creative name.</h2>
-						<p>Turns out <strong>Twenty</strong> was the best I could come up with. Anyway, lame name aside,
-						<br />
-						it's minimally designed, fully responsive, built on HTML5/CSS3,
-						and, like all my stuff,
-						<br />
-						released for free under the <a href="http://html5up.net/license">Creative Commons Attribution 3.0</a> license. Have fun!</p>
-					</header>
+  <!-- ================= EVENTS ================= -->
+  <section id="gigs" class="bg-lotusBg py-16 px-6">
+    <div class="container mx-auto">
+      <h2 class="font-heading text-3xl md:text-4xl text-lotusGold mb-8 text-center">Próximos Eventos</h2>
+      <ul class="max-w-xl mx-auto space-y-4">
+        <!-- Replace with dynamic data → each <li> could be generated from CMS -->
+        <li class="flex justify-between border-b border-gray-600 pb-2"><span>12 Jul · Viva Latino, CDMX</span><span class="text-lotusNeon">Tickets</span></li>
+        <li class="flex justify-between border-b border-gray-600 pb-2"><span>09 Ago · Casa Jaguar, Chiapas</span><span class="text-lotusNeon">Tickets</span></li>
+      </ul>
+    </div>
+  </section>
 
-					<!-- One -->
-						<section class="wrapper style2 container special-alt">
-							<div class="row gtr-50">
-								<div class="col-8 col-12-narrower">
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="container mx-auto py-16 px-6">
+    <h2 class="font-heading text-3xl md:text-4xl text-lotusGold mb-8">Contacto & Comunidad</h2>
 
-									<header>
-										<h2>Behold the <strong>icons</strong> that visualize what you’re all about. or just take up space. your call bro.</h2>
-									</header>
-									<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu comteger ut fermentum lorem. Lorem ipsum dolor sit amet. Sed tristique purus vitae volutpat ultrices. eu elit eget commodo. Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo.</p>
-									<footer>
-										<ul class="buttons">
-											<li><a href="#" class="button">Find Out More</a></li>
-										</ul>
-									</footer>
+    <div class="grid gap-10 md:grid-cols-2">
+      <!-- Newsletter -->
+      <form id="newsletter" class="space-y-4" action="{{NEWSLETTER_ENDPOINT}}" method="post">
+        <div>
+          <label for="name" class="block text-sm mb-1">Nombre</label>
+          <input type="text" id="name" name="name" required placeholder="Pon tu alias mañoso" class="w-full bg-gray-800 border border-gray-700 rounded-lg p-3 focus:outline-none focus:border-lotusNeon">
+        </div>
+        <div>
+          <label for="email" class="block text-sm mb-1">E‑mail</label>
+          <input type="email" id="email" name="email" required placeholder="¿Quieres ser el primero en enterarte? No mandamos spam (solo beats)." class="w-full bg-gray-800 border border-gray-700 rounded-lg p-3 focus:outline-none focus:border-lotusNeon">
+        </div>
+        <button type="submit" class="bg-lotusNeon text-lotusDark font-bold py-3 px-6 rounded-xl transform hover:scale-105 hover:shadow-neon transition">Suscribirme</button>
+      </form>
 
-								</div>
-								<div class="col-4 col-12-narrower imp-narrower">
+      <!-- Chat / Social -->
+      <div class="space-y-6">
+        <!-- Placeholder chat widget -->
+        <div id="chatPlaceholder" class="w-full h-40 bg-gray-900 border border-gray-700 rounded-lg flex items-center justify-center">[Chat embebido aquí]</div>
+        <div class="flex space-x-4 text-2xl">
+          <a href="{{INSTAGRAM_URL}}" aria-label="Instagram" class="hover:text-lotusNeon"><i class="fab fa-instagram"></i></a>
+          <a href="{{TWITTER_URL}}" aria-label="Twitter" class="hover:text-lotusNeon"><i class="fab fa-twitter"></i></a>
+          <a href="{{FACEBOOK_URL}}" aria-label="Facebook" class="hover:text-lotusNeon"><i class="fab fa-facebook"></i></a>
+          <a href="{{TIKTOK_URL}}" aria-label="TikTok" class="hover:text-lotusNeon"><i class="fab fa-tiktok"></i></a>
+          <a href="{{YOUTUBE_URL}}" aria-label="YouTube" class="hover:text-lotusNeon"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-									<ul class="featured-icons">
-										<li><span class="icon fa-clock"><span class="label">Feature 1</span></span></li>
-										<li><span class="icon solid fa-volume-up"><span class="label">Feature 2</span></span></li>
-										<li><span class="icon solid fa-laptop"><span class="label">Feature 3</span></span></li>
-										<li><span class="icon solid fa-inbox"><span class="label">Feature 4</span></span></li>
-										<li><span class="icon solid fa-lock"><span class="label">Feature 5</span></span></li>
-										<li><span class="icon solid fa-cog"><span class="label">Feature 6</span></span></li>
-									</ul>
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-black text-gray-500 text-center py-8 text-sm">
+    © 2025 Lotus — Todos los derechos reservados. <span class="block">Si leíste esto, mándame un 🍍 por DM y te mando un loop gratis.</span>
+  </footer>
 
-								</div>
-							</div>
-						</section>
+  <!-- ================= SCRIPTS ================= -->
+  <!-- Mobile Menu toggle -->
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const nav = document.getElementById('nav');
+    menuBtn.addEventListener('click', () => {
+      nav.classList.toggle('hidden');
+    });
+  </script>
 
-					<!-- Two -->
-						<section class="wrapper style1 container special">
-							<div class="row">
-								<div class="col-4 col-12-narrower">
+  <!-- Font Awesome (social icons) -->
+  <script src="https://kit.fontawesome.com/{{YOUR_FA_KIT}}.js" crossorigin="anonymous"></script>
 
-									<section>
-										<span class="icon solid featured fa-check"></span>
-										<header>
-											<h3>This is Something</h3>
-										</header>
-										<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
-									</section>
+  <!-- Google APIs and Drive Picker -->
+  <script src="https://apis.google.com/js/api.js?onload=onApiLoad"></script>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script>
+    const API_KEY = "{{GOOGLE_API_KEY}}";
+    const CLIENT_ID = "{{GOOGLE_OAUTH_CLIENT_ID}}";
+    const SCOPES = "https://www.googleapis.com/auth/drive.file";
+    let token = null;
+    let pickerApiLoaded = false;
 
-								</div>
-								<div class="col-4 col-12-narrower">
-
-									<section>
-										<span class="icon solid featured fa-check"></span>
-										<header>
-											<h3>Also Something</h3>
-										</header>
-										<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
-									</section>
-
-								</div>
-								<div class="col-4 col-12-narrower">
-
-									<section>
-										<span class="icon solid featured fa-check"></span>
-										<header>
-											<h3>Probably Something</h3>
-										</header>
-										<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
-									</section>
-
-								</div>
-							</div>
-						</section>
-
-					<!-- Three -->
-						<section class="wrapper style3 container special">
-
-							<header class="major">
-								<h2>Next look at this <strong>cool stuff</strong></h2>
-							</header>
-
-							<div class="row">
-								<div class="col-6 col-12-narrower">
-
-									<section>
-										<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-										<header>
-											<h3>A Really Fast Train</h3>
-										</header>
-										<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
-									</section>
-
-								</div>
-								<div class="col-6 col-12-narrower">
-
-									<section>
-										<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-										<header>
-											<h3>An Airport Terminal</h3>
-										</header>
-										<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
-									</section>
-
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-6 col-12-narrower">
-
-									<section>
-										<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-										<header>
-											<h3>Hyperspace Travel</h3>
-										</header>
-										<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
-									</section>
-
-								</div>
-								<div class="col-6 col-12-narrower">
-
-									<section>
-										<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-										<header>
-											<h3>And Another Train</h3>
-										</header>
-										<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
-									</section>
-
-								</div>
-							</div>
-
-							<footer class="major">
-								<ul class="buttons">
-									<li><a href="#" class="button">See More</a></li>
-								</ul>
-							</footer>
-
-						</section>
-
-				</article>
-
-			<!-- CTA -->
-				<section id="cta">
-
-					<header>
-						<h2>Ready to do <strong>something</strong>?</h2>
-						<p>Proin a ullamcorper elit, et sagittis turpis integer ut fermentum.</p>
-					</header>
-					<footer>
-						<ul class="buttons">
-							<li><a href="#" class="button primary">Take My Money</a></li>
-							<li><a href="#" class="button">LOL Wut</a></li>
-						</ul>
-					</footer>
-
-				</section>
-
-			<!-- Footer -->
-				<footer id="footer">
-
-					<ul class="icons">
-						<li><a href="#" class="icon brands circle fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands circle fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands circle fa-google-plus-g"><span class="label">Google+</span></a></li>
-						<li><a href="#" class="icon brands circle fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon brands circle fa-dribbble"><span class="label">Dribbble</span></a></li>
-					</ul>
-
-					<ul class="copyright">
-						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-
-				</footer>
-
-		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    function onApiLoad() {
+      gapi.load('picker', { 'callback': onPickerApiLoad });
+    }
+    function onPickerApiLoad() {
+      pickerApiLoaded = true;
+      // Request token on load (implicit flow)
+      google.accounts.oauth2.initTokenClient({
+        client_id: CLIENT_ID,
+        scope: SCOPES,
+        callback: (t) => { token = t.access_token; }
+      }).requestAccessToken();
+    }
+    function createPicker() {
+      if (pickerApiLoaded && token) {
+        const view = new google.picker.View(google.picker.ViewId.DOCS);
+        const picker = new google.picker.PickerBuilder()
+          .addView(view)
+          .setOAuthToken(token)
+          .setDeveloperKey(API_KEY)
+          .setCallback(pickerCallback)
+          .build();
+        picker.setVisible(true);
+      }
+    }
+    function pickerCallback(data) {
+      if (data.action === google.picker.Action.PICKED) {
+        const file = data.docs[0];
+        addMixtapeToList(file.name, file.thumbnailUrl, file.url);
+      }
+    }
+    // Simple DOM injection (placeholder — replace with your backend logic)
+    function addMixtapeToList(title, thumb, url) {
+      const list = document.getElementById('mixtapeList');
+      const card = list.firstElementChild.cloneNode(true);
+      card.hidden = false;
+      card.querySelector('img').src = thumb;
+      card.querySelector('h3').textContent = title;
+      card.querySelector('a').href = url;
+      list.appendChild(card);
+    }
+  </script>
+</body>
 </html>
