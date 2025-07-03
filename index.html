@@ -348,17 +348,23 @@
         }
 
         .mixtape-cover {
-            width: 100%;
-            height: 200px;
-            background: var(--gradient-primary);
-            border-radius: 15px;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: var(--primary-black);
-        }
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Cuadrado responsivo */
+    background: var(--gradient-primary);
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.mixtape-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen rellene sin deformarse */
+    border-radius: 15px;
+    display: block;
+}
+
 
         .mixtape-title {
             font-size: 1.5rem;
@@ -680,7 +686,7 @@
             <div class="mixtapes-grid">
                 <div class="mixtape-card fade-in">
                     <div class="mixtape-cover">
-                        <img src="/images/escrituras-animadas-de-ayer-y-hoy-lotus.webp" style="width:min-content" alt="Mixtape Cover">
+                        <img src="/images/escrituras-animadas-de-ayer-y-hoy-lotus.webp"  alt="Mixtape Cover">
                     </div>
                     <h3 class="mixtape-title">ESCRITURAS ANIMADAS DE AYER Y HOY</h3>
                     <p class="mixtape-desc">Esta es una coleccion de las primeras producciones de Lotus, antes de lanzar un mixtape con el grupo DLC.</p>
@@ -692,7 +698,7 @@
 
                 <div class="mixtape-card fade-in">
                     <div class="mixtape-cover">
-                        <img src="/images/suenos-y-sombras-cover.jpg" style="width:min-content" alt="Mixtape Cover">
+                        <img src="/images/suenos-y-sombras-cover.jpg"  alt="Mixtape Cover">
                     </div>
                     <h3 class="mixtape-title">SUEñOS Y SOMBRAS</h3>
                     <p class="mixtape-desc">Un mixtape producido en la colonia Las Chicharras, con la participacion de Big Joe,  Ey-Son y Lotus</p>
