@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LotusDLC - Rap sin Filtros | Página Oficial</title>
-    
+
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Lotus - Rapper emergente con flow único. Escucha sus últimos mixtapes, sigue sus shows y conecta con la revolución del rap urbano.">
+    <meta name="description"
+        content="Lotus - Rapper emergente con flow único. Escucha sus últimos mixtapes, sigue sus shows y conecta con la revolución del rap urbano.">
     <meta name="keywords" content="Lotus, rap, hip hop, mixtapes, música urbana, rapper, beats">
     <meta name="author" content="Lotus">
-    
+
     <!-- Open Graph -->
     <meta property="og:title" content="Lotus - Rap sin Filtros">
-    <meta property="og:description" content="El rap más auténtico. Nuevos mixtapes, shows en vivo y conexión directa con los fans.">
+    <meta property="og:description"
+        content="El rap más auténtico. Nuevos mixtapes, shows en vivo y conexión directa con los fans.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lotusdlc.com">
     <meta property="og:image" content="https://lotusdlc.com/images/lotus-og.jpg">
-    
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Lotus DLC - Rap sin Filtros">
     <meta name="twitter:description" content="El rap más auténtico. Nuevos mixtapes, shows en vivo y conexión directa.">
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <style>
         * {
             margin: 0;
@@ -130,7 +133,7 @@
         }
 
         /* Hero Section */
-        
+
         .hero {
             min-height: 100vh;
             display: flex;
@@ -175,10 +178,12 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+
         .hero-content img {
-    max-width: 100%;
-    height: auto; /* Mantiene la proporción de la imagen */
-}
+            max-width: 100%;
+            height: auto;
+            /* Mantiene la proporción de la imagen */
+        }
 
         .hero-tagline {
             font-size: 1.5rem;
@@ -244,8 +249,15 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
         }
 
         /* Sections */
@@ -356,31 +368,31 @@
         }
 
         .mixtape-cover {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    background: var(--gradient-primary);
-    border-radius: 15px;
-    margin-bottom: 1rem;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            background: var(--gradient-primary);
+            border-radius: 15px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
 
-.mixtape-cover img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-    display: block;
-    transition: transform 0.4s ease, filter 0.4s ease;
-}
+        .mixtape-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+            display: block;
+            transition: transform 0.4s ease, filter 0.4s ease;
+        }
 
-/* Hover effect */
-.mixtape-cover:hover img {
-    transform: scale(1.08);
-    filter: brightness(1.1);
-    cursor: pointer;
-}
+        /* Hover effect */
+        .mixtape-cover:hover img {
+            transform: scale(1.08);
+            filter: brightness(1.1);
+            cursor: pointer;
+        }
 
 
 
@@ -622,15 +634,33 @@
         }
 
         @keyframes glitch {
-            0% { transform: translateX(0); }
-            20% { transform: translateX(-2px); }
-            40% { transform: translateX(2px); }
-            60% { transform: translateX(-1px); }
-            80% { transform: translateX(1px); }
-            100% { transform: translateX(0); }
+            0% {
+                transform: translateX(0);
+            }
+
+            20% {
+                transform: translateX(-2px);
+            }
+
+            40% {
+                transform: translateX(2px);
+            }
+
+            60% {
+                transform: translateX(-1px);
+            }
+
+            80% {
+                transform: translateX(1px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
@@ -654,7 +684,8 @@
         <div class="hero-container">
             <div class="hero-content fade-in">
                 <img src="/lotus-logo-yrllow-transparent.png" width="400" height="216">
-                <p class="hero-tagline">Rap auténtico, letras contundentes y beats de alto nivel. La nueva voz del hip hop mexicano.</p>
+                <p class="hero-tagline">Rap auténtico, letras contundentes y beats de alto nivel. La nueva voz del hip
+                    hop mexicano.</p>
                 <div class="cta-buttons">
                     <a href="#musica" class="btn btn-primary">
                         <i class="fas fa-play"></i>
@@ -668,19 +699,24 @@
             </div>
             <div class="hero-image fade-in">
                 <div class="hero-avatar">
-                    <img src="/profile-pic.png" alt="Lotus Avatar" style="width: 100%; height: 100%; border-radius: 50%;">
+                    <img src="/profile-pic.png" alt="Lotus Avatar"
+                        style="width: 100%; height: 100%; border-radius: 50%;">
                 </div>
             </div>
         </div>
     </section>
 
-        <!-- Spotify Section -->
+    <!-- Spotify Section -->
     <section id="musica" class="section spotify-section">
         <div class="container">
             <h2 class="section-title">Escucha en Spotify</h2>
             <div class="spotify-widget fade-in">
                 <!-- Spotify Widget Placeholder -->
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/1WH0H8I8T7mZof5gDXUilp?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/artist/1WH0H8I8T7mZof5gDXUilp?utm_source=generator" width="100%"
+                    height="352" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
             </div>
         </div>
     </section>
@@ -689,7 +725,7 @@
     <section id="mixtapes" class="section mixtapes">
         <div class="container">
             <h2 class="section-title">Mixtapes</h2>
-            
+
             <!-- Upload Section (Admin only) 
             <div class="upload-section fade-in" id="uploadSection" style="display: none;">
                 <h3>Subir Nuevo Mixtape</h3>
@@ -704,10 +740,11 @@
             <div class="mixtapes-grid">
                 <div class="mixtape-card fade-in">
                     <div class="mixtape-cover">
-                        <img src="/images/escrituras-animadas-de-ayer-y-hoy-lotus.webp"  alt="Mixtape Cover">
+                        <img src="/images/escrituras-animadas-de-ayer-y-hoy-lotus.webp" alt="Mixtape Cover">
                     </div>
                     <h3 class="mixtape-title">ESCRITURAS ANIMADAS DE AYER Y HOY</h3>
-                    <p class="mixtape-desc">Esta es una coleccion de las primeras producciones de Lotus, antes de lanzar un mixtape con el grupo DLC.</p>
+                    <p class="mixtape-desc">Esta es una coleccion de las primeras producciones de Lotus, antes de lanzar
+                        un mixtape con el grupo DLC.</p>
                     <a href="#" class="btn btn-primary">
                         <i class="fas fa-download"></i>
                         Descargar
@@ -716,10 +753,11 @@
 
                 <div class="mixtape-card fade-in">
                     <div class="mixtape-cover">
-                        <img src="/images/suenos-y-sombras-cover.jpg"  alt="Mixtape Cover">
+                        <img src="/images/suenos-y-sombras-cover.jpg" alt="Mixtape Cover">
                     </div>
                     <h3 class="mixtape-title">SUEñOS Y SOMBRAS</h3>
-                    <p class="mixtape-desc">Un mixtape producido en la colonia Las Chicharras, con la participacion de Big Joe,  Ey-Son y Lotus</p>
+                    <p class="mixtape-desc">Un mixtape producido en la colonia Las Chicharras, con la participacion de
+                        Big Joe, Ey-Son y Lotus</p>
                     <a href="#" class="btn btn-primary">
                         <i class="fas fa-download"></i>
                         Descargar
@@ -779,9 +817,16 @@
             <h2 class="section-title">Sobre Lotus</h2>
             <div class="bio-content fade-in">
                 <p class="bio-text">
-                    Lotus es un rapero originario del sureste de Chiapas, cuya pasión por la cultura hip hop comenzó desde que era morro, influenciado por el graffiti, el breakdance y el rap mexicano. Inspirado por leyendas de la era dorada del rap en EEUU, comenzo a experimentar con estucturas de rima distintas buscando un estilo más auténtico y más elaborado. A pesar de los desafíos de la escena en Chiapas, Lotus se ha destacado como un artista completo, capaz de componer letras profundas y producir los beats en los que plasma esas ideas por sí solo. Junto a Big Joe y Ey-Son, ambos del mismo barrio, formaron el grupo DLC con el cual lanzaron su primer mixtape "Sueños y Sombras". Actualmente, Lotus está trabajando en su mixtape más ambicioso, "El Pantano", que promete revolucionar la escena del rap hispano. Con una mezcla de letras crudas y beats innovadores, Lotus está listo para llevar su música a un nuevo nivel y conectar con una audiencia más amplia.
+                    Lotus es un rapero y productor del sureste de Chiapas. Su camino en la música comenzó con
+                    influencias del hip hop clásico y la escena mexicana, lo que lo motivó a desarrollar un estilo
+                    propio tanto en la escritura como en la producción de sus beats.<br>
+
+                    Como parte del grupo DLC, junto a Big Joe y Ey-Son, lanzó el mixtape "Sueños y Sombras". Ahora,
+                    trabaja en un nuevo proyecto personal titulado "El Pantano", donde busca seguir contando sus
+                    historias con un sonido crudo y directo. Su objetivo es sencillo: hacer música que se sienta real y
+                    conectar con la gente.
                 </p>
-                
+
             </div>
         </div>
     </section>
@@ -791,7 +836,7 @@
         <div class="container">
             <h2 class="section-title">Conecta</h2>
             <div class="contact-grid">
-              
+
 
                 <!-- Social Links -->
                 <div class="social-links fade-in">
@@ -826,7 +871,7 @@
                         </div>
                     </a>
 
-                                        <a href="#" class="social-link">
+                    <a href="https://wa.me/17729406244" class="social-link">
                         <i class="fas fa-comments social-icon"></i>
                         <div>
                             <strong>Enviar Mensaje</strong>
@@ -843,7 +888,8 @@
         <div class="container">
             <div class="footer-content">
                 <p>&copy; 2025 LotusDLC. Todos los derechos reservados.</p>
-                <p><a href="#" style="color: var(--text-secondary);">Términos</a> | <a href="#" style="color: var(--text-secondary);">Privacidad</a></p>
+                <p><a href="#" style="color: var(--text-secondary);">Términos</a> | <a href="#"
+                        style="color: var(--text-secondary);">Privacidad</a></p>
                 <p class="easter-egg">
                     "Si llegaste hasta aquí leyendo, eres parte del squad real 💯"
                 </p>
@@ -889,21 +935,21 @@
         });
 
         // Newsletter form submission
-        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+        document.getElementById('newsletterForm').addEventListener('submit', function (e) {
             e.preventDefault();
             const formData = new FormData(this);
-            
+
             // Simulate form submission
             const submitBtn = this.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
-            
+
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Uniéndote al squad...';
             submitBtn.disabled = true;
-            
+
             setTimeout(() => {
                 submitBtn.innerHTML = '<i class="fas fa-check"></i> ¡Bienvenido al squad!';
                 submitBtn.style.background = 'var(--accent-neon)';
-                
+
                 setTimeout(() => {
                     submitBtn.innerHTML = originalText;
                     submitBtn.disabled = false;
@@ -914,7 +960,7 @@
         });
 
         // Mobile menu toggle
-        document.querySelector('.mobile-menu').addEventListener('click', function() {
+        document.querySelector('.mobile-menu').addEventListener('click', function () {
             const navMenu = document.querySelector('.nav-menu');
             navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
         });
@@ -924,8 +970,8 @@
         let oauthToken;
 
         function loadPicker() {
-            gapi.load('auth', {'callback': onAuthApiLoad});
-            gapi.load('picker', {'callback': onPickerApiLoad});
+            gapi.load('auth', { 'callback': onAuthApiLoad });
+            gapi.load('picker', { 'callback': onPickerApiLoad });
         }
 
         function onAuthApiLoad() {
@@ -947,7 +993,7 @@
             if (pickerApiLoaded && oauthToken) {
                 const view = new google.picker.View(google.picker.ViewId.DOCS);
                 view.setMimeTypes('audio/mpeg,audio/wav,audio/mp3');
-                
+
                 const picker = new google.picker.PickerBuilder()
                     .enableFeature(google.picker.Feature.NAV_HIDDEN)
                     .enableFeature(google.picker.Feature.MULTISELECT_ENABLED)
@@ -966,10 +1012,10 @@
             if (data.action == google.picker.Action.PICKED) {
                 const fileId = data.docs[0].id;
                 const fileName = data.docs[0].name;
-                
+
                 // Handle the selected file
                 console.log('Selected file:', fileName, fileId);
-                
+
                 // Create new mixtape card
                 addMixtapeCard(fileName, fileId);
             }
@@ -990,21 +1036,21 @@
                     Descargar
                 </a>
             `;
-            
+
             // Insert before the "Próximamente" card
             const lastCard = mixtapesGrid.lastElementChild;
             mixtapesGrid.insertBefore(newCard, lastCard);
         }
 
         // Upload button functionality
-        document.getElementById('uploadBtn').addEventListener('click', function() {
+        document.getElementById('uploadBtn').addEventListener('click', function () {
             // Check if user is authenticated (in real implementation)
             // For demo purposes, we'll simulate authentication
-            
+
             if (!oauthToken) {
                 // Simulate Google Auth
                 this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Conectando con Google...';
-                
+
                 setTimeout(() => {
                     oauthToken = 'demo_token'; // In real app, get actual token
                     this.innerHTML = '<i class="fab fa-google-drive"></i> Seleccionar Archivos';
@@ -1020,16 +1066,16 @@
         function checkAdminStatus() {
             // Simulate admin check
             const isAdmin = Math.random() > 0.7; // 30% chance for demo
-            
+
             if (isAdmin) {
                 document.getElementById('uploadSection').style.display = 'block';
             }
         }
 
         // Initialize
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             checkAdminStatus();
-            
+
             // Load Google APIs
             if (typeof gapi !== 'undefined') {
                 loadPicker();
@@ -1084,7 +1130,7 @@
         function addParticleEffect() {
             const hero = document.querySelector('.hero');
             const particleCount = 50;
-            
+
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'particle';
@@ -1125,4 +1171,5 @@
     <!-- Spotify Web Playback SDK (Optional) -->
     <script src="https://sdk.scdn.co/spotify-player.js"></script>
 </body>
+
 </html>
