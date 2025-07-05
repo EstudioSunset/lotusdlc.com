@@ -6,13 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LotusDLC - Rap sin Filtros | Página Oficial</title>
 
-    <!-- SEO Meta Tags -->
     <meta name="description"
         content="Lotus - Rapper emergente con flow único. Escucha sus últimos mixtapes, sigue sus shows y conecta con la revolución del rap urbano.">
     <meta name="keywords" content="Lotus, rap, hip hop, mixtapes, música urbana, rapper, beats">
     <meta name="author" content="Lotus">
 
-    <!-- Open Graph -->
     <meta property="og:title" content="Lotus - Rap sin Filtros">
     <meta property="og:description"
         content="El rap más auténtico. Nuevos mixtapes, shows en vivo y conexión directa con los fans.">
@@ -20,20 +18,25 @@
     <meta property="og:url" content="https://lotusdlc.com">
     <meta property="og:image" content="https://lotusdlc.com/images/lotus-og.jpg">
 
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Lotus DLC - Rap sin Filtros">
     <meta name="twitter:description" content="El rap más auténtico. Nuevos mixtapes, shows en vivo y conexión directa.">
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
+        .sedgwick-ave-display-regular {
+            font-family: "Sedgwick Ave Display", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -132,16 +135,29 @@
             cursor: pointer;
         }
 
-        /* Hero Section */
-
+        /* === HERO SECTION START === */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
+            justify-content: center;
             position: relative;
-            background: var(--gradient-dark);
             overflow: hidden;
             padding-top: 120px;
+            background: var(--gradient-dark); /* Fallback por si el video no carga */
+        }
+
+        .hero-background-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: auto;
+            height: auto;
+            min-width: 100%;
+            min-height: 100%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            z-index: 1; /* CAPA 1 (FONDO) */
         }
 
         .hero::before {
@@ -153,8 +169,9 @@
             bottom: 0;
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23ffd700" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
             opacity: 0.3;
+            z-index: 2; /* CAPA 2 (OVERLAY) */
         }
-
+        
         .hero-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -164,8 +181,9 @@
             gap: 4rem;
             align-items: center;
             position: relative;
-            z-index: 1;
+            z-index: 3; /* CAPA 3 (CONTENIDO) */
         }
+        /* === HERO SECTION END === */
 
         .hero-content h1 {
             font-family: "Sedgwick Ave Display", cursive;
@@ -182,7 +200,6 @@
         .hero-content img {
             max-width: 100%;
             height: auto;
-            /* Mantiene la proporción de la imagen */
         }
 
         .hero-tagline {
@@ -249,18 +266,14 @@
         }
 
         @keyframes float {
-
-            0%,
-            100% {
+            0%, 100% {
                 transform: translateY(0px);
             }
-
             50% {
                 transform: translateY(-20px);
             }
         }
 
-        /* Sections */
         .section {
             padding: 5rem 0;
         }
@@ -283,7 +296,6 @@
             background-clip: text;
         }
 
-        /* Bio Section */
         .bio {
             background: var(--secondary-black);
         }
@@ -301,31 +313,6 @@
             line-height: 1.8;
         }
 
-        .bio-link {
-            color: var(--accent-gold);
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .bio-link:hover {
-            text-shadow: 0 0 10px var(--accent-gold);
-        }
-
-        /* Spotify Section */
-        .spotify-section {
-            text-align: center;
-        }
-
-        .spotify-widget {
-            max-width: 500px;
-            margin: 0 auto;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-        }
-
-        /* Mixtapes Section */
         .mixtapes {
             background: var(--secondary-black);
         }
@@ -345,21 +332,6 @@
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
-        }
-
-        .mixtape-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .mixtape-card:hover::before {
-            left: 100%;
         }
 
         .mixtape-card:hover {
@@ -387,14 +359,11 @@
             transition: transform 0.4s ease, filter 0.4s ease;
         }
 
-        /* Hover effect */
         .mixtape-cover:hover img {
             transform: scale(1.08);
             filter: brightness(1.1);
             cursor: pointer;
         }
-
-
 
         .mixtape-title {
             font-size: 1.5rem;
@@ -408,123 +377,10 @@
             margin-bottom: 1.5rem;
         }
 
-        .upload-section {
-            text-align: center;
-            padding: 3rem;
-            border: 2px dashed var(--accent-gold);
-            border-radius: 20px;
-            background: rgba(255, 215, 0, 0.05);
-        }
-
-        .upload-btn {
-            background: var(--gradient-primary);
-            color: var(--primary-black);
-            border: none;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .upload-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
-        }
-
-        /* Events Section */
-        .events-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .event-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 2rem;
-            background: var(--secondary-black);
-            border-radius: 20px;
-            border-left: 4px solid var(--accent-gold);
-            transition: all 0.3s ease;
-        }
-
-        .event-item:hover {
-            transform: translateX(10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .event-date {
-            font-family: "Sedgwick Ave Display", cursive;
-            font-weight: 700;
-            color: var(--accent-gold);
-            font-size: 1.2rem;
-        }
-
-        .event-details h3 {
-            color: var(--text-primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .event-location {
-            color: var(--text-secondary);
-        }
-
-        /* Contact Section */
         .contact {
             background: var(--secondary-black);
         }
-
-        .contact-grid {
-            display: block;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .newsletter {
-            background: var(--primary-black);
-            padding: 3rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 215, 0, 0.2);
-        }
-
-        .newsletter h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--accent-gold);
-        }
-
-        .newsletter p {
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-input {
-            width: 100%;
-            padding: 1rem;
-            border: 2px solid rgba(255, 215, 0, 0.3);
-            border-radius: 10px;
-            background: transparent;
-            color: var(--text-primary);
-            font-size: 1rem;
-        }
-
-        .form-input:focus {
-            outline: none;
-            border-color: var(--accent-gold);
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
-        }
-
-        .form-input::placeholder {
-            color: var(--text-secondary);
-        }
-
+        
         .social-links {
             display: flex;
             flex-direction: column;
@@ -554,7 +410,6 @@
             font-size: 1.5rem;
         }
 
-        /* Footer */
         .footer {
             background: var(--primary-black);
             padding: 3rem 0 1rem;
@@ -566,14 +421,6 @@
             color: var(--text-secondary);
         }
 
-        .easter-egg {
-            margin-top: 2rem;
-            font-size: 0.9rem;
-            color: var(--accent-gold);
-            font-style: italic;
-        }
-
-        /* Responsive Design */
         @media (max-width: 768px) {
             .nav-menu {
                 display: none;
@@ -595,82 +442,24 @@
             }
 
             .section-title {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
+            
             .cta-buttons {
                 justify-content: center;
-            }
-
-            .event-item {
-                flex-direction: column;
-                gap: 1rem;
-                text-align: center;
-            }
-        }
-
-        /* Animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeIn 0.8s ease forwards;
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Glitch effect for logo */
-        .logo:hover {
-            animation: glitch 0.3s ease-in-out;
-        }
-
-        @keyframes glitch {
-            0% {
-                transform: translateX(0);
-            }
-
-            20% {
-                transform: translateX(-2px);
-            }
-
-            40% {
-                transform: translateX(2px);
-            }
-
-            60% {
-                transform: translateX(-1px);
-            }
-
-            80% {
-                transform: translateX(1px);
-            }
-
-            100% {
-                transform: translateX(0);
             }
         }
     </style>
 </head>
 
 <body>
-    <!-- Header -->
     <header class="header">
         <nav class="nav-container">
-            <a href="#home" class="logo"><img src="/lotus-logo-yrllow-transparent.png" width="100" height="54"></a>
+            <a href="#home" class="logo"><img src="/lotus-logo-yrllow-transparent.png" width="100" height="54" alt="LotusDLC Logo"></a>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#musica" class="nav-link">Música</a></li>
                 <li><a href="#mixtapes" class="nav-link">Mixtapes</a></li>
-                <li><a href="#eventos" class="nav-link">Shows</a></li>
                 <li><a href="#contacto" class="nav-link">Contacto</a></li>
             </ul>
             <div class="mobile-menu">
@@ -679,13 +468,15 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
+        <video class="hero-background-video" poster="/profile-pic.png" autoplay loop muted playsinline>
+            <source src="/video-hero-lotus-ss.webm" type="video/webm">
+            <source src="/video-hero-lotus-ss.mp4" type="video/mp4">
+        </video>
         <div class="hero-container">
             <div class="hero-content fade-in">
-                <img src="/lotus-logo-yrllow-transparent.png" width="400" height="216">
-                <p class="hero-tagline">Rap auténtico, letras contundentes y beats de alto nivel. La nueva voz del hip
-                    hop mexicano.</p>
+                <img src="/lotus-logo-yrllow-transparent.png" width="400" height="216" alt="LotusDLC Logo Principal">
+                <p class="hero-tagline">Rap auténtico, letras contundentes y beats de alto nivel. La nueva voz del hip hop mexicano.</p>
                 <div class="cta-buttons">
                     <a href="#musica" class="btn btn-primary">
                         <i class="fas fa-play"></i>
@@ -699,54 +490,31 @@
             </div>
             <div class="hero-image fade-in">
                 <div class="hero-avatar">
-                    <img src="/profile-pic.png" alt="Lotus Avatar"
-                        style="width: 100%; height: 100%; border-radius: 50%;">
+                    <img src="/profile-pic.png" alt="Lotus Avatar" style="width: 100%; height: 100%; border-radius: 50%;">
                 </div>
             </div>
         </div>
     </section>
 
-    
-
-    <!-- Spotify Section -->
     <section id="musica" class="section spotify-section">
         <div class="container">
             <h2 class="section-title">Escucha en Spotify</h2>
             <div class="spotify-widget fade-in">
-                <!-- Spotify Widget Placeholder -->
-                <iframe style="border-radius:12px"
-                    src="https://open.spotify.com/embed/artist/1WH0H8I8T7mZof5gDXUilp?utm_source=generator" width="100%"
-                    height="352" frameBorder="0" allowfullscreen=""
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy"></iframe>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/1WH0H8I8T7mZof5gDXUilp?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
         </div>
     </section>
 
-    <!-- Mixtapes Section -->
     <section id="mixtapes" class="section mixtapes">
         <div class="container">
             <h2 class="section-title">Mixtapes</h2>
-
-            <!-- Upload Section (Admin only) 
-            <div class="upload-section fade-in" id="uploadSection" style="display: none;">
-                <h3>Subir Nuevo Mixtape</h3>
-                <p>Conecta con Google Drive para subir tu próximo proyecto</p>
-                <button class="upload-btn" id="uploadBtn">
-                    <i class="fab fa-google-drive"></i>
-                    Subir desde Drive
-                </button>
-            </div>-->
-
-            <!-- Mixtapes Grid -->
             <div class="mixtapes-grid">
                 <div class="mixtape-card fade-in">
                     <div class="mixtape-cover">
                         <img src="/images/escrituras-animadas-de-ayer-y-hoy-lotus.webp" alt="Mixtape Cover">
                     </div>
                     <h3 class="mixtape-title">ESCRITURAS ANIMADAS DE AYER Y HOY</h3>
-                    <p class="mixtape-desc">Esta es una coleccion de las primeras producciones de Lotus, antes de lanzar
-                        un mixtape con el grupo DLC.</p>
+                    <p class="mixtape-desc">Esta es una coleccion de las primeras producciones de Lotus, antes de lanzar un mixtape con el grupo DLC.</p>
                     <a href="#" class="btn btn-primary">
                         <i class="fas fa-download"></i>
                         Descargar
@@ -757,9 +525,8 @@
                     <div class="mixtape-cover">
                         <img src="/images/suenos-y-sombras-cover.jpg" alt="Mixtape Cover">
                     </div>
-                    <h3 class="mixtape-title">SUEñOS Y SOMBRAS</h3>
-                    <p class="mixtape-desc">Un mixtape producido en la colonia Las Chicharras, con la participacion de
-                        Big Joe, Ey-Son y Lotus</p>
+                    <h3 class="mixtape-title">SUEÑOS Y SOMBRAS</h3>
+                    <p class="mixtape-desc">Un mixtape producido en la colonia Las Chicharras, con la participacion de Big Joe, Ey-Son y Lotus</p>
                     <a href="#" class="btn btn-primary">
                         <i class="fas fa-download"></i>
                         Descargar
@@ -768,7 +535,7 @@
 
                 <div class="mixtape-card fade-in">
                     <div class="mixtape-cover">
-                        <i class="fas fa-skull"></i>
+                        <i class="fas fa-skull" style="font-size: 6rem;"></i>
                     </div>
                     <h3 class="mixtape-title">EL PANTANO</h3>
                     <p class="mixtape-desc">El proyecto más ambicioso está en camino. Prepárate para la revolución.</p>
@@ -781,39 +548,6 @@
         </div>
     </section>
 
-    <!-- Events Section --
-    <section id="eventos" class="section">
-        <div class="container">
-            <h2 class="section-title">Próximos Shows</h2>
-            <div class="events-list">
-                <div class="event-item fade-in">
-                    <div class="event-details">
-                        <h3>Festival Underground</h3>
-                        <p class="event-location">Centro Cultural, CDMX</p>
-                    </div>
-                    <div class="event-date">15 JUL</div>
-                </div>
-
-                <div class="event-item fade-in">
-                    <div class="event-details">
-                        <h3>Rap Night Live</h3>
-                        <p class="event-location">Club 23, Guadalajara</p>
-                    </div>
-                    <div class="event-date">28 JUL</div>
-                </div>
-
-                <div class="event-item fade-in">
-                    <div class="event-details">
-                        <h3>Urban Legends Tour</h3>
-                        <p class="event-location">Múltiples ciudades</p>
-                    </div>
-                    <div class="event-date">AGO</div>
-                </div>
-            </div>
-        </div>
-    </section>-->
-
-    <!-- Bio Section -->
     <section class="section bio">
         <div class="container">
             <h2 class="section-title">Sobre Lotus</h2>
@@ -821,8 +555,7 @@
                 <p class="bio-text">
                     Lotus es un rapero y productor del sureste de Chiapas. Su camino en la música comenzó con
                     influencias del hip hop clásico y la escena mexicana, lo que lo motivó a desarrollar un estilo
-                    propio tanto en la escritura como en la producción de sus beats.<br>
-
+                    propio tanto en la escritura como en la producción de sus beats.<br><br>
                     Como parte del grupo DLC, junto a Big Joe y Ey-Son, lanzó el mixtape "Sueños y Sombras". Ahora,
                     trabaja en un nuevo proyecto personal titulado "El Pantano", donde busca seguir contando sus
                     historias con un sonido crudo y directo. Su objetivo es sencillo: hacer música que se sienta real y
@@ -833,74 +566,59 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contacto" class="section contact">
         <div class="container">
             <h2 class="section-title">Conecta</h2>
-            <div class="contact-grid">
+            <div class="social-links fade-in">
+                <a href="https://www.facebook.com/lotusdlc" class="social-link" target="_blank">
+                    <i class="fab fa-facebook social-icon"></i>
+                    <div>
+                        <strong>Facebook</strong>
+                        <p>Contenido general</p>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/lotus_dlc/" class="social-link" target="_blank">
+                    <i class="fab fa-instagram social-icon"></i>
+                    <div>
+                        <strong>Instagram</strong>
+                        <p>Historias diarias y behind the scenes</p>
+                    </div>
+                </a>
 
+                <a href="https://www.tiktok.com/@lotus_dlc" class="social-link" target="_blank">
+                    <i class="fab fa-tiktok social-icon"></i>
+                    <div>
+                        <strong>TikTok</strong>
+                        <p>Freestyles y Cyphers</p>
+                    </div>
+                </a>
 
-                <!-- Social Links -->
-                <div class="social-links fade-in">
-                    <a href="https://www.facebook.com/lotusdlc" class="social-link">
-                        <i class="fab fa-facebook social-icon"></i>
-                        <div>
-                            <strong>Facebook</strong>
-                            <p>Contenido general</p>
-                        </div>
-                    </a>
-                    <a href="https://www.instagram.com/lotus_dlc/" class="social-link">
-                        <i class="fab fa-instagram social-icon"></i>
-                        <div>
-                            <strong>Instagram</strong>
-                            <p>Historias diarias y behind the scenes</p>
-                        </div>
-                    </a>
+                <a href="https://www.youtube.com/@LotusDLC" class="social-link" target="_blank">
+                    <i class="fab fa-youtube social-icon"></i>
+                    <div>
+                        <strong>YouTube</strong>
+                        <p>Videos oficiales</p>
+                    </div>
+                </a>
 
-                    <a href="https://www.tiktok.com/@lotus_dlc" class="social-link">
-                        <i class="fab fa-tiktok social-icon"></i>
-                        <div>
-                            <strong>TikTok</strong>
-                            <p>Freestyles y Cyphers</p>
-                        </div>
-                    </a>
-
-                    <a href="https://www.youtube.com/@lotusdlc" class="social-link">
-                        <i class="fab fa-youtube social-icon"></i>
-                        <div>
-                            <strong>YouTube</strong>
-                            <p>Videos oficiales</p>
-                        </div>
-                    </a>
-
-                    <a href="https://wa.me/17729406244" class="social-link">
-                        <i class="fas fa-comments social-icon"></i>
-                        <div>
-                            <strong>Enviar Mensaje</strong>
-                            <p>Contacto para beats, composiciones, featurings, etc.</p>
-                        </div>
-                    </a>
-                </div>
+                <a href="https://wa.me/17729406244" class="social-link" target="_blank">
+                    <i class="fas fa-comments social-icon"></i>
+                    <div>
+                        <strong>Enviar Mensaje</strong>
+                        <p>Contacto para beats, composiciones, featurings, etc.</p>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 LotusDLC. Todos los derechos reservados.</p>
-                <p><a href="#" style="color: var(--text-secondary);">Términos</a> | <a href="#"
-                        style="color: var(--text-secondary);">Privacidad</a></p>
-                <p class="easter-egg">
-                    "Si llegaste hasta aquí leyendo, eres parte del squad real 💯"
-                </p>
+                <p>© 2025 LotusDLC. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
-
-    <!-- Google Drive Picker API -->
-    <script src="https://apis.google.com/js/api.js"></script>
 
     <script>
         // Smooth scrolling for navigation
@@ -917,262 +635,39 @@
             });
         });
 
-        // Fade in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animationDelay = Math.random() * 0.3 + 's';
-                    entry.target.classList.add('fade-in');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Newsletter form submission
-        document.getElementById('newsletterForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const formData = new FormData(this);
-
-            // Simulate form submission
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Uniéndote al squad...';
-            submitBtn.disabled = true;
-
-            setTimeout(() => {
-                submitBtn.innerHTML = '<i class="fas fa-check"></i> ¡Bienvenido al squad!';
-                submitBtn.style.background = 'var(--accent-neon)';
-
-                setTimeout(() => {
-                    submitBtn.innerHTML = originalText;
-                    submitBtn.disabled = false;
-                    submitBtn.style.background = '';
-                    this.reset();
-                }, 3000);
-            }, 2000);
-        });
-
         // Mobile menu toggle
         document.querySelector('.mobile-menu').addEventListener('click', function () {
             const navMenu = document.querySelector('.nav-menu');
-            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
-        });
-
-        // Google Drive Picker API Integration
-        let pickerApiLoaded = false;
-        let oauthToken;
-
-        function loadPicker() {
-            gapi.load('auth', { 'callback': onAuthApiLoad });
-            gapi.load('picker', { 'callback': onPickerApiLoad });
-        }
-
-        function onAuthApiLoad() {
-            window.gapi.load('auth2', initAuth);
-        }
-
-        function initAuth() {
-            gapi.auth2.init({
-                client_id: 'YOUR_CLIENT_ID.apps.googleusercontent.com'
-            });
-        }
-
-        function onPickerApiLoad() {
-            pickerApiLoaded = true;
-            createPicker();
-        }
-
-        function createPicker() {
-            if (pickerApiLoaded && oauthToken) {
-                const view = new google.picker.View(google.picker.ViewId.DOCS);
-                view.setMimeTypes('audio/mpeg,audio/wav,audio/mp3');
-
-                const picker = new google.picker.PickerBuilder()
-                    .enableFeature(google.picker.Feature.NAV_HIDDEN)
-                    .enableFeature(google.picker.Feature.MULTISELECT_ENABLED)
-                    .setAppId('YOUR_APP_ID')
-                    .setOAuthToken(oauthToken)
-                    .addView(view)
-                    .addView(new google.picker.DocsUploadView())
-                    .setDeveloperKey('YOUR_DEVELOPER_KEY')
-                    .setCallback(pickerCallback)
-                    .build();
-                picker.setVisible(true);
-            }
-        }
-
-        function pickerCallback(data) {
-            if (data.action == google.picker.Action.PICKED) {
-                const fileId = data.docs[0].id;
-                const fileName = data.docs[0].name;
-
-                // Handle the selected file
-                console.log('Selected file:', fileName, fileId);
-
-                // Create new mixtape card
-                addMixtapeCard(fileName, fileId);
-            }
-        }
-
-        function addMixtapeCard(title, fileId) {
-            const mixtapesGrid = document.querySelector('.mixtapes-grid');
-            const newCard = document.createElement('div');
-            newCard.className = 'mixtape-card fade-in';
-            newCard.innerHTML = `
-                <div class="mixtape-cover">
-                    <i class="fas fa-music"></i>
-                </div>
-                <h3 class="mixtape-title">${title}</h3>
-                <p class="mixtape-desc">Recién subido desde el estudio. Contenido fresh y sin filtros.</p>
-                <a href="https://drive.google.com/file/d/${fileId}/view" target="_blank" class="btn btn-primary">
-                    <i class="fas fa-download"></i>
-                    Descargar
-                </a>
-            `;
-
-            // Insert before the "Próximamente" card
-            const lastCard = mixtapesGrid.lastElementChild;
-            mixtapesGrid.insertBefore(newCard, lastCard);
-        }
-
-        // Upload button functionality
-        document.getElementById('uploadBtn').addEventListener('click', function () {
-            // Check if user is authenticated (in real implementation)
-            // For demo purposes, we'll simulate authentication
-
-            if (!oauthToken) {
-                // Simulate Google Auth
-                this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Conectando con Google...';
-
-                setTimeout(() => {
-                    oauthToken = 'demo_token'; // In real app, get actual token
-                    this.innerHTML = '<i class="fab fa-google-drive"></i> Seleccionar Archivos';
-                    createPicker();
-                }, 1500);
+            // This is a simple toggle. You might want a more robust solution with classes.
+            if (navMenu.style.display === 'flex') {
+                navMenu.style.display = 'none';
             } else {
-                createPicker();
+                navMenu.style.display = 'flex';
+                // This needs more styling to look good on mobile (e.g., position absolute, full width, etc.)
             }
         });
 
-        // Show upload section for admin users (demo)
-        // In production, check user permissions
-        function checkAdminStatus() {
-            // Simulate admin check
-            const isAdmin = Math.random() > 0.7; // 30% chance for demo
-
-            if (isAdmin) {
-                document.getElementById('uploadSection').style.display = 'block';
-            }
-        }
-
-        // Initialize
-        document.addEventListener('DOMContentLoaded', function () {
-            checkAdminStatus();
-
-            // Load Google APIs
-            if (typeof gapi !== 'undefined') {
-                loadPicker();
-            }
-        });
-
-        // Spotify Web Playback SDK Integration (Optional)
-        window.onSpotifyWebPlaybackSDKReady = () => {
-            const token = 'YOUR_SPOTIFY_ACCESS_TOKEN';
-            const player = new Spotify.Player({
-                name: 'Lotus Web Player',
-                getOAuthToken: cb => { cb(token); }
-            });
-
-            // Error handling
-            player.addListener('initialization_error', ({ message }) => {
-                console.error('Spotify initialization error:', message);
-            });
-
-            player.addListener('authentication_error', ({ message }) => {
-                console.error('Spotify authentication error:', message);
-            });
-
-            // Ready
-            player.addListener('ready', ({ device_id }) => {
-                console.log('Spotify player ready with device ID:', device_id);
-            });
-
-            // Connect to the player
-            player.connect();
+        // Fade in animation on scroll (simplified for clarity)
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
         };
-
-        // Performance optimization: Lazy load images
-        if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src;
-                        img.classList.remove('lazy');
-                        imageObserver.unobserve(img);
-                    }
-                });
+        const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('appear');
+                    appearOnScroll.unobserve(entry.target);
+                }
             });
+        }, appearOptions);
 
-            document.querySelectorAll('img[data-src]').forEach(img => {
-                imageObserver.observe(img);
-            });
-        }
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
 
-        // Add some dynamic effects
-        function addParticleEffect() {
-            const hero = document.querySelector('.hero');
-            const particleCount = 50;
-
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.cssText = `
-                    position: absolute;
-                    width: 2px;
-                    height: 2px;
-                    background: var(--accent-gold);
-                    border-radius: 50%;
-                    pointer-events: none;
-                    opacity: 0.3;
-                    animation: float ${Math.random() * 10 + 5}s infinite linear;
-                    left: ${Math.random() * 100}%;
-                    top: ${Math.random() * 100}%;
-                    animation-delay: ${Math.random() * 5}s;
-                `;
-                hero.appendChild(particle);
-            }
-        }
-
-        // Initialize particle effect
-        setTimeout(addParticleEffect, 1000);
-
-        // Console easter egg
-        console.log(`
-        ╔══════════════════════════════════════╗
-        ║              🎤 LOTUS DLC 🎤              ║
-        ║          Rap sin filtros             ║
-        ║                                      ║
-        ║   Si estás viendo esto, eres parte   ║
-        ║        del squad técnico 💻          ║
-        ║                                      ║
-        ║    Construido con 🔥 y mucho 🎵      ║
-        ╚══════════════════════════════════════╝
-        `);
     </script>
-
-    <!-- Spotify Web Playback SDK (Optional) -->
-    <script src="https://sdk.scdn.co/spotify-player.js"></script>
-
 </body>
-
 </html>
