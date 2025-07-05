@@ -51,13 +51,13 @@
             backdrop-filter: blur(10px);
             z-index: 1000;
             padding: 1rem 0;
-            border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 1.5rem; /* Un poco menos de padding para dar espacio */
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -81,19 +81,19 @@
         }
         
         .mobile-menu {
-            display: none; /* Oculto en desktop */
+            display: none;
             font-size: 1.5rem;
             color: var(--text-primary);
             cursor: pointer;
         }
         
         .nav-menu-mobile {
-            display: none; /* Oculto por defecto */
+            display: none;
         }
         
         /* --- ESTILOS GENERALES DE SECCIÓN --- */
         .section {
-            padding: 6rem 2rem;
+            padding: 6rem 1.5rem;
         }
 
         .container {
@@ -110,6 +110,8 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            line-height: 1.2; /* Mejora el espaciado si el texto se divide */
+            overflow-wrap: break-word; /* *** CORRECCIÓN CLAVE ***: Evita que el texto se desborde */
         }
 
         .section-subtitle {
@@ -123,16 +125,25 @@
         /* --- ESTILOS DE LA PÁGINA DE BEATS --- */
         .beats-section {
             background: var(--secondary-black);
-            padding-top: 8rem; /* Más padding arriba para compensar el header fijo */
+            padding-top: 8rem;
         }
 
-        .beats-grid {
+        .beats-grid,
+        .services-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
         }
 
-        .beat-card {
+        .beats-grid {
+             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        }
+
+        .services-list {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .beat-card,
+        .service-item {
             background: var(--primary-black);
             border-radius: 15px;
             padding: 1.5rem;
@@ -140,7 +151,8 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .beat-card:hover {
+        .beat-card:hover,
+        .service-item:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
@@ -175,20 +187,10 @@
             align-items: center;
         }
         
-        .services-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
         .service-item {
             display: flex;
             flex-direction: column;
             gap: 1rem;
-            padding: 2rem;
-            background: var(--secondary-black);
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
             text-align: center;
         }
         
@@ -229,16 +231,15 @@
             color: var(--text-primary);
             border: 2px solid var(--accent-gold);
         }
-
+        
         .btn:hover {
             transform: translateY(-3px);
         }
         
-        /* --- FOOTER --- */
         .footer {
-            padding: 3rem 0 2rem;
+            padding: 3rem 1.5rem 2rem;
             text-align: center;
-            border-top: 1px solid rgba(255, 215, 0, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: var(--text-secondary);
         }
         
@@ -286,7 +287,7 @@
                 padding-top: 6rem;
             }
             .section-title {
-                font-size: 2.5rem;
+                font-size: 2.2rem; /* *** CORRECCIÓN ***: Título aún más pequeño para móviles */
             }
             .section-subtitle {
                 font-size: 1rem;
