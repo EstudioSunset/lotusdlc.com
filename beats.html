@@ -8,7 +8,8 @@
 
     <meta name="description"
         content="Catálogo de beats de rap, hip-hop y corridos. Adquiere licencias, solicita featurings o pide tu instrumental personalizado con LotusDLC.">
-    <meta name="keywords" content="beats de rap, instrumentales de hip hop, comprar beats, corridos tumbados beats, featurings, lotusdlc">
+    <meta name="keywords"
+        content="beats de rap, instrumentales de hip hop, comprar beats, corridos tumbados beats, featurings, lotusdlc">
     <meta name="author" content="Lotus">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -77,11 +78,65 @@
             font-size: 2rem;
             font-weight: 900;
         }
-        
+
         .nav-menu {
             display: flex;
             list-style: none;
             gap: 2rem;
+        }
+
+        /* --- NUEVOS ESTILOS PARA EL MENÚ MÓVIL --- */
+
+        /* Oculta el menú de escritorio y muestra el icono de hamburguesa en móvil */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                /* Oculta el menú horizontal por defecto */
+            }
+
+            .mobile-menu {
+                display: block;
+                /* Muestra el icono de hamburguesa */
+            }
+        }
+
+        /* Estilos para el panel del menú desplegable */
+        .nav-menu-mobile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            transform: translateY(-120%);
+            opacity: 0;
+            pointer-events: none;
+            transition: transform 0.4s ease, opacity 0.4s ease;
+        }
+
+        /* Estilo para cuando el menú está activo (visible) */
+        .nav-menu-mobile.active {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+            z-index: 999;
+        }
+
+        /* Ajustes a los enlaces dentro del menú móvil */
+        .nav-menu-mobile .nav-link {
+            font-size: 1.5rem;
+        }
+
+        /* Oculta el menú desplegable en la vista de escritorio */
+        @media (min-width: 769px) {
+            .nav-menu-mobile {
+                display: none !important;
+            }
         }
 
         .nav-link {
@@ -94,11 +149,11 @@
         .nav-link:hover {
             color: var(--accent-gold);
         }
-        
+
         .section {
             padding: 6rem 0;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -116,7 +171,7 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
+
         .section-subtitle {
             text-align: center;
             font-size: 1.2rem;
@@ -143,7 +198,7 @@
             background: var(--gradient-primary);
             color: var(--primary-black);
         }
-        
+
         .btn-secondary {
             background: transparent;
             color: var(--text-primary);
@@ -154,7 +209,7 @@
             transform: translateY(-3px);
             box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
         }
-        
+
         .footer {
             background: var(--primary-black);
             padding: 3rem 0 1rem;
@@ -186,7 +241,7 @@
             transform: translateY(-5px);
             box-shadow: 0 15px 35px rgba(255, 215, 0, 0.15);
         }
-        
+
         .beat-card h3 {
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
@@ -198,26 +253,27 @@
             color: var(--text-secondary);
             margin-bottom: 1rem;
         }
-        
+
         .beat-card audio {
             width: 100%;
             margin-bottom: 1rem;
-            filter: invert(1) sepia(0.5) saturate(5) hue-rotate(3deg); /* Estilo dorado para el reproductor */
+            filter: invert(1) sepia(0.5) saturate(5) hue-rotate(3deg);
+            /* Estilo dorado para el reproductor */
         }
-        
+
         .beat-card .price {
             font-size: 1.8rem;
             font-weight: bold;
             color: var(--accent-gold);
         }
-        
+
         .beat-card .buy-button-container {
             margin-top: 1rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .services-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -237,10 +293,10 @@
             border: 1px solid rgba(255, 215, 0, 0.2);
             text-align: center;
         }
-        
+
         .service-item:hover {
-             background: var(--primary-black);
-             transform: translateY(-5px);
+            background: var(--primary-black);
+            transform: translateY(-5px);
         }
 
         .service-item .service-icon {
@@ -250,22 +306,23 @@
         }
 
         .service-item h3 {
-             font-size: 1.8rem;
-             color: var(--text-primary);
-        }
-        
-        .service-item p {
-            color: var(--text-secondary);
-            flex-grow: 1; /* Para alinear botones */
+            font-size: 1.8rem;
+            color: var(--text-primary);
         }
 
+        .service-item p {
+            color: var(--text-secondary);
+            flex-grow: 1;
+            /* Para alinear botones */
+        }
     </style>
 </head>
 
 <body>
     <header class="header">
         <nav class="nav-container">
-            <a href="index.html" class="logo"><img src="/lotus-logo-yrllow-transparent.png" width="100" height="54" alt="LotusDLC Logo"></a>
+            <a href="#home" class="logo"><img src="/lotus-logo-yrllow-transparent.png" width="100" height="54"
+                    alt="LotusDLC Logo"></a>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#musica" class="nav-link">Música</a></li>
@@ -273,6 +330,9 @@
                 <li><a href="/beats.html" class="nav-link">Beats</a></li>
                 <li><a href="#contacto" class="nav-link">Contacto</a></li>
             </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
         </nav>
     </header>
 
@@ -295,7 +355,7 @@
                             <a href="#" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Comprar</a>
                         </div>
                     </div>
-                    
+
                     <div class="beat-card">
                         <h3>Callejones de Oro</h3>
                         <p class="tags">Corridos Tumbados | 120 BPM | Acústico</p>
@@ -305,7 +365,7 @@
                             <a href="#" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Comprar</a>
                         </div>
                     </div>
-                    
+
                     <div class="beat-card">
                         <h3>Cenizas del Asfalto</h3>
                         <p class="tags">Boom Bap | 88 BPM | Sample de Soul</p>
@@ -315,8 +375,8 @@
                             <a href="#" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Comprar</a>
                         </div>
                     </div>
-                    
-                    </div>
+
+                </div>
             </div>
         </section>
 
@@ -324,29 +384,33 @@
             <div class="container">
                 <h2 class="section-title">Servicios Personalizados</h2>
                 <p class="section-subtitle">
-                    ¿Necesitas algo único? Creemos un proyecto a tu medida. Contáctame para discutir tu idea y obtener una cotización.
+                    ¿Necesitas algo único? Creemos un proyecto a tu medida. Contáctame para discutir tu idea y obtener
+                    una cotización.
                 </p>
-                
+
                 <div class="services-list">
                     <div class="service-item">
                         <i class="fas fa-microphone-alt service-icon"></i>
                         <h3>Featurings con Lotus</h3>
-                        <p>Agrega un verso original de Lotus a tu canción. Ideal para darle un toque profesional y un estilo único a tu proyecto.</p>
+                        <p>Agrega un verso original de Lotus a tu canción. Ideal para darle un toque profesional y un
+                            estilo único a tu proyecto.</p>
                         <a href="index.html#contacto" class="btn btn-secondary">Cotizar</a>
                     </div>
 
                     <div class="service-item">
                         <i class="fas fa-sliders-h service-icon"></i>
                         <h3>Beats Personalizados</h3>
-                        <p>Produciré un beat exclusivo para ti desde cero, basado en tus ideas, referencias y el estilo que buscas. Licencia de uso ilimitado.</p>
-                         <a href="index.html#contacto" class="btn btn-secondary">Cotizar</a>
+                        <p>Produciré un beat exclusivo para ti desde cero, basado en tus ideas, referencias y el estilo
+                            que buscas. Licencia de uso ilimitado.</p>
+                        <a href="index.html#contacto" class="btn btn-secondary">Cotizar</a>
                     </div>
-                    
+
                     <div class="service-item">
                         <i class="fas fa-guitar service-icon"></i>
                         <h3>Corridos a la Medida</h3>
-                        <p>¿Quieres contar una historia? Producimos corridos tradicionales o tumbados completamente personalizados, desde la letra hasta los arreglos finales.</p>
-                         <a href="index.html#contacto" class="btn btn-secondary">Cotizar</a>
+                        <p>¿Quieres contar una historia? Producimos corridos tradicionales o tumbados completamente
+                            personalizados, desde la letra hasta los arreglos finales.</p>
+                        <a href="index.html#contacto" class="btn btn-secondary">Cotizar</a>
                     </div>
                 </div>
             </div>
@@ -357,6 +421,32 @@
     <footer class="footer">
         <p>© 2025 LotusDLC. Todos los derechos reservados.</p>
     </footer>
+    <script>
+       // Nuevo y mejorado script para el menú móvil
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('.mobile-menu');
+    const navMenu = document.querySelector('.nav-menu'); // El ul original
+
+    // Crea el menú móvil clonando el menú de escritorio
+    const mobileNav = navMenu.cloneNode(true);
+    mobileNav.classList.remove('nav-menu');
+    mobileNav.classList.add('nav-menu-mobile');
+    document.querySelector('.nav-container').appendChild(mobileNav);
+
+    // Añade el evento de clic al botón de hamburguesa
+    mobileMenuButton.addEventListener('click', function () {
+        mobileNav.classList.toggle('active');
+    });
+
+    // Cierra el menú al hacer clic en un enlace (opcional pero recomendado)
+    mobileNav.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+        });
+    });
+});
+    </script>
 
 </body>
+
 </html>

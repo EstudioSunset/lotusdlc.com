@@ -144,7 +144,8 @@
             position: relative;
             overflow: hidden;
             padding-top: 120px;
-            background: var(--gradient-dark); /* Fallback por si el video no carga */
+            background: var(--gradient-dark);
+            /* Fallback por si el video no carga */
         }
 
         .hero-background-video {
@@ -157,7 +158,8 @@
             min-height: 100%;
             transform: translate(-50%, -50%);
             object-fit: cover;
-            z-index: 1; /* CAPA 1 (FONDO) */
+            z-index: 1;
+            /* CAPA 1 (FONDO) */
         }
 
         .hero::before {
@@ -169,9 +171,10 @@
             bottom: 0;
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23ffd700" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
             opacity: 0.3;
-            z-index: 2; /* CAPA 2 (OVERLAY) */
+            z-index: 2;
+            /* CAPA 2 (OVERLAY) */
         }
-        
+
         .hero-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -181,8 +184,10 @@
             gap: 4rem;
             align-items: center;
             position: relative;
-            z-index: 3; /* CAPA 3 (CONTENIDO) */
+            z-index: 3;
+            /* CAPA 3 (CONTENIDO) */
         }
+
         /* === HERO SECTION END === */
 
         .hero-content h1 {
@@ -266,9 +271,12 @@
         }
 
         @keyframes float {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0px);
             }
+
             50% {
                 transform: translateY(-20px);
             }
@@ -380,7 +388,7 @@
         .contact {
             background: var(--secondary-black);
         }
-        
+
         .social-links {
             display: flex;
             flex-direction: column;
@@ -421,9 +429,62 @@
             color: var(--text-secondary);
         }
 
+        /* Oculta el menú desplegable en la vista de escritorio */
+        @media (min-width: 769px) {
+            .nav-menu-mobile {
+                display: none !important;
+            }
+        }
+
         @media (max-width: 768px) {
             .nav-menu {
                 display: none;
+            }
+
+            .nav-menu-mobile {
+                display: flex;
+                /* Usamos flex para centrar los ítems */
+                flex-direction: column;
+                /* Apila los enlaces verticalmente */
+                align-items: center;
+                /* Centra los enlaces horizontalmente */
+                gap: 2rem;
+                /* Espacio entre los enlaces */
+
+                position: absolute;
+                /* Lo saca del flujo normal para que se superponga */
+                top: 100%;
+                /* Lo posiciona justo debajo del header */
+                left: 0;
+                width: 100%;
+
+                background: rgba(10, 10, 10, 0.98);
+                /* Fondo oscuro casi opaco */
+                backdrop-filter: blur(10px);
+                /* Mismo efecto de desenfoque que el header */
+
+                padding: 2rem 0;
+
+                /* Animación de entrada y salida */
+                transform: translateY(-120%);
+                /* Empieza oculto arriba */
+                opacity: 0;
+                pointer-events: none;
+                /* Evita clics cuando está oculto */
+                transition: transform 0.4s ease, opacity 0.4s ease;
+            }
+
+
+            .nav-menu-mobile.active {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: auto;
+                z-index: 999;
+            }
+
+
+            .nav-menu-mobile .nav-link {
+                font-size: 1.5rem;
             }
 
             .mobile-menu {
@@ -444,7 +505,7 @@
             .section-title {
                 font-size: 2.5rem;
             }
-            
+
             .cta-buttons {
                 justify-content: center;
             }
@@ -455,7 +516,8 @@
 <body>
     <header class="header">
         <nav class="nav-container">
-            <a href="#home" class="logo"><img src="/lotus-logo-yrllow-transparent.png" width="100" height="54" alt="LotusDLC Logo"></a>
+            <a href="#home" class="logo"><img src="/lotus-logo-yrllow-transparent.png" width="100" height="54"
+                    alt="LotusDLC Logo"></a>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#musica" class="nav-link">Música</a></li>
@@ -472,12 +534,13 @@
     <section id="home" class="hero">
         <video class="hero-background-video" poster="/profile-pic.png" autoplay loop muted playsinline>
             <source src="/ss-video-hero-lotus.webm" type="video/webm">
-            
+
         </video>
         <div class="hero-container">
             <div class="hero-content fade-in">
                 <img src="/lotus-logo-yrllow-transparent.png" width="400" height="216" alt="LotusDLC Logo Principal">
-                <p class="hero-tagline">Rap auténtico, letras contundentes y beats de alto nivel. La nueva voz del hip hop mexicano.</p>
+                <p class="hero-tagline">Rap auténtico, letras contundentes y beats de alto nivel. La nueva voz del hip
+                    hop mexicano.</p>
                 <div class="cta-buttons">
                     <a href="#musica" class="btn btn-primary">
                         <i class="fas fa-play"></i>
@@ -491,7 +554,8 @@
             </div>
             <div class="hero-image fade-in">
                 <div class="hero-avatar">
-                    <img src="/profile-pic.png" alt="Lotus Avatar" style="width: 100%; height: 100%; border-radius: 50%;">
+                    <img src="/profile-pic.png" alt="Lotus Avatar"
+                        style="width: 100%; height: 100%; border-radius: 50%;">
                 </div>
             </div>
         </div>
@@ -501,7 +565,11 @@
         <div class="container">
             <h2 class="section-title">Escucha en Spotify</h2>
             <div class="spotify-widget fade-in">
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/1WH0H8I8T7mZof5gDXUilp?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/artist/1WH0H8I8T7mZof5gDXUilp?utm_source=generator" width="100%"
+                    height="352" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
             </div>
         </div>
     </section>
@@ -515,7 +583,8 @@
                         <img src="/images/escrituras-animadas-de-ayer-y-hoy-lotus.webp" alt="Mixtape Cover">
                     </div>
                     <h3 class="mixtape-title">ESCRITURAS ANIMADAS DE AYER Y HOY</h3>
-                    <p class="mixtape-desc">Esta es una coleccion de las primeras producciones de Lotus, antes de lanzar un mixtape con el grupo DLC.</p>
+                    <p class="mixtape-desc">Esta es una coleccion de las primeras producciones de Lotus, antes de lanzar
+                        un mixtape con el grupo DLC.</p>
                     <a href="#" class="btn btn-primary">
                         <i class="fas fa-download"></i>
                         Descargar
@@ -527,7 +596,8 @@
                         <img src="/images/suenos-y-sombras-cover.jpg" alt="Mixtape Cover">
                     </div>
                     <h3 class="mixtape-title">SUEÑOS Y SOMBRAS</h3>
-                    <p class="mixtape-desc">Un mixtape producido en la colonia Las Chicharras, con la participacion de Big Joe, Ey-Son y Lotus</p>
+                    <p class="mixtape-desc">Un mixtape producido en la colonia Las Chicharras, con la participacion de
+                        Big Joe, Ey-Son y Lotus</p>
                     <a href="#" class="btn btn-primary">
                         <i class="fas fa-download"></i>
                         Descargar
@@ -557,7 +627,8 @@
                     Lotus es un rapero y productor del sureste de Chiapas. Su camino en la música comenzó con
                     influencias del hip hop clásico y la escena mexicana, lo que lo motivó a desarrollar un estilo
                     propio tanto en la escritura como en la producción de sus beats.<br><br>
-                    Como parte del grupo DLC, junto a Big Joe y Ey-Son, lanzó el mixtape "Sueños y Sombras" desde Las Chicharras, Chiapas, Mexico. Ahora,
+                    Como parte del grupo DLC, junto a Big Joe y Ey-Son, lanzó el mixtape "Sueños y Sombras" desde Las
+                    Chicharras, Chiapas, Mexico. Ahora,
                     trabaja en un nuevo proyecto personal titulado "El Pantano", donde busca seguir contando sus
                     historias con un sonido crudo y directo. Su objetivo es sencillo: hacer música que se sienta real y
                     conectar con la gente.
@@ -636,18 +707,29 @@
             });
         });
 
-        // Mobile menu toggle
-        document.querySelector('.mobile-menu').addEventListener('click', function () {
-            const navMenu = document.querySelector('.nav-menu');
-            // This is a simple toggle. You might want a more robust solution with classes.
-            if (navMenu.style.display === 'flex') {
-                navMenu.style.display = 'none';
-            } else {
-                navMenu.style.display = 'flex';
-                // This needs more styling to look good on mobile (e.g., position absolute, full width, etc.)
-            }
-        });
+        // Nuevo y mejorado script para el menú móvil
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.querySelector('.mobile-menu');
+            const navMenu = document.querySelector('.nav-menu'); // El ul original
 
+            // Crea el menú móvil clonando el menú de escritorio
+            const mobileNav = navMenu.cloneNode(true);
+            mobileNav.classList.remove('nav-menu');
+            mobileNav.classList.add('nav-menu-mobile');
+            document.querySelector('.nav-container').appendChild(mobileNav);
+
+            // Añade el evento de clic al botón de hamburguesa
+            mobileMenuButton.addEventListener('click', function () {
+                mobileNav.classList.toggle('active');
+            });
+
+            // Cierra el menú al hacer clic en un enlace (opcional pero recomendado)
+            mobileNav.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileNav.classList.remove('active');
+                });
+            });
+        });
         // Fade in animation on scroll (simplified for clarity)
         const faders = document.querySelectorAll('.fade-in');
         const appearOptions = {
@@ -671,4 +753,5 @@
 
     </script>
 </body>
+
 </html>
