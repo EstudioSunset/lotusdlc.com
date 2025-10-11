@@ -243,37 +243,110 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <!-- Discography / Mixtapes -->
-  <section id="discografia" aria-label="Discografía">
-    <div class="wrap">
-      <h2 class="title">Mixtapes & proyectos</h2>
-      <div class="grid disc-grid">
-        <article class="disc">
-          <img src="/images/escrituras-animadas-de-ayer-y-hoy-lotus.webp" alt="Portada: Escrituras Animadas de Ayer y Hoy" loading="lazy" />
-          <div class="pad">
-            <h3>Escrituras Animadas de Ayer y Hoy</h3>
-            <p>Primeras producciones de Lotus antes del mixtape con DLC.</p>
-            <a class="btn btn--primary" href="#" download><i class="fa fa-download"></i> Descargar</a>
-          </div>
-        </article>
-        <article class="disc">
-          <img src="/images/suenos-y-sombras-cover.jpg" alt="Portada: Sueños y Sombras" loading="lazy" />
-          <div class="pad">
-            <h3>Sueños y Sombras</h3>
-            <p>Desde Las Chicharras con Big Joe y Ey‑Son.</p>
-            <a class="btn btn--primary" href="#" download><i class="fa fa-download"></i> Descargar</a>
-          </div>
-        </article>
-        <article class="disc">
-          <img src="/images/el-pantano-temp.jpg" alt="Arte temporal de El Pantano" loading="lazy" />
-          <div class="pad">
-            <h3>El Pantano</h3>
-            <p>Proyecto en curso. Sé de los primeros en escucharlo.</p>
-            <a class="btn btn--ghost" href="#contacto"><i class="fa fa-bell"></i> Notificarme</a>
-          </div>
-        </article>
-      </div>
+<section id="discografia" aria-label="Discografía" style="background:#000; color:#fff; padding:80px 20px;">
+  <div class="wrap">
+    <h2 class="title" style="text-align:center; font-size:2rem; margin-bottom:40px;">Mixtapes & proyectos</h2>
+
+    <div class="grid disc-grid" style="display:grid; gap:30px; grid-template-columns:repeat(auto-fit,minmax(300px,1fr));">
+
+      <!-- Proyecto 1 -->
+      <article class="disc" style="background:#111; border-radius:12px; overflow:hidden; box-shadow:0 0 25px rgba(0,0,0,.4);">
+        <img src="/images/escrituras-animadas-de-ayer-y-hoy-lotus.webp" alt="Portada: Escrituras Animadas de Ayer y Hoy" loading="lazy" style="width:100%; object-fit:cover;">
+        <div class="pad" style="padding:20px;">
+          <h3 style="margin:0 0 10px;">Escrituras Animadas de Ayer y Hoy</h3>
+          <p style="color:#b9b9b9;">Primeras producciones de Lotus antes del mixtape con DLC.</p>
+          <a class="btn btn--primary js-open-form" href="#form" data-mixtape="Escrituras Animadas de Ayer y Hoy" style="display:inline-block;margin-top:10px;background:#7c8c54;color:#0b0b0b;padding:10px 18px;border-radius:6px;text-decoration:none;font-weight:bold;">
+            <i class="fa fa-download"></i> Descargar
+          </a>
+        </div>
+      </article>
+
+      <!-- Proyecto 2 -->
+      <article class="disc" style="background:#111; border-radius:12px; overflow:hidden; box-shadow:0 0 25px rgba(0,0,0,.4);">
+        <img src="/images/suenos-y-sombras-cover.jpg" alt="Portada: Sueños y Sombras" loading="lazy" style="width:100%; object-fit:cover;">
+        <div class="pad" style="padding:20px;">
+          <h3 style="margin:0 0 10px;">Sueños y Sombras</h3>
+          <p style="color:#b9b9b9;">Desde Las Chicharras con Big Joe y Ey-Son.</p>
+          <a class="btn btn--primary js-open-form" href="#form" data-mixtape="Sueños y Sombras" style="display:inline-block;margin-top:10px;background:#7c8c54;color:#0b0b0b;padding:10px 18px;border-radius:6px;text-decoration:none;font-weight:bold;">
+            <i class="fa fa-download"></i> Descargar
+          </a>
+        </div>
+      </article>
+
+      <!-- Proyecto 3 (El Pantano - Acceso anticipado) -->
+      <article class="disc" style="background:#111; border-radius:12px; overflow:hidden; box-shadow:0 0 25px rgba(0,0,0,.4);">
+        <img src="/images/el-pantano-temp.jpg" alt="Arte temporal de El Pantano" loading="lazy" style="width:100%; object-fit:cover;">
+        <div class="pad" style="padding:20px;">
+          <h3 style="margin:0 0 10px;">El Pantano</h3>
+          <p style="color:#b9b9b9;">
+            Proyecto en curso. Sé de los primeros en escucharlo.  
+            <br><br>
+            <strong>Obtendrás un link para escuchar antes que nadie <em>"El Pantano"</em> cuando Lotus termine de producirlo.</strong>
+          </p>
+          <button id="btnOpenPantanoForm" style="
+            background:#7c8c54;
+            color:#0b0b0b;
+            border:none;
+            padding:12px 20px;
+            border-radius:6px;
+            font-weight:bold;
+            cursor:pointer;
+            transition:all .2s ease;
+            margin-top:10px;
+          "><i class="fa fa-bell"></i> Acceso anticipado</button>
+        </div>
+      </article>
+
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- MODAL: FORMULARIO DE GOOGLE PARA EL PANTANO -->
+<div id="pantanoModal" style="
+  display:none; 
+  position:fixed; inset:0;
+  background:rgba(0,0,0,0.85); 
+  justify-content:center; align-items:center; 
+  z-index:9999; padding:20px;
+">
+  <div style="
+    background:#111; color:#fff; 
+    padding:30px 20px; border-radius:12px; 
+    width:90%; max-width:520px; position:relative;
+  ">
+    <button id="closePantanoModal" style="
+      position:absolute; top:10px; right:12px;
+      background:transparent; border:none; color:#aaa;
+      font-size:1.5rem; cursor:pointer;
+    ">&times;</button>
+
+    <h3 style="margin-bottom:10px;">Regístrate para el acceso anticipado</h3>
+    <p style="color:#c9c9c9; margin-bottom:15px;">
+      Obtendrás un link para escuchar antes que nadie <em>"El Pantano"</em> cuando esté listo 🌑
+    </p>
+
+    <iframe 
+      src="https://forms.gle/nkZWNr8YG3RJo3H79"
+      width="100%" height="520" frameborder="0" 
+      style="border:1px solid #2f3b25; border-radius:8px;"
+      loading="lazy">Cargando...</iframe>
+  </div>
+</div>
+
+<!-- SCRIPT -->
+<script>
+document.getElementById('btnOpenPantanoForm').onclick = () => {
+  document.getElementById('pantanoModal').style.display = 'flex';
+};
+document.getElementById('closePantanoModal').onclick = () => {
+  document.getElementById('pantanoModal').style.display = 'none';
+};
+window.onclick = (e) => {
+  const modal = document.getElementById('pantanoModal');
+  if (e.target === modal) modal.style.display = 'none';
+};
+</script>
+
 
   <!-- Shows -->
   <section id="shows" class="shows" aria-label="Fechas">
