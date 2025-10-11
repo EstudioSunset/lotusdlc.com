@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diccionario de Rimas | LotusDLC</title>
+
+    <meta name="description"
+        content="Encuentra rimas consonantes y asonantes en el diccionario de rap más completo para el español latinoamericano. Filtra por sílabas, acento y más.">
+    <meta name="keywords"
+        content="diccionario de rimas, buscar rimas, rimas para rap, rimas consonantes, rimas asonantes, rimas en español">
+    <meta name="author" content="Lotus">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-black: #0a0a0a;
+            --secondary-black: #1a1a1a;
+            --accent-gold: #ffd700;
+            --text-primary: #ffffff;
+            --text-secondary: #b3b3b3;
+            --gradient-primary: linear-gradient(135deg, #ffd700 0%, #ff6b35 100%);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--primary-black);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- HEADER (Consistente) --- */
+        .header {
+            position: fixed; top: 0; width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000; padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .nav-container {
+            max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .nav-menu { display: flex; list-style: none; gap: 2rem; }
+        .nav-link { color: var(--text-primary); text-decoration: none; font-weight: 600; }
+        .nav-link:hover { color: var(--accent-gold); }
+        .mobile-menu { display: none; font-size: 1.5rem; cursor: pointer; }
+        .nav-menu-mobile { display: none; }
+        
+        /* --- ESTILOS DE LA HERRAMIENTA DE RIMAS --- */
+        .rhyme-tool-section { padding-top: 8rem; }
+
+        .section-title {
+            font-family: "Sedgwick Ave Display", cursive;
+            font-size: 3.5rem; text-align: center; margin-bottom: 1rem;
+            background: var(--gradient-primary); -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; background-clip: text;
+            line-height: 1.2; overflow-wrap: break-word;
+        }
+
+        .section-subtitle {
+            text-align: center; font-size: 1.2rem; color: var(--text-secondary);
+            max-width: 600px; margin: 0 auto 3rem auto;
+        }
+        
+        .rhyme-form {
+            background: var(--secondary-black);
+            padding: 2rem; border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            margin-bottom: 3rem;
+        }
+        
+        .search-main { display: flex; gap: 1rem; margin-bottom: 1.5rem; }
+        
+        .search-main input[type="text"] {
+            flex-grow: 1; padding: 1rem; font-size: 1.2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: var(--primary-black); color: var(--text-primary);
+            border-radius: 8px;
+        }
+        .search-main button {
+            padding: 1rem 2rem; border: none; border-radius: 8px;
+            font-size: 1.2rem; font-weight: 700;
+            background: var(--gradient-primary); color: var(--primary-black);
+            cursor: pointer;
+        }
+
+        .filters-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+        .filter-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-secondary); }
+        .filter-group select, .filter-group .radio-group {
+            width: 100%; padding: 0.8rem; font-size: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: var(--primary-black); color: var(--text-primary);
+            border-radius: 8px;
+        }
+        .filter-group .radio-group { display: flex; gap: 0.5rem; padding: 0.5rem; }
+        .filter-group .radio-group input { display: none; }
+        .filter-group .radio-group .radio-label {
+            flex-grow: 1; text-align: center; padding: 0.5rem;
+            border-radius: 6px; cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.05);
+            transition: background-color 0.3s;
+        }
+        .filter-group .radio-group input:checked + .radio-label {
+            background-color: var(--accent-gold); color: var(--primary-black); font-weight: 700;
+        }
+        
+        .rhyme-results { display: none; /* Se mostrará con JS */ }
+        .results-section { margin-bottom: 2.5rem; }
+        .results-section h3 { font-size: 1.8rem; color: var(--accent-gold); border-bottom: 1px solid rgba(255, 215, 0, 0.2); padding-bottom: 0.5rem; margin-bottom: 1rem; }
+        .rhyme-list { list-style: none; column-count: 4; column-gap: 2rem; }
+        .rhyme-list li { margin-bottom: 0.5rem; }
+        .example-link { color: var(--text-primary); text-decoration: none; }
+        .example-link:hover { text-decoration: underline; }
+        .example-link i { margin-left: 0.5rem; color: var(--text-secondary); }
+
+        .footer { padding: 3rem 1.5rem 2rem; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.1); color: var(--text-secondary); }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .nav-menu { display: none; }
+            .mobile-menu { display: block; }
+            .nav-menu-mobile {
+                display: flex; flex-direction: column; align-items: center; gap: 2rem;
+                position: absolute; top: 100%; left: 0; width: 100%;
+                background: rgba(10, 10, 10, 0.98); backdrop-filter: blur(10px);
+                padding: 2rem 0; transform: translateY(-120%); opacity: 0;
+                pointer-events: none; transition: transform 0.4s ease, opacity 0.4s ease;
+                z-index: 999;
+            }
+            .nav-menu-mobile.active { transform: translateY(0); opacity: 1; pointer-events: auto; }
+            .nav-menu-mobile .nav-link { font-size: 1.5rem; }
+
+            .section { padding: 4rem 1rem; }
+            .rhyme-tool-section { padding-top: 6rem; }
+            .section-title { font-size: 2.5rem; }
+            .section-subtitle { font-size: 1rem; }
+            .search-main { flex-direction: column; }
+            .filters-grid { grid-template-columns: 1fr 1fr; }
+            .rhyme-list { column-count: 2; }
+        }
+        @media (min-width: 769px) {
+            .nav-menu-mobile { display: none !important; }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo"><img src="/lotus-logo-yrllow-transparent.png" width="100" height="54" alt="LotusDLC Logo"></a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="beats.html" class="nav-link">Beats</a></li>
+                <li><a href="rimas.html" class="nav-link">Diccionario de Rimas</a></li>
+                <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section rhyme-tool-section">
+            <div class="container">
+                <h2 class="section-title">Diccionario de Rimas</h2>
+                <p class="section-subtitle">La herramienta definitiva para raperos y compositores de habla hispana. Encuentra la rima perfecta para cada verso.</p>
+                
+                <form class="rhyme-form" id="rhymeForm">
+                    <div class="search-main">
+                        <input type="text" id="wordInput" placeholder="Escribe una palabra..." required>
+                        <button type="submit">Buscar Rimas</button>
+                    </div>
+                    <div class="filters-grid">
+                        <div class="filter-group">
+                            <label>Tipo de Rima</label>
+                            <div class="radio-group">
+                                <input type="radio" id="consonante" name="rhyme_type" value="consonante" checked>
+                                <label for="consonante" class="radio-label">Consonante</label>
+                                <input type="radio" id="asonante" name="rhyme_type" value="asonante">
+                                <label for="asonante" class="radio-label">Asonante</label>
+                            </div>
+                        </div>
+                        <div class="filter-group">
+                            <label for="syllables">Sílabas</label>
+                            <select name="syllables" id="syllables">
+                                <option value="any">Cualquiera</option>
+                                <option value="2">2 sílabas</option>
+                                <option value="3">3 sílabas</option>
+                                <option value="4">4 sílabas</option>
+                                <option value="5">5 sílabas</option>
+                                <option value="6">6 sílabas</option>
+                                <option value="7">7 sílabas</option>
+                                <option value="8">8 sílabas</option>
+                                <option value="9">9 sílabas</option>
+                                <option value="10">10 sílabas</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Acentuación</label>
+                             <div class="radio-group">
+                                <input type="radio" id="stress_any" name="stress_type" value="any" checked>
+                                <label for="stress_any" class="radio-label">Todas</label>
+                                <input type="radio" id="aguda" name="stress_type" value="aguda">
+                                <label for="aguda" class="radio-label">Aguda</label>
+                                <input type="radio" id="grave" name="stress_type" value="grave">
+                                <label for="grave" class="radio-label">Grave</label>
+                            </div>
+                        </div>
+                        <div class="filter-group">
+                            <label>Tipo de Palabra</label>
+                            <div class="radio-group">
+                                <input type="radio" id="pos_any" name="pos_type" value="any" checked>
+                                <label for="pos_any" class="radio-label">Todos</label>
+                                <input type="radio" id="noun" name="pos_type" value="noun">
+                                <label for="noun" class="radio-label">Sust.</label>
+                                <input type="radio" id="adj" name="pos_type" value="adj">
+                                <label for="adj" class="radio-label">Adj.</label>
+                                <input type="radio" id="verb" name="pos_type" value="verb">
+                                <label for="verb" class="radio-label">Verbo</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="rhyme-results" id="rhymeResults">
+                    <div class="results-section">
+                        <h3>Rimas Consonantes para "Pareja" (20)</h3>
+                        <ul class="rhyme-list">
+                            <li>queja</li> <li>vieja</li> <li>deja</li> <li>reja</li>
+                            <li>ceja</li> <li>lenteja</li> <li>conseja</li> <li>madeja</li>
+                            <li>granjeja</li> <li>calleja</li> <li>colleja</li> <li>trebeja</li>
+                            <li>oveja</li> <li>bermeja</li> <li>aneja</li> <li>festeja</li>
+                            <li>teja</li> <li>desqueja</li> <li>semeja</li> <li>viajeja</li>
+                        </ul>
+                    </div>
+
+                    <div class="results-section">
+                        <h3>Rimas Armadas (Sugerencias)</h3>
+                        <ul class="rhyme-list">
+                            <li>me deja</li> <li>la queja</li> <li>se aleja</li> <li>una reja</li>
+                            <li>más vieja</li> <li>la oreja</li> <li>la teja</li> <li>una abeja</li>
+                        </ul>
+                    </div>
+
+                    <div class="results-section">
+                        <h3>Ejemplos en Canciones</h3>
+                        <ul class="rhyme-list" style="column-count: 1;">
+                           <li><a href='https://www.google.com/search?q=letras+de+rap+"queja"' target="_blank" class="example-link">Buscar "queja" en letras de rap <i class="fas fa-external-link-alt"></i></a></li>
+                           <li><a href='https://www.google.com/search?q=letras+de+rap+"deja"' target="_blank" class="example-link">Buscar "deja" en letras de rap <i class="fas fa-external-link-alt"></i></a></li>
+                           <li><a href='https://www.google.com/search?q=letras+de+rap+"vieja"' target="_blank" class="example-link">Buscar "vieja" en letras de rap <i class="fas fa-external-link-alt"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 LotusDLC. Todos los derechos reservados.</p>
+    </footer>
+    
+    <script>
+        // Lógica para manejar el formulario y mostrar/ocultar resultados
+        document.getElementById('rhymeForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita que la página se recargue
+            
+            // Aquí iría la llamada a tu back-end para buscar las rimas
+            
+            // Por ahora, solo mostramos los resultados de ejemplo
+            document.getElementById('rhymeResults').style.display = 'block';
+        });
+
+        // Script del menú móvil (consistente)
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.querySelector('.mobile-menu');
+            const navMenu = document.querySelector('.nav-menu');
+            if (mobileMenuButton && navMenu) {
+                const mobileNav = navMenu.cloneNode(true);
+                mobileNav.classList.remove('nav-menu');
+                mobileNav.classList.add('nav-menu-mobile');
+                document.querySelector('.nav-container').appendChild(mobileNav);
+
+                mobileMenuButton.addEventListener('click', function () {
+                    mobileNav.classList.toggle('active');
+                });
+                mobileNav.querySelectorAll('.nav-link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileNav.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
