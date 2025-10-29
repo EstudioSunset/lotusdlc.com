@@ -2,887 +2,1121 @@
 <html lang="es">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZP0N6VFYE"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lotus DLC — Rap sin filtros</title>
+  <meta name="description" content="Lotus DLC: rap crudo desde Chiapas. Escucha lo nuevo, mira videos y conecta.">
 
-    gtag('config', 'G-NZP0N6VFYE');
-  </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lotus DLC — Rap sin filtros | Sitio oficial</title>
-  <meta name="description"
-    content="Lotus DLC: rap crudo desde Chiapas. Escucha lo nuevo, mira videos, agenda shows y conecta directamente." />
-  <link rel="canonical" href="https://lotusdlc.com/" />
-
-  <!-- Preconnects / Perf -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&family=Inter:wght@300;400;600;800;900&display=swap"
-    rel="stylesheet" />
-  <link rel="preload" as="image" href="/lotus-logo-yrllow-transparent.png" />
-  <link rel="preload" as="image" href="/profile-pic-transp.png" />
-
-  <!-- Social -->
-  <meta property="og:title" content="Lotus DLC — Rap sin filtros" />
-  <meta property="og:description" content="Nuevos sencillos, mixtapes y shows. Conecta con Lotus DLC." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://lotusdlc.com" />
-  <meta property="og:image" content="https://lotusdlc.com/images/lotus-og.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Icons -->
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    integrity="sha512-3h7XWkAM7X3yWwKxQwXv2n7eX1m2A1k0VnSyyq+GZ8l8nZ8C9d5tHnq5t4gQYz2x1l2rKx9uQqz3qFQJ1P8yBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-PRP3GXGN');</script>
-  <!-- End Google Tag Manager -->
+    crossorigin="anonymous">
 
   <style>
-    :root {
-      --bg: #0a0a0a;
-      --bg-2: #121212;
-      --card: #181818;
-      --ink: #fff;
-      --muted: #b3b3b3;
-      --gold: #ffd700;
-      --neon: #00ff41;
-      --ring: rgba(255, 215, 0, .25);
-      --grad: linear-gradient(135deg, #ffd700 0%, #ff6b35 100%);
-    }
-
     * {
-      box-sizing: border-box
-    }
-
-    html,
-    body {
       margin: 0;
-      height: 100%;
-      scroll-behavior: smooth;
-      background: var(--bg);
-      color: var(--ink);
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    img {
-      max-width: 100%;
-      display: block
+    :root {
+      --red: #dc143c;
+      --black: #000;
+      --dark: #0a0a0a;
+      --card: #1a1a1a;
+      --gold: #dc143c;
+      --text: #fff;
+      --muted: #b3b3b3;
     }
 
-    a {
-      color: inherit
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--black);
+      color: var(--text);
+      overflow-x: hidden;
     }
 
-    /* Accessibility */
-    .skip-link {
-      position: absolute;
-      left: -9999px;
-      top: auto;
-      width: 1px;
-      height: 1px;
-      overflow: hidden
-    }
-
-    .skip-link:focus {
-      left: 1rem;
-      top: 1rem;
-      width: auto;
-      height: auto;
-      background: #000;
-      color: #fff;
-      padding: .5rem 1rem;
-      border: 2px solid var(--gold);
-      z-index: 10000
-    }
-
-    /* Header */
-    .header {
-      position: sticky;
+    /* TOP NAV */
+    .top-nav {
+      position: fixed;
       top: 0;
-      z-index: 1000;
-      background: rgba(10, 10, 10, .9);
-      backdrop-filter: saturate(1.2) blur(8px);
-      border-bottom: 1px solid var(--ring)
-    }
-
-    .nav {
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      padding: .75rem 1rem
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: .75rem;
-      text-decoration: none
-    }
-
-    .brand-title {
-      font-family: "Sedgwick Ave Display", cursive;
-      background: var(--grad);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-size: 1.5rem;
-      font-weight: 900;
-      line-height: 1
-    }
-
-    .spacer {
-      flex: 1
-    }
-
-    .menu {
-      display: flex;
-      gap: 1.25rem;
-      align-items: center
-    }
-
-    .menu a {
-      font-weight: 700;
-      text-decoration: none;
-      position: relative
-    }
-
-    .menu a:after {
-      content: "";
-      position: absolute;
       left: 0;
-      bottom: -6px;
-      width: 0;
-      height: 2px;
-      background: var(--gold);
-      transition: width .25s
-    }
-
-    .menu a:hover:after {
-      width: 100%
-    }
-
-    .cta {
-      display: inline-flex;
+      right: 0;
+      background: var(--red);
+      height: 70px;
+      display: flex;
       align-items: center;
-      gap: .5rem;
-      background: var(--grad);
-      color: #111;
-      padding: .6rem 1rem;
-      border-radius: 999px;
-      font-weight: 800
+      justify-content: space-between;
+      padding: 0 2rem;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     }
 
-    .burger {
-      display: none;
-      font-size: 1.25rem
-    }
-
-    /* Hero */
-    .hero {
-      position: relative;
-      min-height: 92vh;
-      display: grid;
-      place-items: center;
-      padding: 96px 1rem 2rem
-    }
-
-    .hero video {
+    .logo-center {
       position: absolute;
-      inset: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'pragmatica-extended', sans-serif;
+      font-size: 1.8rem;
+      color: var(--text);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .menu-toggle {
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1.8rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    .menu-toggle:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .side-menu {
+      position: fixed;
+      top: 70px;
+      left: -300px;
+      width: 300px;
+      height: calc(100vh - 70px);
+      background: var(--dark);
+      transition: left 0.4s ease;
+      z-index: 999;
+      overflow-y: auto;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .side-menu.open {
+      left: 0;
+    }
+
+    .side-menu nav {
+      padding: 2rem 1rem;
+    }
+
+    .side-menu a {
+      display: block;
+      padding: 1rem 1.5rem;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+      transition: all 0.3s;
+    }
+
+    .side-menu a:hover {
+      background: var(--red);
+      transform: translateX(5px);
+    }
+
+    .menu-overlay {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      display: none;
+      z-index: 998;
+    }
+
+    .menu-overlay.active {
+      display: block;
+    }
+
+    /* HERO CAROUSEL */
+    .hero {
+      margin-top: 20px;
+      height: 90vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .carousel-slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .carousel-slide.active {
+      opacity: 1;
+    }
+
+    .carousel-slide img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      filter: contrast(1.1) saturate(1.1)
     }
 
-    .hero:before {
-      content: "";
+    .carousel-overlay {
       position: absolute;
-      inset: 0;
-      background: radial-gradient(60% 50% at 50% 40%, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .85) 60%, rgba(0, 0, 0, .95) 100%),
-        linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, .7) 100%)
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 3rem 2rem;
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
     }
 
-    .hero-inner {
-      position: relative;
-      z-index: 2;
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 3rem;
-      align-items: center
+    .carousel-overlay h1 {
+      font-family: 'pragmatica-extended, sans-serif', sans-serif;
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      color: var(--gold);
+      margin-bottom: 1rem;
     }
 
-    .kicker {
-      letter-spacing: .2em;
-      color: var(--muted);
-      text-transform: uppercase;
-      font-weight: 800
-    }
-
-    .display {
-      font-family: "Sedgwick Ave Display", cursive;
-      font-size: clamp(2.8rem, 7vw, 5.8rem);
-      line-height: .9;
-      background: var(--grad);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin: .2rem 0 .75rem
-    }
-
-    .sub {
-      color: var(--muted);
-      font-size: 1.125rem;
-      max-width: 60ch
-    }
-
-    .buttons {
+    .carousel-dots {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
       display: flex;
-      flex-wrap: wrap;
-      gap: .75rem;
-      margin-top: 1.25rem
+      gap: 0.8rem;
+      z-index: 10;
     }
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: .5rem;
-      font-weight: 800;
-      border-radius: 999px;
-      padding: .8rem 1.1rem;
-      border: 2px solid transparent;
-      transition: transform .15s, box-shadow .15s
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px var(--ring)
-    }
-
-    .btn--primary {
-      background: var(--grad);
-      color: #111
-    }
-
-    .btn--ghost {
-      border-color: var(--gold)
-    }
-
-    .avatar {
-      position: relative;
-      width: min(440px, 80vw);
-      aspect-ratio: 1/1;
+    .dot {
+      width: 12px;
+      height: 12px;
       border-radius: 50%;
-      overflow: hidden;
-      border: 2px solid var(--ring);
-      box-shadow: 0 10px 40px rgba(0, 0, 0, .6)
+      background: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: all 0.3s;
     }
 
-    /* Section base */
+    .dot.active {
+      background: var(--gold);
+      width: 30px;
+      border-radius: 6px;
+    }
+
+    /* SECTIONS */
     section {
-      padding: 64px 1rem
+      padding: 1rem 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
     }
 
-    .wrap {
+    .section-title {
+      font-family: 'pragmatica-extended', sans-serif;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      color: var(--gold);
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    /* VIDEOS */
+    .video-carousel {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .video-track {
+      display: flex;
+      gap: 2rem;
+      transition: transform 0.5s ease;
+    }
+
+    .video-item {
+      min-width: calc(33.333% - 1.5rem);
+      aspect-ratio: 16/9;
+      background: var(--card);
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      transition: transform 0.3s;
+    }
+
+    .video-item:hover {
+      transform: scale(1.05);
+    }
+
+    .video-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .video-play-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70px;
+      height: 70px;
+      background: var(--red);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: var(--text);
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--red);
+      color: var(--text);
+      border: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 10;
+      transition: all 0.3s;
+    }
+
+    .carousel-btn:hover {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    .carousel-btn.prev {
+      left: 1rem;
+    }
+
+    .carousel-btn.next {
+      right: 1rem;
+    }
+
+    /* VIDEO MODAL */
+    .video-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.95);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .video-modal.active {
+      display: flex;
+    }
+
+    .video-modal-content {
+      position: relative;
+      width: 100%;
       max-width: 1200px;
-      margin: auto
+      aspect-ratio: 16/9;
     }
 
-    .title {
-      font-family: "Sedgwick Ave Display", cursive;
-      font-size: clamp(2rem, 4.5vw, 3rem);
-      background: var(--grad);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin: 0 0 24px
+    .video-modal iframe {
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
     }
 
-    .grid {
+    .video-close {
+      position: absolute;
+      top: -3rem;
+      right: 0;
+      background: var(--red);
+      color: var(--text);
+      border: none;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .video-close:hover {
+      transform: rotate(90deg);
+    }
+
+    /* SPOTIFY */
+    .spotify-section {
+      background: var(--dark);
+      padding: 2rem 2rem;
+      text-align: center;
+    }
+
+    .spotify-embed {
+      max-width: 800px;
+      margin: 2rem auto;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    /* ALBUMS */
+    .albums-grid {
       display: grid;
-      gap: 1.25rem
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
     }
 
-    /* Music */
-    .feature-card {
+    .album-card {
+      background: var(--card);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .album-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .album-card img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+    }
+
+    .album-info {
+      padding: 1.5rem;
+    }
+
+    .album-info h3 {
+      margin-bottom: 0.5rem;
+      color: var(--gold);
+    }
+
+    /* LYRICS */
+    /* --- LYRICS: harden layout & prevent horizontal overflow --- */
+    .lyrics-carousel {
+      position: relative;
+      max-width: 1100px;
+      /* un poco más aire en desktop */
+      margin: 0 auto;
+      overflow: hidden;
+      /* clave: evita scroll y “peek” lateral */
+    }
+
+    .lyrics-track {
+      display: flex;
+      width: 100%;
+      will-change: transform;
+      transform: translateX(0);
+      /* estado inicial explícito */
+    }
+
+    .lyrics-item {
+      flex: 0 0 100%;
+      /* ocupa exactamente el 100% del carrusel */
+      max-width: 100%;
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      /* evita que cualquier borde/padding aumente el ancho efectivo */
+      box-sizing: border-box;
+    }
+
+    .lyrics-cover {
+      flex: 0 0 300px;
+      max-width: 300px;
+    }
+
+    .lyrics-cover img {
+      display: block;
+      /* elimina espacios fantasma de imágenes inline */
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .lyrics-content {
+      flex: 1 1 auto;
+      min-width: 0;
+      /* permite que el contenido se encoja sin empujar el layout */
+      background: var(--card);
+      padding: 2rem;
+      border-radius: 12px;
+      max-height: 500px;
+      overflow-y: auto;
+    }
+
+    /* Botones del carrusel de letras: asegúralos dentro del contenedor */
+    #lyrics .carousel-btn {
+      z-index: 2;
+    }
+
+    /* Mobile: stack limpio, sin “desborde” lateral */
+    @media (max-width: 768px) {
+      .lyrics-item {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .lyrics-cover {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: none;
+      }
+
+      .lyrics-content {
+        max-height: none;
+        /* deja crecer vertical en móvil */
+      }
+    }
+
+
+    .lyrics-line {
+      margin-bottom: 0.8rem;
+      line-height: 1.6;
+    }
+
+    .rhyme-a {
+      color: #ff6b6b;
+    }
+
+    .rhyme-b {
+      color: #4ecdc4;
+    }
+
+    .rhyme-c {
+      color: #95e1d3;
+    }
+
+    .rhyme-d {
+      color: #ffd93d;
+    }
+
+    /* SUBSCRIBE */
+    .subscribe-section {
+      background: var(--dark);
+      text-align: center;
+      padding-top: 2rem;
+    }
+
+    .subscribe-form {
+      max-width: 500px;
+      margin: 2rem auto;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .subscribe-form input {
+      flex: 1;
+      padding: 1rem 1.5rem;
+      border: 2px solid var(--red);
+      background: var(--black);
+      color: var(--text);
+      border-radius: 50px;
+      font-size: 1rem;
+    }
+
+    .subscribe-form button {
+      padding: 1rem 2rem;
+      background: var(--red);
+      color: var(--text);
+      border: none;
+      border-radius: 50px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .subscribe-form button:hover {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--dark);
+      padding: 2rem 2rem;
+    }
+
+    .footer-content {
+      max-width: 1400px;
+      margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1.25rem;
-      background: var(--card);
-      border: 1px solid var(--ring);
-      border-radius: 18px;
-      padding: 1rem
+      gap: 3rem;
     }
 
-    .feature-cover {
-      border-radius: 14px;
-      overflow: hidden
-    }
-
-    .platforms {
+    .contact-form {
       display: flex;
-      flex-wrap: wrap;
-      gap: .5rem
-    }
-
-    .pill {
-      padding: .45rem .75rem;
-      border: 1px solid var(--ring);
-      border-radius: 999px;
-      color: var(--muted);
-      text-decoration: none;
-      font-weight: 700
-    }
-
-    /* Discography */
-    .disc-grid {
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))
-    }
-
-    .disc {
-      background: var(--card);
-      border: 1px solid var(--ring);
-      border-radius: 16px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column
-    }
-
-    .disc img {
-      aspect-ratio: 1/1;
-      object-fit: cover
-    }
-
-    .disc .pad {
-      padding: 1rem
-    }
-
-    .disc h3 {
-      margin: 0 0 .25rem
-    }
-
-    .disc p {
-      margin: 0 0 .75rem;
-      color: var(--muted)
-    }
-
-    /* Shows */
-    .shows {
-      background: var(--bg-2)
-    }
-
-    .show-list {
-      display: grid;
-      gap: .75rem
-    }
-
-    .show {
-      display: grid;
-      grid-template-columns: 120px 1fr auto;
+      flex-direction: column;
       gap: 1rem;
-      align-items: center;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
       padding: 1rem;
-      background: var(--card);
-      border: 1px solid var(--ring);
-      border-radius: 14px
+      background: var(--black);
+      border: 1px solid var(--card);
+      color: var(--text);
+      border-radius: 8px;
+      font-family: inherit;
     }
 
-    .show .date {
-      font-weight: 900;
-      font-size: 1.1rem
+    .contact-form button {
+      padding: 1rem;
+      background: var(--red);
+      color: var(--text);
+      border: none;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s;
     }
 
-    .show .city {
-      color: var(--muted)
+    .footer-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
     }
 
-    .show .buy {
-      white-space: nowrap
-    }
-
-    /* EPK / Bio */
-    .epk {
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 1.5rem
-    }
-
-    .quote {
-      font-size: 1.1rem;
-      color: var(--muted);
-      border-left: 3px solid var(--gold);
-      padding-left: 1rem
-    }
-
-    /* Contact / Newsletter */
-    .contact {
-      background: var(--bg-2)
-    }
-
-    form {
-      display: grid;
-      gap: .75rem
-    }
-
-    .field {
-      display: grid;
-      gap: .35rem
-    }
-
-    .input,
-    textarea {
-      background: #0d0d0d;
-      border: 1px solid var(--ring);
-      border-radius: 10px;
-      color: var(--ink);
-      padding: .9rem
-    }
-
-    .small {
-      color: var(--muted);
-      font-size: .9rem
-    }
-
-    /* Footer */
-    footer {
-      padding: 40px 1rem;
-      border-top: 1px solid var(--ring);
-      background: #0b0b0b
-    }
-
-    .foot {
-      max-width: 1200px;
-      margin: auto;
+    .social-links {
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      color: var(--muted)
     }
 
-    .socials {
+    .social-links a {
+      width: 50px;
+      height: 50px;
+      background: var(--red);
+      color: var(--text);
       display: flex;
-      gap: .75rem
-    }
-
-    .socials a {
-      width: 40px;
-      height: 40px;
-      display: grid;
-      place-items: center;
+      align-items: center;
+      justify-content: center;
       border-radius: 50%;
-      border: 1px solid var(--ring)
+      font-size: 1.3rem;
+      text-decoration: none;
+      transition: all 0.3s;
     }
 
-    /* Mobile */
-    @media (max-width: 900px) {
-      .hero-inner {
+    .social-links a:hover {
+      background: var(--gold);
+      color: var(--black);
+      transform: translateY(-5px);
+    }
+
+    /* FLOATING BUTTON */
+    .float-btn {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 60px;
+      height: 60px;
+      background: var(--red);
+      color: var(--text);
+      border: none;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(220, 20, 60, 0.5);
+      z-index: 999;
+      transition: all 0.3s;
+    }
+
+    .float-btn:hover {
+      background: var(--gold);
+      color: var(--black);
+      transform: scale(1.1);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .video-item {
+        min-width: calc(100% - 2rem);
+      }
+
+      .lyrics-item {
+        flex-direction: column;
+      }
+
+      .lyrics-cover {
+        flex: 1;
+        width: 100%;
+      }
+
+      .footer-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
-        text-align: center
       }
 
-      .feature-card {
-        grid-template-columns: 1fr
-      }
-
-      .epk {
-        grid-template-columns: 1fr
-      }
-
-      .menu {
-        display: none
-      }
-
-      .burger {
-        display: block;
-        margin-left: auto
+      .subscribe-form {
+        flex-direction: column;
       }
     }
 
-    /* Reduced motion */
-    @media (prefers-reduced-motion: reduce) {
-      .btn:hover {
-        transform: none;
-        box-shadow: none
+    @media (max-width: 480px) {
+      .top-nav {
+        padding: 0 1rem;
       }
 
-      .hero video {
-        animation: none
+      .logo-center {
+        font-size: 1.3rem;
       }
     }
   </style>
-
-  <!-- JSON-LD (Musician) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MusicGroup",
-    "name": "Lotus DLC",
-    "genre": ["Hip hop", "Rap"],
-    "foundingLocation": "Chiapas, México",
-    "url": "https://lotusdlc.com",
-    "image": "https://lotusdlc.com/images/lotus-og.jpg",
-    "sameAs": [
-      "https://open.spotify.com/artist/1WH0H8I8T7mZof5gDXUilp",
-      "https://www.youtube.com/@LotusDLC",
-      "https://www.instagram.com/lotus_dlc/",
-      "https://www.tiktok.com/@lotus.dlc",
-      "https://www.facebook.com/lotusdlc"
-    ]
-  }
-  </script>
 </head>
 
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRP3GXGN" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-  <!-- Header -->
-  <header class="header" aria-label="Barra de navegación">
-    <nav class="nav">
-      <a class="brand" href="#home" aria-label="Inicio Lotus DLC">
-        <img src="/lotus-logo-yrllow-transparent.png" alt="Logo Lotus DLC" width="72" height="39" />
-        <span class="brand-title">Lotus DLC</span>
-      </a>
-      <div class="spacer"></div>
-      <div class="menu" role="menubar">
-        <a role="menuitem" href="#musica">Música</a>
-        <a role="menuitem" href="#discografia">Discografía</a>
-        <a role="menuitem" href="#shows">Shows</a>
-        <a role="menuitem" href="#epk">EPK</a>
-        <a role="menuitem" href="#contacto" class="cta"><i class="fa fa-envelope"></i> Booking</a>
-      </div>
-      <button class="burger" aria-label="Abrir menú" id="burger"><i class="fa fa-bars"></i></button>
-    </nav>
+  <!-- TOP NAV -->
+  <header class="top-nav">
+    <button class="menu-toggle" id="menuToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <a href="#" class="logo-center">
+      <img src="/lotus-logo-transparent.png" alt="Lotus DLC Logo" style="height: 40px;">
+    </a>
+
+    <div style="width: 45px;"></div>
   </header>
 
-  <!-- Hero -->
-  <section id="home" class="hero" aria-label="Portada">
-    <video autoplay loop muted playsinline poster="/profile-pic.png">
-      <source src="/ss-video-hero-lotus.webm" type="video/webm" />
-    </video>
-    <div class="hero-inner" id="contenido">
-      <div>
-        <p class="kicker">Rap desde el sureste de Chiapas</p>
-        <h1 class="display">El Pantano está vivo</h1>
-        <p class="sub">Barrio, tinta y cicatrices. Historias reales sobre un sonido crudo. Pasa, escucha y si vibra,
-          comparte.</p>
-        <div class="buttons">
-          <a href="#musica" class="btn btn--primary"><i class="fa fa-play"></i> Escuchar ahora</a>
-          <a href="#contacto" class="btn btn--ghost"><i class="fa fa-bell"></i> Suscribirme</a>
-          <a href="https://wa.me/17729406244" class="btn btn--ghost" target="_blank" rel="noopener"><i
-              class="fa fa-comments"></i> WhatsApp</a>
-        </div>
-      </div>
-      <div>
-        <figure class="avatar" aria-label="Retrato de Lotus DLC">
-          <img src="/profile-pic-transp.png" alt="Avatar de Lotus DLC" loading="eager" />
-        </figure>
-      </div>
-    </div>
-  </section>
+  <!-- SIDE MENU -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+  <aside class="side-menu" id="sideMenu">
+    <nav>
+      <a href="#hero">Inicio</a>
+      <a href="#videos">Videos</a>
+      <a href="#spotify">Spotify</a>
+      <a href="#albums">Álbumes</a>
+      <a href="#lyrics">Letras</a>
+      <a href="#subscribe">Suscribirse</a>
+      <a href="#contact">Contacto</a>
+    </nav>
+  </aside>
 
-  <!-- Music Feature -->
-  <section id="musica" aria-label="Música">
-    <div class="wrap">
-      <h2 class="title">Lo más reciente</h2>
-      <div class="feature-card">
-        <div class="feature-cover">
-          <img src="/images/single-cover.jpg" alt="Portada del single más reciente de Lotus DLC" loading="lazy" />
-        </div>
-        <div>
-          <h3 style="margin-top:0">Single: <strong>CY4 — Cypher IV</strong></h3>
-          <p class="small">Prod. Lotus DLC · 2025</p>
-          <div class="platforms" style="margin:.75rem 0 1rem">
-            <a class="pill" href="https://open.spotify.com/artist/1WH0H8I8T7mZof5gDXUilp" target="_blank"
-              rel="noopener">Spotify</a>
-            <a class="pill" href="https://music.apple.com/" target="_blank" rel="noopener">Apple Music</a>
-            <a class="pill" href="https://www.youtube.com/@LotusDLC" target="_blank" rel="noopener">YouTube</a>
-            <a class="pill" href="https://www.tiktok.com/@lotus.dlc" target="_blank" rel="noopener">TikTok</a>
-          </div>
-          <div style="border:1px solid var(--ring);border-radius:12px;overflow:hidden">
-            <iframe style="border-radius:12px"
-              src="https://open.spotify.com/embed/artist/1WH0H8I8T7mZof5gDXUilp?utm_source=generator" width="100%"
-              height="352" frameborder="0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"></iframe>
-          </div>
-        </div>
+  <!-- HERO CAROUSEL -->
+  <section class="hero" id="hero">
+    <div class="carousel-container">
+      <div class="carousel-slide active">
+        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1920&h=1080&fit=crop" alt="Lotus DLC">
+      </div>
+      <div class="carousel-slide">
+        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=1920&h=1080&fit=crop" alt="Lotus DLC">
+      </div>
+      <div class="carousel-slide">
+        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=1920&h=1080&fit=crop" alt="Lotus DLC">
+      </div>
+      <div class="carousel-slide">
+        <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=1920&h=1080&fit=crop" alt="Lotus DLC">
+      </div>
+
+      <div class="carousel-overlay">
+        <h1>Desde el Estudio Sunset</h1>
+        <p style="font-size: 1.2rem; color: var(--muted);">Rap del sureste de México</p>
+      </div>
+
+      <div class="carousel-dots" id="carouselDots">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
+        <span class="dot" data-slide="3"></span>
       </div>
     </div>
   </section>
 
-  <!-- Discography / Mixtapes -->
-  <section id="discografia" aria-label="Discografía" style="background:#000; color:#fff; padding:80px 20px;">
-    <div class="wrap">
-      <h2 class="title" style="text-align:center; font-size:2rem; margin-bottom:40px;">Mixtapes & proyectos</h2>
-
-      <div class="grid disc-grid"
-        style="display:grid; gap:30px; grid-template-columns:repeat(auto-fit,minmax(300px,1fr));">
-
-        <!-- Proyecto 1 -->
-        <article class="disc"
-          style="background:#111; border-radius:12px; overflow:hidden; box-shadow:0 0 25px rgba(0,0,0,.4);">
-          <img src="/images/escrituras-animadas-de-ayer-y-hoy-lotus.webp"
-            alt="Portada: Escrituras Animadas de Ayer y Hoy" loading="lazy" style="width:100%; object-fit:cover;">
-          <div class="pad" style="padding:20px;">
-            <h3 style="margin:0 0 10px;">Escrituras Animadas de Ayer y Hoy</h3>
-            <p style="color:#b9b9b9;">Primeras producciones de Lotus antes del mixtape con DLC.</p>
-            <a class="btn btn--primary js-open-form" href="https://forms.gle/nkZWNr8YG3RJo3H79" target="_blank"
-              rel="noopener noreferrer">
-              <i class="fa fa-envelope"></i> Obtener acceso
-            </a>
-
-          </div>
-        </article>
-
-        <!-- Proyecto 2 -->
-        <article class="disc"
-          style="background:#111; border-radius:12px; overflow:hidden; box-shadow:0 0 25px rgba(0,0,0,.4);">
-          <img src="/images/suenos-y-sombras-cover.jpg" alt="Portada: Sueños y Sombras" loading="lazy"
-            style="width:100%; object-fit:cover;">
-          <div class="pad" style="padding:20px;">
-            <h3 style="margin:0 0 10px;">Sueños y Sombras</h3>
-            <p style="color:#b9b9b9;">Desde Las Chicharras con Big Joe y Ey-Son.</p>
-            <a class="btn btn--primary" href="https://forms.gle/nkZWNr8YG3RJo3H79" target="_blank"
-              rel="noopener noreferrer">
-              <i class="fa fa-download"></i> Descargar
-            </a>
-          </div>
-        </article>
-
-        <!-- Proyecto 3 (El Pantano - Acceso anticipado) -->
-        <article class="disc"
-          style="background:#111; border-radius:12px; overflow:hidden; box-shadow:0 0 25px rgba(0,0,0,.4);">
-          <img src="/images/el-pantano-temp.jpg" alt="Arte temporal de El Pantano" loading="lazy"
-            style="width:100%; object-fit:cover;">
-          <div class="pad" style="padding:20px;">
-            <h3 style="margin:0 0 10px;">El Pantano</h3>
-            <p style="color:#b9b9b9;">
-              Proyecto en curso. Sé de los primeros en escucharlo.
-              <br><br>
-              <strong>Obtendrás un link para escuchar antes que nadie <em>"El Pantano"</em> cuando Lotus termine de
-                producirlo.</strong>
-            </p>
-            <button id="btnOpenPantanoForm" style="
-            background:#7c8c54;
-            color:#0b0b0b;
-            border:none;
-            padding:12px 20px;
-            border-radius:6px;
-            font-weight:bold;
-            cursor:pointer;
-            transition:all .2s ease;
-            margin-top:10px;
-          "><i class="fa fa-bell"></i> Acceso anticipado</button>
-          </div>
-        </article>
-
+  <!-- VIDEOS -->
+  <section id="videos">
+    <h2 class="section-title">Videos</h2>
+    <div class="video-carousel">
+      <button class="carousel-btn prev" id="videoPrev">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <div class="video-track" id="videoTrack">
+        <div class="video-item" data-video="dQw4w9WgXcQ">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Qt_e0taMDU0?si=STEICIL_NjIV5XQv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <div class="video-play-icon"><i class="fas fa-play"></i></div>
+        </div>
+        <div class="video-item" data-video="dQw4w9WgXcQ">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/R8IzoiWW5zI?si=zVw13tMTgxrrQYJP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <div class="video-play-icon"><i class="fas fa-play"></i></div>
+        </div>
+        <div class="video-item" data-video="dQw4w9WgXcQ">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/psLeAg61-pI?si=Gj_o1a78jMF5wf4Z&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <div class="video-play-icon"><i class="fas fa-play"></i></div>
+        </div>
+        <div class="video-item" data-video="dQw4w9WgXcQ">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/LAClA_QS4qQ?si=zch7Z__QdYVCsdOZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <div class="video-play-icon"><i class="fas fa-play"></i></div>
+        </div>
+        <div class="video-item" data-video="dQw4w9WgXcQ">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/CuCgTqvYu_g?si=slDTCbxtY1QwsbVH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <div class="video-play-icon"><i class="fas fa-play"></i></div>
+        </div>
+        <div class="video-item" data-video="dQw4w9WgXcQ">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/3xYeWdn9Bzw?si=mkDG89yg7B4GYZLh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <div class="video-play-icon"><i class="fas fa-play"></i></div>
+        </div>
+        <div class="video-item" data-video="dQw4w9WgXcQ">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/FkiL4xLnlP0?si=ckZ4OOrTPgVAcm3G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <div class="video-play-icon"><i class="fas fa-play"></i></div>
+        </div>
+        <div class="video-item" data-video="dQw4w9WgXcQ">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/0WbevTPRP50?si=Op1lngvyhTzIXY3Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <div class="video-play-icon"><i class="fas fa-play"></i></div>
+        </div>
+        <div class="video-item" data-video="dQw4w9WgXcQ">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/xhfMHRZogTI?si=mKXo5WASBRyikmWU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <div class="video-play-icon"><i class="fas fa-play"></i></div>
+        </div>
+        <div class="video-item" data-video="dQw4w9WgXcQ">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/0WbevTPRP50?si=Op1lngvyhTzIXY3Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <div class="video-play-icon"><i class="fas fa-play"></i></div>
+        </div>
       </div>
+      <button class="carousel-btn next" id="videoNext">
+        <i class="fas fa-chevron-right"></i>
+      </button>
     </div>
   </section>
 
-  <!-- MODAL: FORMULARIO DE GOOGLE PARA EL PANTANO -->
-  <div id="pantanoModal" style="
-  display:none; 
-  position:fixed; inset:0;
-  background:rgba(0,0,0,0.85); 
-  justify-content:center; align-items:center; 
-  z-index:9999; padding:20px;
-">
-    <div style="
-    background:#111; color:#fff; 
-    padding:30px 20px; border-radius:12px; 
-    width:90%; max-width:520px; position:relative;
-  ">
-      <button id="closePantanoModal" style="
-      position:absolute; top:10px; right:12px;
-      background:transparent; border:none; color:#aaa;
-      font-size:1.5rem; cursor:pointer;
-    ">&times;</button>
-
-      <h3 style="margin-bottom:10px;">Regístrate para el acceso anticipado</h3>
-      <p style="color:#c9c9c9; margin-bottom:15px;">
-        Obtendrás un link para escuchar antes que nadie <em>"El Pantano"</em> cuando esté listo 🌑
-      </p>
-
-      <iframe src="https://forms.gle/nkZWNr8YG3RJo3H79" width="100%" height="520" frameborder="0"
-        style="border:1px solid #2f3b25; border-radius:8px;" loading="lazy">Cargando...</iframe>
+  <!-- VIDEO MODAL -->
+  <div class="video-modal" id="videoModal">
+    <div class="video-modal-content">
+      <button class="video-close" id="videoClose">
+        <i class="fas fa-times"></i>
+      </button>
+      <iframe id="videoFrame" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
   </div>
 
-  <!-- SCRIPT -->
-  <script>
-    document.getElementById('btnOpenPantanoForm').onclick = () => {
-      document.getElementById('pantanoModal').style.display = 'flex';
-    };
-    document.getElementById('closePantanoModal').onclick = () => {
-      document.getElementById('pantanoModal').style.display = 'none';
-    };
-    window.onclick = (e) => {
-      const modal = document.getElementById('pantanoModal');
-      if (e.target === modal) modal.style.display = 'none';
-    };
-  </script>
+  <!-- SPOTIFY -->
+  <section class="spotify-section" id="spotify">
+    <h2 class="section-title">Escucha en Spotify</h2>
+    <div class="spotify-embed">
+      <iframe data-testid="embed-iframe" style="border-radius:12px"
+        src="https://open.spotify.com/embed/artist/1WH0H8I8T7mZof5gDXUilp?utm_source=generator" width="100%"
+        height="352" frameBorder="0" allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+  </section>
 
-
-  <!-- Shows -->
-  <section id="shows" class="shows" aria-label="Fechas">
-    <div class="wrap">
-      <h2 class="title">Shows</h2>
-      <div class="show-list">
-        <div class="show">
-          <div>
-            <div class="date">Nov 15</div>
-            <div class="city small">Vero Beach, FL</div>
-          </div>
-          <div>
-            <strong>Showcase — El Pantano (set especial)</strong>
-            <div class="small">Lugar por anunciar</div>
-          </div>
-          <div class="buy"><a class="btn btn--primary" href="#contacto">Lista de invitados</a></div>
+  <!-- ALBUMS -->
+  <section id="albums">
+    <h2 class="section-title">Álbumes & Mixtapes</h2>
+    <div class="albums-grid">
+      <div class="album-card">
+        <img src="/images/el-pantano-cover-lotus-dlc.jpg" alt="Álbum 1">
+        <div class="album-info">
+          <h3>El Pantano</h3>
+          <p style="color: var(--muted);">2025</p>
         </div>
-        <div class="show">
-          <div>
-            <div class="date">Dic 07</div>
-            <div class="city small">Miami, FL</div>
-          </div>
-          <div>
-            <strong>Cypher Night — invitado</strong>
-            <div class="small">Sala TBA</div>
-          </div>
-          <div class="buy"><a class="btn btn--primary" href="#contacto">Booking</a></div>
+      </div>
+      <div class="album-card">
+        <img src="/images/suenos-y-sombras-cover.jpg" alt="Álbum 2">
+        <div class="album-info">
+          <h3>Sueños y Sombras</h3>
+          <p style="color: var(--muted);">2024</p>
+        </div>
+      </div>
+      <div class="album-card">
+        <img src="https://images.unsplash.com/photo-1571609704149-97c63eb9994b?w=600&h=600&fit=crop" alt="Álbum 3">
+        <div class="album-info">
+          <h3>Escrituras Animadas</h3>
+          <p style="color: var(--muted);">2023</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- EPK / Bio corta + larga -->
-  <section id="epk" aria-label="EPK y biografía">
-    <div class="wrap epk">
-      <div>
-        <h2 class="title">EPK (press)</h2>
-        <p class="quote">“Lotus DLC mezcla introspección y crudeza con un sonido que respira cinematografía: paisajes
-          sonoros densos, golpes precisos y versos que se sienten.”</p>
-        <ul class="small" style="line-height:1.9">
-          <li>Origen: Chiapas, México</li>
-          <li>Género: Rap / Hip‑hop</li>
-          <li>Para fans de: lirismo real, atmósferas oscuras y beats con alma</li>
-          <li>Contacto prensa & booking: <a href="mailto:info@estudiosunset.com">info@estudiosunset.com</a></li>
-          <li>Descargas: <a href="/assets/lotusdlc-presskit.zip">Press kit (.zip)</a> — fotos, logo, bio</li>
-        </ul>
-      </div>
-      <div>
-        <h3 style="margin-top:0">Bio</h3>
-        <p class="small">Lotus DLC es un MC originario de Las Chicharras, Chiapas. Inició en la adolescencia, cuando el
-          rap comenzaba a tomar fuerza en el sureste de México. Desde entonces ha mantenido una trayectoria constante,
-          construyendo una voz propia que mezcla experiencia, aprendizaje y conciencia.
-          Más que una carrera, el rap se ha convertido en su manera de narrar lo que sucede en "El Pantano" las
-          historias que se viven fuera del foco.</p>
-        <div class="platforms" style="margin-top:.75rem">
-          <a class="pill" href="https://www.instagram.com/lotus_dlc/" target="_blank" rel="noopener">Instagram</a>
-          <a class="pill" href="https://www.youtube.com/@LotusDLC" target="_blank" rel="noopener">YouTube</a>
-          <a class="pill" href="https://open.spotify.com/artist/1WH0H8I8T7mZof5gDXUilp" target="_blank"
-            rel="noopener">Spotify</a>
-          <a class="pill" href="https://www.tiktok.com/@lotus.dlc" target="_blank" rel="noopener">TikTok</a>
+  <!-- LYRICS -->
+  <section id="lyrics">
+    <h2 class="section-title">Letras</h2>
+    <div class="lyrics-carousel">
+      <button class="carousel-btn prev" id="lyricsPrev">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <div class="lyrics-track" id="lyricsTrack">
+        <div class="lyrics-item">
+          <div class="lyrics-cover">
+            <img src="https://images.unsplash.com/photo-1512733596533-7b00ccf8ebaf?w=600&h=600&fit=crop" alt="CY4">
+          </div>
+          <div class="lyrics-content">
+            <h3>CY4 - Cypher IV</h3>
+            <p class="lyrics-line">En el <span class="rhyme-a">pantano</span> me crie</p>
+            <p class="lyrics-line">Con la tinta en la <span class="rhyme-a">mano</span></p>
+            <p class="lyrics-line">Desde el barrio hasta el <span class="rhyme-b">cielo</span></p>
+            <p class="lyrics-line">Mi rap es <span class="rhyme-b">sincero</span></p>
+            <p class="lyrics-line">Chiapas en el <span class="rhyme-c">pecho</span></p>
+            <p class="lyrics-line">Dolor y <span class="rhyme-c">derecho</span></p>
+            <p class="lyrics-line">Esta es mi <span class="rhyme-d">historia</span></p>
+            <p class="lyrics-line">Mi verdad, mi <span class="rhyme-d">gloria</span></p>
+          </div>
+        </div>
+        <div class="lyrics-item">
+          <div class="lyrics-cover">
+            <img src="https://images.unsplash.com/photo-1619983081563-430f63602796?w=600&h=600&fit=crop" alt="Track 2">
+          </div>
+          <div class="lyrics-content">
+            <h3>Sueños y Sombras</h3>
+            <p class="lyrics-line">Entre <span class="rhyme-a">sueños</span> camino</p>
+            <p class="lyrics-line">Sigo mi <span class="rhyme-a">destino</span></p>
+            <p class="lyrics-line">Las sombras me <span class="rhyme-b">siguen</span></p>
+            <p class="lyrics-line">Pero nunca <span class="rhyme-b">consiguen</span></p>
+          </div>
         </div>
       </div>
+      <button class="carousel-btn next" id="lyricsNext">
+        <i class="fas fa-chevron-right"></i>
+      </button>
     </div>
   </section>
 
-  <!-- Contact / Newsletter (Netlify Forms ready) -->
-  <section id="contacto" class="contact" aria-label="Contacto y newsletter">
-    <div class="wrap">
-      <h2 class="title">Conecta</h2>
-      <div class="grid" style="grid-template-columns:1fr 1fr;gap:1.25rem">
-        <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="newsletter" />
-          <p class="small">Suscríbete para enterarte de lanzamientos, videos y fechas. Cero spam, solo fuego.</p>
-          <p class="hidden" style="display:none"><label>Don’t fill this out if you're human: <input
-                name="bot-field" /></label></p>
-          <div class="field">
-            <label for="email">Email</label>
-            <input class="input" id="email" name="email" type="email" placeholder="tu@email.com" required />
-          </div>
-          <button class="btn btn--primary" type="submit"><i class="fa fa-bell"></i> Suscribirme</button>
-          <p class="small">También: <a href="https://wa.me/17729406244" target="_blank" rel="noopener">WhatsApp</a></p>
-        </form>
+  <!-- SUBSCRIBE -->
+  <section class="subscribe-section" id="subscribe">
+    <p style="color: var(--muted); max-width: 600px; margin: 0 auto 2rem;">Suscríbete para recibir nuevos lanzamientos,
+      videos exclusivos y fechas de shows.</p>
+    <form class="subscribe-form">
+      <input type="email" placeholder="tu@email.com" required>
+      <button type="submit">
+        <i class="fas fa-bell"></i> Suscribirse
+      </button>
+    </form>
+  </section>
 
-        <form name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="booking" />
-          <h3 style="margin:0 0 .25rem">Booking / Beats / Featurings</h3>
-          <p class="small">Cuéntame del evento o colaboración.</p>
-          <p class="hidden" style="display:none"><label>Don’t fill this out if you're human: <input
-                name="bot-field" /></label></p>
-          <div class="field"><label for="nombre">Nombre</label><input class="input" id="nombre" name="nombre"
-              required /></div>
-          <div class="field"><label for="mail2">Email</label><input class="input" id="mail2" name="email" type="email"
-              required /></div>
-          <div class="field"><label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" rows="5"
-              placeholder="Fecha, ciudad, presupuesto aproximado…"></textarea></div>
-          <button class="btn btn--ghost" type="submit"><i class="fa fa-paper-plane"></i> Enviar</button>
-          <p class="small">O escribe directo: <a href="mailto:info@estudiosunset.com">info@estudiosunset.com</a></p>
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="footer-content">
+      <div>
+        <h3 style="color: var(--gold); margin-bottom: 1.5rem;">Booking & Contacto</h3>
+        <form class="contact-form">
+          <input type="text" placeholder="Nombre" required>
+          <input type="email" placeholder="Email" required>
+          <textarea rows="5" placeholder="Mensaje..." required></textarea>
+          <button type="submit">Enviar Mensaje</button>
         </form>
       </div>
-    </div>
-  </section>
 
-  <footer>
-    <div class="foot">
-      <small>© 2025 Lotus DLC. Todos los derechos reservados.</small>
-      <div class="socials" aria-label="Redes sociales">
-        <a href="https://www.instagram.com/lotus_dlc/" target="_blank" rel="noopener" aria-label="Instagram"><i
-            class="fab fa-instagram"></i></a>
-        <a href="https://www.youtube.com/@LotusDLC" target="_blank" rel="noopener" aria-label="YouTube"><i
-            class="fab fa-youtube"></i></a>
-        <a href="https://open.spotify.com/artist/1WH0H8I8T7mZof5gDXUilp" target="_blank" rel="noopener"
-          aria-label="Spotify"><i class="fab fa-spotify"></i></a>
-        <a href="https://www.tiktok.com/@lotus.dlc" target="_blank" rel="noopener" aria-label="TikTok"><i
-            class="fab fa-tiktok"></i></a>
-        <a href="https://www.facebook.com/lotusdlc" target="_blank" rel="noopener" aria-label="Facebook"><i
-            class="fab fa-facebook"></i></a>
+      <div class="footer-info">
+        <div>
+          <h3 style="color: var(--gold); margin-bottom: 1rem;">Lotus DLC</h3>
+          <p style="color: var(--muted); line-height: 1.8;">
+            Rap desde Chiapas, México.<br>
+            Booking: info@estudiosunset.com<br>
+            WhatsApp: +1 (772) 940-6244
+          </p>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom: 1rem;">Sígueme</h4>
+          <div class="social-links">
+            <a href="https://www.instagram.com/lotus_dlc/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@LotusDLC" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://open.spotify.com/artist/1WH0H8I8T7mZof5gDXUilp" target="_blank"><i
+                class="fab fa-spotify"></i></a>
+            <a href="https://www.tiktok.com/@lotus.dlc" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.facebook.com/lotusdlc" target="_blank"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+
+        <p style="color: var(--muted); font-size: 0.9rem; margin-top: 2rem;">
+          © 2025 Lotus DLC. Todos los derechos reservados.
+        </p>
       </div>
     </div>
   </footer>
 
+  <!-- FLOATING BUTTON -->
+  <button class="float-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
   <script>
-    // Mobile menu
-    const burger = document.getElementById('burger');
-    burger?.addEventListener('click', () => {
-      const menu = document.querySelector('.menu');
-      menu?.classList.toggle('open');
-      if (menu?.style.display === 'flex') { menu.style.display = 'none'; } else { menu.style.display = 'flex'; }
+    // ===== MENU TOGGLE =====
+    const menuToggle = document.getElementById('menuToggle');
+    const sideMenu = document.getElementById('sideMenu');
+    const menuOverlay = document.getElementById('menuOverlay');
+
+    menuToggle.addEventListener('click', () => {
+      sideMenu.classList.toggle('open');
+      menuOverlay.classList.toggle('active');
     });
 
-    // Lazy load embeds when visible
-    const iframes = document.querySelectorAll('iframe[data-src]');
-    const io = 'IntersectionObserver' in window ? new IntersectionObserver((entries, o) => {
-      entries.forEach(e => { if (e.isIntersecting) { const el = e.target; el.src = el.dataset.src; o.unobserve(el); } });
-    }) : null;
-    if (io) { iframes.forEach(f => io.observe(f)); }
+    menuOverlay.addEventListener('click', () => {
+      sideMenu.classList.remove('open');
+      menuOverlay.classList.remove('active');
+    });
+
+    // Cerrar menú al hacer clic en un enlace
+    document.querySelectorAll('.side-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        sideMenu.classList.remove('open');
+        menuOverlay.classList.remove('active');
+      });
+    });
+
+    // ===== HERO CAROUSEL =====
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.dot');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+
+      currentSlide = (index + totalSlides) % totalSlides;
+      slides[currentSlide].classList.add('active');
+      dots[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+
+    // Auto-advance carousel
+    let carouselInterval = setInterval(nextSlide, 5000);
+
+    // Manual dot control
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        showSlide(index);
+        clearInterval(carouselInterval);
+        carouselInterval = setInterval(nextSlide, 5000);
+      });
+    });
+
+    // ===== VIDEO CAROUSEL =====
+    const videoTrack = document.getElementById('videoTrack');
+    const videoPrev = document.getElementById('videoPrev');
+    const videoNext = document.getElementById('videoNext');
+    let videoPosition = 0;
+
+    videoNext.addEventListener('click', () => {
+      const itemWidth = videoTrack.querySelector('.video-item').offsetWidth;
+      const gap = 32; // 2rem
+      const maxScroll = -(videoTrack.scrollWidth - videoTrack.parentElement.offsetWidth);
+
+      videoPosition -= (itemWidth + gap);
+      if (videoPosition < maxScroll) videoPosition = 0;
+
+      videoTrack.style.transform = `translateX(${videoPosition}px)`;
+    });
+
+    videoPrev.addEventListener('click', () => {
+      const itemWidth = videoTrack.querySelector('.video-item').offsetWidth;
+      const gap = 32;
+
+      videoPosition += (itemWidth + gap);
+      if (videoPosition > 0) {
+        videoPosition = -(videoTrack.scrollWidth - videoTrack.parentElement.offsetWidth);
+      }
+
+      videoTrack.style.transform = `translateX(${videoPosition}px)`;
+    });
+
+    // ===== VIDEO MODAL =====
+    const videoModal = document.getElementById('videoModal');
+    const videoFrame = document.getElementById('videoFrame');
+    const videoClose = document.getElementById('videoClose');
+    const videoItems = document.querySelectorAll('.video-item');
+
+    videoItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const videoId = item.dataset.video;
+        videoFrame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+        videoModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    videoClose.addEventListener('click', closeVideoModal);
+    videoModal.addEventListener('click', (e) => {
+      if (e.target === videoModal) closeVideoModal();
+    });
+
+    function closeVideoModal() {
+      videoModal.classList.remove('active');
+      videoFrame.src = '';
+      document.body.style.overflow = 'auto';
+    }
+
+    // ===== LYRICS CAROUSEL =====
+    const lyricsTrack = document.getElementById('lyricsTrack');
+    const lyricsPrev = document.getElementById('lyricsPrev');
+    const lyricsNext = document.getElementById('lyricsNext');
+    let lyricsPosition = 0;
+    const lyricsItems = document.querySelectorAll('.lyrics-item');
+    const totalLyrics = lyricsItems.length;
+
+    lyricsNext.addEventListener('click', () => {
+      if (lyricsPosition > -(totalLyrics - 1)) {
+        lyricsPosition--;
+        lyricsTrack.style.transform = `translateX(${lyricsPosition * 100}%)`;
+      }
+    });
+
+    lyricsPrev.addEventListener('click', () => {
+      if (lyricsPosition < 0) {
+        lyricsPosition++;
+        lyricsTrack.style.transform = `translateX(${lyricsPosition * 100}%)`;
+      }
+    });
+
+    // ===== SMOOTH SCROLL =====
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const offset = 70; // altura del nav
+          const targetPosition = target.offsetTop - offset;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // ===== FORMS =====
+    document.querySelectorAll('form').forEach(form => {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('¡Gracias por tu mensaje! Te contactaremos pronto.');
+        form.reset();
+      });
+    });
+
+    // ===== FLOATING BUTTON VISIBILITY =====
+    const floatBtn = document.querySelector('.float-btn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        floatBtn.style.opacity = '1';
+        floatBtn.style.pointerEvents = 'auto';
+      } else {
+        floatBtn.style.opacity = '0';
+        floatBtn.style.pointerEvents = 'none';
+      }
+    });
+
+    // Inicializar visibilidad del botón flotante
+    floatBtn.style.opacity = '0';
+    floatBtn.style.transition = 'opacity 0.3s';
   </script>
 </body>
 
