@@ -5,25 +5,27 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- HTML Meta Tags -->
-<title>Lotus DLC — Rap sin filtros</title>
-<meta name="description" content="Lotus DLC: rap crudo desde Chiapas. Escucha lo nuevo, mira videos y conecta.">
+  <title>Lotus DLC — Rap sin filtros</title>
+  <meta name="description" content="Lotus DLC: rap crudo desde Chiapas. Escucha lo nuevo, mira videos y conecta.">
 
-<!-- Facebook Meta Tags -->
-<meta property="og:url" content="https://lotusdlc.com/">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Lotus DLC — Rap sin filtros">
-<meta property="og:description" content="Lotus DLC: rap crudo desde Chiapas. Escucha lo nuevo, mira videos y conecta.">
-<meta property="og:image" content="/images/lotus-cover-spoti.jpg">
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://lotusdlc.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Lotus DLC — Rap sin filtros">
+  <meta property="og:description"
+    content="Lotus DLC: rap crudo desde Chiapas. Escucha lo nuevo, mira videos y conecta.">
+  <meta property="og:image" content="/images/lotus-cover-spoti.jpg">
 
-<!-- Twitter Meta Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta property="twitter:domain" content="lotusdlc.com">
-<meta property="twitter:url" content="https://lotusdlc.com/">
-<meta name="twitter:title" content="Lotus DLC — Rap sin filtros">
-<meta name="twitter:description" content="Lotus DLC: rap crudo desde Chiapas. Escucha lo nuevo, mira videos y conecta.">
-<meta name="twitter:image" content="/images/lotus-cover-spoti.jpg">
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="lotusdlc.com">
+  <meta property="twitter:url" content="https://lotusdlc.com/">
+  <meta name="twitter:title" content="Lotus DLC — Rap sin filtros">
+  <meta name="twitter:description"
+    content="Lotus DLC: rap crudo desde Chiapas. Escucha lo nuevo, mira videos y conecta.">
+  <meta name="twitter:image" content="/images/lotus-cover-spoti.jpg">
 
-<!-- Meta Tags Generated via https://www.opengraph.xyz -->
+  <!-- Meta Tags Generated via https://www.opengraph.xyz -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -388,40 +390,73 @@
       overflow: hidden;
     }
 
-    /* ALBUMS */
-    .albums-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
+    /* --- ALBUMS CAROUSEL --- */
+    .albums-carousel {
+      position: relative;
+      overflow: hidden;
     }
 
-    .album-card {
+    .albums-track {
+      display: flex;
+      gap: 2rem;
+      /* mismo gap que videos */
+      transition: transform 0.5s ease;
+      will-change: transform;
+    }
+
+    .albums-track .album-card {
+      min-width: calc(33.333% - 1.333rem);
+      /* 3 por vista en desktop */
       background: var(--card);
       border-radius: 12px;
       overflow: hidden;
-      transition: transform 0.3s;
       cursor: pointer;
+      transition: transform 0.3s;
+      display: flex;
+      flex-direction: column;
     }
 
-    .album-card:hover {
-      transform: translateY(-10px);
+    .albums-track .album-card:hover {
+      transform: translateY(-8px);
     }
 
-    .album-card img {
+    .albums-track .album-card img {
       width: 100%;
-      aspect-ratio: 1;
+      aspect-ratio: 1/1;
+      /* cuadrado */
       object-fit: cover;
+      display: block;
     }
 
-    .album-info {
-      padding: 1.5rem;
+    .albums-track .album-info {
+      padding: 1rem 1.25rem;
     }
 
-    .album-info h3 {
-      margin-bottom: 0.5rem;
+    .albums-track .album-info h3 {
+      margin-bottom: .25rem;
       color: var(--gold);
     }
+
+    /* Reusa .carousel-btn existente */
+    #albums .carousel-btn {
+      z-index: 2;
+    }
+
+    /* Responsivo */
+    @media (max-width: 1024px) {
+      .albums-track .album-card {
+        min-width: calc(50% - 1rem);
+        /* 2 por vista en tablet */
+      }
+    }
+
+    @media (max-width: 768px) {
+      .albums-track .album-card {
+        min-width: calc(100% - 2rem);
+        /* 1 por vista en móvil */
+      }
+    }
+
 
     /* LYRICS */
     /* --- LYRICS: harden layout & prevent horizontal overflow --- */
@@ -765,44 +800,75 @@
       </button>
       <div class="video-track" id="videoTrack">
         <div class="video-item" data-video="dQw4w9WgXcQ">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/Qt_e0taMDU0?si=STEICIL_NjIV5XQv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-         
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Qt_e0taMDU0?si=STEICIL_NjIV5XQv"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
         </div>
         <div class="video-item" data-video="dQw4w9WgXcQ">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/R8IzoiWW5zI?si=zVw13tMTgxrrQYJP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-         
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/R8IzoiWW5zI?si=zVw13tMTgxrrQYJP"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
         </div>
         <div class="video-item" data-video="dQw4w9WgXcQ">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/psLeAg61-pI?si=Gj_o1a78jMF5wf4Z&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-         
+          <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/psLeAg61-pI?si=Gj_o1a78jMF5wf4Z&amp;controls=0"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
         </div>
         <div class="video-item" data-video="dQw4w9WgXcQ">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/LAClA_QS4qQ?si=zch7Z__QdYVCsdOZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-         
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/LAClA_QS4qQ?si=zch7Z__QdYVCsdOZ"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
         </div>
         <div class="video-item" data-video="dQw4w9WgXcQ">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/CuCgTqvYu_g?si=slDTCbxtY1QwsbVH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-         
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/CuCgTqvYu_g?si=slDTCbxtY1QwsbVH"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
         </div>
         <div class="video-item" data-video="dQw4w9WgXcQ">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/3xYeWdn9Bzw?si=mkDG89yg7B4GYZLh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-         
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/3xYeWdn9Bzw?si=mkDG89yg7B4GYZLh"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
         </div>
         <div class="video-item" data-video="dQw4w9WgXcQ">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/FkiL4xLnlP0?si=ckZ4OOrTPgVAcm3G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-         
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/FkiL4xLnlP0?si=ckZ4OOrTPgVAcm3G"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
         </div>
         <div class="video-item" data-video="dQw4w9WgXcQ">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/KD0BC_PiVX8?si=awWWabnz3MUUjGyT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-         
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/KD0BC_PiVX8?si=awWWabnz3MUUjGyT"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
         </div>
         <div class="video-item" data-video="dQw4w9WgXcQ">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/xhfMHRZogTI?si=mKXo5WASBRyikmWU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-         
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/xhfMHRZogTI?si=mKXo5WASBRyikmWU"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
         </div>
         <div class="video-item" data-video="dQw4w9WgXcQ">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/0WbevTPRP50?si=Op1lngvyhTzIXY3Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-         
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/0WbevTPRP50?si=Op1lngvyhTzIXY3Z"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
         </div>
       </div>
       <button class="carousel-btn next" id="videoNext">
@@ -835,30 +901,101 @@
   <!-- ALBUMS -->
   <section id="albums">
     <h2 class="section-title">Álbumes & Mixtapes</h2>
-    <div class="albums-grid">
-      <div class="album-card">
-        <img src="/images/el-pantano-cover-lotus-dlc.jpg" alt="Álbum 1">
-        <div class="album-info">
-          <h3>El Pantano</h3>
-          <p style="color: var(--muted);">2025</p>
-        </div>
+
+    <div class="albums-carousel">
+      <button class="carousel-btn prev" id="albumsPrev">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+
+      <div class="albums-track" id="albumsTrack">
+        <article class="album-card">
+          <img src="/images/el-pantano-cover-lotus-dlc.jpg" alt="El Pantano">
+          <div class="album-info">
+            <h3>El Pantano</h3>
+            <p style="color: var(--muted);">2025</p>
+          </div>
+        </article>
+
+        <article class="album-card">
+          <img src="/images/suenos-y-sombras-cover.jpg" alt="Sueños y Sombras">
+          <div class="album-info">
+            <h3>Sueños y Sombras</h3>
+            <p style="color: var(--muted);">2024</p>
+          </div>
+        </article>
+
+        <article class="album-card">
+          <img src="/images/artworks-000325703420-1080x1080.jpg" alt="Escrituras Animadas">
+          <div class="album-info">
+            <h3>Livin The Dream</h3>
+            <p style="color: var(--muted);">2016</p>
+          </div>
+        </article>
+
+        <article class="album-card">
+          <img src="/images/metamorflowsis-lotus-cover.jpg" alt="Escrituras Animadas">
+          <div class="album-info">
+            <h3>Metamorflowsis</h3>
+            <p style="color: var(--muted);">2010</p>
+          </div>
+        </article>
+
+        <article class="album-card">
+          <img src="/images/esto-es-flowtastico-cover-lotus-fr.jpg" alt="Escrituras Animadas">
+          <div class="album-info">
+            <h3>Esto es: Flowtastico</h3>
+            <p style="color: var(--muted);">2008</p>
+          </div>
+        </article>
       </div>
-      <div class="album-card">
-        <img src="/images/suenos-y-sombras-cover.jpg" alt="Álbum 2">
-        <div class="album-info">
-          <h3>Sueños y Sombras</h3>
-          <p style="color: var(--muted);">2024</p>
-        </div>
-      </div>
-      <div class="album-card">
-        <img src="https://images.unsplash.com/photo-1571609704149-97c63eb9994b?w=600&h=600&fit=crop" alt="Álbum 3">
-        <div class="album-info">
-          <h3>Escrituras Animadas</h3>
-          <p style="color: var(--muted);">2023</p>
-        </div>
-      </div>
+
+      <button class="carousel-btn next" id="albumsNext">
+        <i class="fas fa-chevron-right"></i>
+      </button>
     </div>
   </section>
+<script>
+  // ===== ALBUMS CAROUSEL =====
+const albumsTrack = document.getElementById('albumsTrack');
+const albumsPrev  = document.getElementById('albumsPrev');
+const albumsNext  = document.getElementById('albumsNext');
+let albumsPosition = 0; // en píxeles
+
+function albumStep() {
+  const item = albumsTrack.querySelector('.album-card');
+  if (!item) return 0;
+  const styles = getComputedStyle(albumsTrack);
+  const gap = parseFloat(styles.gap) || 32;      // coincide con CSS
+  return item.offsetWidth + gap;                  // cuánto movemos por click
+}
+
+function albumsMaxScroll() {
+  return -(albumsTrack.scrollWidth - albumsTrack.parentElement.offsetWidth);
+}
+
+function moveAlbums(dir) { // dir: 1 = prev, -1 = next
+  const step = albumStep();
+  if (!step) return;
+
+  albumsPosition += dir * step;
+
+  const minPos = albumsMaxScroll();
+  if (albumsPosition < minPos) albumsPosition = 0;                 // loop al inicio
+  if (albumsPosition > 0)      albumsPosition = minPos || 0;       // loop al final
+
+  albumsTrack.style.transform = `translateX(${albumsPosition}px)`;
+}
+
+albumsNext.addEventListener('click', () => moveAlbums(-1));
+albumsPrev.addEventListener('click', () => moveAlbums(1));
+
+// Ajusta posición al redimensionar (evita saltos en responsive)
+window.addEventListener('resize', () => {
+  albumsPosition = 0;
+  albumsTrack.style.transform = 'translateX(0px)';
+});
+
+</script>
 
   <!-- LYRICS -->
   <!--<section id="lyrics">
