@@ -5,34 +5,31 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- HTML Meta Tags -->
-  <title>Lotus DLC — Rap sin filtros</title>
-  <meta name="description" content="Lotus DLC: rap crudo desde Chiapas. Escucha lo nuevo, mira videos y conecta.">
+  <title>Lotus DLC — Rap Consciente, Estructuras Complejas</title>
+  <meta name="description" content="Lotus DLC: rap consciente desde Chiapas. Barras contundentes, estructuras diseñadas para escucharse más de una vez. Escucha lo nuevo.">
 
   <!-- Facebook Meta Tags -->
   <meta property="og:url" content="https://lotusdlc.com/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Lotus DLC — Rap sin filtros">
+  <meta property="og:title" content="Lotus DLC — Rap Consciente">
   <meta property="og:description"
-    content="Lotus DLC: rap crudo desde Chiapas. Escucha lo nuevo, mira videos y conecta.">
+    content="Rap consciente, estructuras complejas y barras contundentes desde Chiapas.">
   <meta property="og:image" content="/images/lotus-cover-spoti.jpg">
 
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta property="twitter:domain" content="lotusdlc.com">
   <meta property="twitter:url" content="https://lotusdlc.com/">
-  <meta name="twitter:title" content="Lotus DLC — Rap sin filtros">
+  <meta name="twitter:title" content="Lotus DLC — Rap Consciente">
   <meta name="twitter:description"
-    content="Lotus DLC: rap crudo desde Chiapas. Escucha lo nuevo, mira videos y conecta.">
+    content="Rap consciente, estructuras complejas y barras contundentes desde Chiapas.">
   <meta name="twitter:image" content="/images/lotus-cover-spoti.jpg">
 
   <!-- Meta Tags Generated via https://www.opengraph.xyz -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&family=Inter:wght@300;400;600;800;900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
 
     <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -50,20 +47,29 @@
     }
 
     :root {
-      --red: #dc143c;
-      --black: #000;
+      --bg-primary: #0a0a0a;
+      --bg-secondary: #141414;
+      --bg-tertiary: #1f1f1f;
+      --accent-primary: #9B111E;
+      --accent-secondary: #C9A227;
+      --text-primary: #f5f5f5;
+      --text-secondary: #a0a0a0;
+      --text-muted: #666666;
+      --red: #9B111E;
+      --black: #0a0a0a;
       --dark: #0a0a0a;
-      --card: #1a1a1a;
-      --gold: #dc143c;
-      --text: #fff;
-      --muted: #b3b3b3;
+      --card: #141414;
+      --gold: #C9A227;
+      --text: #f5f5f5;
+      --muted: #a0a0a0;
     }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background: var(--black);
-      color: var(--text);
+      font-family: 'Source Sans 3', sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
       overflow-x: hidden;
+      line-height: 1.7;
     }
 
     /* TOP NAV */
@@ -209,9 +215,11 @@
     }
 
    .carousel-overlay h1{
-  font-family: "BBH Bogle", sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: clamp(2.4rem, 6vw, 5.1rem);
-  letter-spacing: .02em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   color: #fff;
   text-shadow: 0 2px 14px rgba(0,0,0,.7);
 }
@@ -250,9 +258,12 @@
     }
 
     .section-title {
-      font-family: 'pragmatica-extended', sans-serif;
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      color: var(--gold);
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent-secondary);
       margin-bottom: 3rem;
       text-align: center;
     }
@@ -444,7 +455,7 @@
 
     .albums-track .album-info h3 {
       margin-bottom: .25rem;
-      color: var(--gold);
+      color: var(--accent-secondary);
     }
 
     /* Reusa .carousel-btn existente */
@@ -728,6 +739,22 @@
       .subscribe-form {
         flex-direction: column;
       }
+
+      #featured > div {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        text-align: center;
+      }
+
+      #featured img {
+        max-width: 300px !important;
+        margin: 0 auto;
+        display: block;
+      }
+
+      #featured .btn-row {
+        justify-content: center;
+      }
     }
 
     @media (max-width: 480px) {
@@ -762,10 +789,11 @@
   <aside class="side-menu" id="sideMenu">
     <nav>
       <a href="#hero">Inicio</a>
+      <a href="#about">El Artista</a>
+      <a href="#featured">El Pantano</a>
       <a href="#videos">Videos</a>
       <a href="#spotify">Spotify</a>
       <a href="#albums">Álbumes</a>
-      <!--<a href="#lyrics">Letras</a>-->
       <a href="#subscribe">Suscribirse</a>
       <a href="#contact">Contacto</a>
     </nav>
@@ -789,8 +817,8 @@
       
 
       <div class="carousel-overlay">
-        <h1>Desde el Estudio Sunset</h1>
-        <p style="font-size: 1.2rem; color: var(--muted);">Rap del sureste de México</p>
+        <h1>Rap Consciente</h1>
+        <p style="font-size: 1.2rem; color: var(--text-secondary); margin-top: 0.5rem;">Estructuras complejas y barras contundentes desde Chiapas</p>
       </div>
 
       <div class="carousel-dots" id="carouselDots">
@@ -798,6 +826,44 @@
         <span class="dot" data-slide="1"></span>
         <span class="dot" data-slide="2"></span>
         <span class="dot" data-slide="3"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTIST STATEMENT -->
+  <section id="about" style="padding: 6rem 2rem; background: var(--bg-secondary);">
+    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+      <h2 class="section-title" style="margin-bottom: 2rem;">El Artista</h2>
+      <p style="font-size: 1.3rem; color: var(--text-secondary); line-height: 1.9; margin-bottom: 1.5rem;">
+        Lotus DLC no hace música para las radios. Hace barras que requieren más de una escucha.
+        Rap consciente desde Chiapas con estructuras diseñadas para quien realmente presta atención.
+      </p>
+      <p style="color: var(--text-muted); font-size: 1rem;">
+        Introspectivo. Técnico. Sin filtros.
+      </p>
+    </div>
+  </section>
+
+  <!-- FEATURED RELEASE: EL PANTANO -->
+  <section id="featured" style="padding: 6rem 2rem; background: var(--bg-primary);">
+    <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+      <div>
+        <p style="color: var(--accent-secondary); font-size: 0.9rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1rem;">Último Lanzamiento</p>
+        <h2 style="font-family: 'Oswald', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 600; color: var(--text-primary); margin-bottom: 1rem; text-transform: uppercase;">El Pantano</h2>
+        <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
+          Un proyecto que explora las profundidades del ser. Letras que nacen del pantano —ese lugar entre lo claro y lo oscuro donde todo es posible.
+        </p>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="https://open.spotify.com/artist/1WH0H8I8T7mZof5gDXUilp" target="_blank" style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1rem 2rem; background: var(--accent-primary); color: var(--text-primary); text-decoration: none; font-weight: 600; border-radius: 4px; transition: all 0.3s;">
+            <i class="fab fa-spotify"></i> Escuchar en Spotify
+          </a>
+          <a href="https://www.youtube.com/@LotusDLC" target="_blank" style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1rem 2rem; background: transparent; border: 1px solid var(--text-muted); color: var(--text-primary); text-decoration: none; font-weight: 600; border-radius: 4px; transition: all 0.3s;">
+            <i class="fab fa-youtube"></i> Ver Videos
+          </a>
+        </div>
+      </div>
+      <div>
+        <img src="/images/el-pantano-cover-lotus-dlc.jpg" alt="El Pantano - Lotus DLC" style="width: 100%; max-width: 450px; border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,0.5);">
       </div>
     </div>
   </section>
@@ -1053,8 +1119,10 @@ window.addEventListener('resize', () => {
 
   <!-- SUBSCRIBE -->
   <section class="subscribe-section" id="subscribe">
-    <p style="color: var(--muted); max-width: 600px; margin: 0 auto 2rem;">Suscríbete para recibir nuevos lanzamientos,
-      videos exclusivos y fechas de shows.</p>
+    <h2 class="section-title">Conecta</h2>
+    <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 2rem; font-size: 1.1rem; line-height: 1.8;">
+      Recibe letras exclusivas, behind-the-scenes, fechas de shows y nuevo material antes que nadie.
+    </p>
     <form class="subscribe-form">
       <input type="email" placeholder="tu@email.com" required>
       <button type="submit">
@@ -1067,7 +1135,7 @@ window.addEventListener('resize', () => {
   <footer id="contact">
     <div class="footer-content">
       <div>
-        <h3 style="color: var(--gold); margin-bottom: 1.5rem;">Booking & Contacto</h3>
+        <h3 style="color: var(--accent-secondary); margin-bottom: 1.5rem;">Booking & Contacto</h3>
         <form class="contact-form">
           <input type="text" placeholder="Nombre" required>
           <input type="email" placeholder="Email" required>
@@ -1078,11 +1146,11 @@ window.addEventListener('resize', () => {
 
       <div class="footer-info">
         <div>
-          <h3 style="color: var(--gold); margin-bottom: 1rem;">Lotus DLC</h3>
-          <p style="color: var(--muted); line-height: 1.8;">
-            Rap desde Chiapas, México.<br>
-            Booking: info@estudiosunset.com<br>
-            WhatsApp: +1 (772) 940-6244
+          <h3 style="color: var(--accent-secondary); margin-bottom: 1rem;">Lotus DLC</h3>
+          <p style="color: var(--text-secondary); line-height: 1.8;">
+            Rap consciente desde Chiapas, México.<br>
+            <span style="color: var(--text-muted); font-size: 0.9rem;">Booking: info@estudiosunset.com<br>
+            WhatsApp: +1 (772) 940-6244</span>
           </p>
         </div>
 
@@ -1098,7 +1166,7 @@ window.addEventListener('resize', () => {
           </div>
         </div>
 
-        <p style="color: var(--muted); font-size: 0.9rem; margin-top: 2rem;">
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 2rem;">
           © 2025 Lotus DLC. Todos los derechos reservados.
         </p>
       </div>
