@@ -5,1563 +5,1026 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- SEO Meta Tags -->
-  <title>Lotus DLC — Rap de autor desde Chiapas</title>
+  <title>Lotus DLC — Rap desde Chiapas | El Pantano</title>
   <meta name="description"
-    content="Lotus DLC: rap de autor desde Chiapas. Técnica, conciencia y canciones memorables que revelan algo nuevo en cada escucha.">
+    content="Lotus DLC hace rap de autor desde Chiapas: técnica, conciencia y canciones que no se quedan en la superficie. Escucha su catálogo y descubre El Pantano.">
+  <link rel="canonical" href="https://lotusdlc.com/">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/favicon-180.png">
 
-  <!-- Facebook Meta Tags -->
+  <!-- Open Graph -->
   <meta property="og:url" content="https://lotusdlc.com/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Lotus DLC — Rap de autor desde Chiapas">
+  <meta property="og:title" content="Lotus DLC — Rap desde Chiapas | El Pantano">
   <meta property="og:description"
-    content="Lotus DLC: rap de autor desde Chiapas. Técnica, conciencia y canciones memorables que revelan algo nuevo en cada escucha.">
-  <meta property="og:image" content="/images/lotus-cover-spoti.jpg">
+    content="Lotus DLC hace rap de autor desde Chiapas: técnica, conciencia y canciones que no se quedan en la superficie. Escucha su catálogo y descubre El Pantano.">
+  <meta property="og:image" content="https://lotusdlc.com/images/el-pantano-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="es_MX">
 
-  <!-- Twitter Meta Tags -->
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta property="twitter:domain" content="lotusdlc.com">
   <meta property="twitter:url" content="https://lotusdlc.com/">
-  <meta name="twitter:title" content="Lotus DLC — Rap de autor desde Chiapas">
+  <meta name="twitter:title" content="Lotus DLC — Rap desde Chiapas | El Pantano">
   <meta name="twitter:description"
-    content="Lotus DLC: rap de autor desde Chiapas. Técnica, conciencia y canciones memorables que revelan algo nuevo en cada escucha.">
-  <meta name="twitter:image" content="/images/lotus-cover-spoti.jpg">
+    content="Lotus DLC hace rap de autor desde Chiapas: técnica, conciencia y canciones que no se quedan en la superficie. Escucha su catálogo y descubre El Pantano.">
+  <meta name="twitter:image" content="https://lotusdlc.com/images/el-pantano-og.jpg">
 
-  <!-- Fonts: Barlow Condensed (display) + Inter (body) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Inter:wght@300;400;600;800;900&display=swap"
-    rel="stylesheet">
-
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    crossorigin="anonymous">
-
-  <!-- Analytics -->
-  <script type="text/javascript">
-    (function (c, l, a, r, i, t, y) {
-      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-    })(window, document, "clarity", "script", "txjrdx8yc1");
+  <!-- Schema.org: Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Lotus DLC",
+    "alternateName": "Lotus",
+    "url": "https://lotusdlc.com/",
+    "image": "https://lotusdlc.com/images/el-pantano-og.jpg",
+    "jobTitle": "Rapero y productor",
+    "genre": ["Hip Hop", "Rap"],
+    "homeLocation": {
+      "@type": "Place",
+      "name": "Chiapas, México"
+    },
+    "sameAs": [
+      "https://www.instagram.com/lotus_dlc/",
+      "https://www.youtube.com/@LotusDLC",
+      "https://open.spotify.com/artist/1WH0H8I8T7mZof5gDXUilp",
+      "https://www.tiktok.com/@lotus.dlc",
+      "https://www.facebook.com/lotusdlc"
+    ]
+  }
   </script>
+
+  <!-- Preload: fuente del hero + imagen del hero (LCP) -->
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/barlow-condensed-900.woff2" crossorigin>
+  <link rel="preload" as="image" type="image/avif"
+    href="/images/hero/el-pantano-960.avif"
+    imagesrcset="/images/hero/el-pantano-640.avif 640w, /images/hero/el-pantano-960.avif 960w, /images/hero/el-pantano-1280.avif 1280w, /images/hero/el-pantano-1920.avif 1920w"
+    imagesizes="100vw"
+    fetchpriority="high">
 
   <style>
     /* ===========================
-       RESET & ROOT
+       FUENTES (self-hosted, subset latin)
     =========================== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    @font-face {
+      font-family: 'Barlow Condensed';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url('/fonts/barlow-condensed-700.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Barlow Condensed';
+      font-style: normal;
+      font-weight: 900;
+      font-display: swap;
+      src: url('/fonts/barlow-condensed-900.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url('/fonts/inter-variable.woff2') format('woff2-variations'), url('/fonts/inter-variable.woff2') format('woff2');
     }
 
+    /* ===========================
+       RESET & TOKENS
+       Paleta muestreada por pixel de images/el-pantano-inside.webp
+       (ver documento de aprobación — no es la paleta verde/oro
+       originalmente asumida, es la real de la obra).
+    =========================== */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     :root {
-      --red:     #cc1236;
-      --red-dk:  #a50e2d;
-      --black:   #000000;
-      --dark:    #0a0a0a;
-      --surface: #111111;
-      --card:    #1a1a1a;
-      --gold:    #c9a042;
-      --text:    #f0ede8;
-      --muted:   #888888;
-      --border:  #222222;
+      --color-agua:    #170b2e; /* fondo dominante, 41% de la imagen */
+      --color-lodo:    #3a1442; /* superficie / tarjetas */
+      --color-oro:     #fa6956; /* acento cálido real (resplandor / flor) */
+      --color-niebla:  #a9829c; /* texto secundario, diseñado para legibilidad */
+      --color-texto:   #f6eff3; /* texto principal, blanco cálido diseñado */
+      --acento-2:      #7d1b64; /* segundo cúmulo de color, hover/foco */
+      --borde:         rgba(246,239,243,0.14);
+      --font-display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+      --font-body: 'Inter', -apple-system, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
     }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background: var(--black);
-      color: var(--text);
-      overflow-x: hidden;
-      line-height: 1.6;
+      font-family: var(--font-body);
+      background: var(--color-agua);
+      color: var(--color-texto);
+      line-height: 1.65;
       font-size: 16px;
+      overflow-x: hidden;
     }
+
+    img { max-width: 100%; display: block; }
+
+    a { color: inherit; }
+
+    :focus-visible {
+      outline: 2px solid var(--color-oro);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    .visually-hidden {
+      position: absolute; width: 1px; height: 1px; overflow: hidden;
+      clip: rect(0,0,0,0); white-space: nowrap; border: 0; padding: 0; margin: -1px;
+    }
+
+    .skip-link {
+      position: absolute; left: 0; top: -100px;
+      background: var(--color-oro); color: var(--color-agua);
+      padding: 0.75rem 1.25rem; font-weight: 700; z-index: 3000;
+      transition: top 0.2s;
+    }
+    .skip-link:focus { top: 0; }
 
     /* ===========================
        TOP NAV
     =========================== */
     .top-nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: var(--dark);
-      height: 70px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 2rem;
+      position: fixed; top: 0; left: 0; right: 0;
+      background: rgba(23,11,46,0.92);
+      backdrop-filter: blur(6px);
+      height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 1rem;
       z-index: 1000;
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid var(--borde);
     }
 
     .logo-center {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      align-items: center;
-      text-decoration: none;
+      position: absolute; left: 50%; transform: translateX(-50%);
+      display: flex; align-items: center; text-decoration: none;
     }
-
-    .logo-center img {
-      height: 38px;
-      width: auto;
-    }
+    .logo-center img { height: 32px; width: auto; }
 
     .menu-toggle {
-      background: none;
-      border: none;
-      color: var(--text);
-      font-size: 1.4rem;
-      cursor: pointer;
-      padding: 0.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 44px;
-      height: 44px;
-      border-radius: 4px;
-      transition: background 0.2s;
+      background: none; border: none; color: var(--color-texto);
+      cursor: pointer; padding: 0; display: flex; align-items: center; justify-content: center;
+      width: 44px; height: 44px; border-radius: 4px; transition: background 0.2s;
     }
+    .menu-toggle:hover { background: rgba(246,239,243,0.08); }
+    .menu-toggle svg { width: 22px; height: 22px; }
 
-    .menu-toggle:hover {
-      background: rgba(255, 255, 255, 0.07);
-    }
+    .nav-spacer { width: 44px; }
 
     /* ===========================
        SIDE MENU
     =========================== */
     .side-menu {
-      position: fixed;
-      top: 70px;
-      left: -300px;
-      width: 270px;
-      height: calc(100vh - 70px);
-      background: var(--surface);
-      transition: left 0.35s ease;
-      z-index: 999;
-      overflow-y: auto;
-      border-right: 1px solid var(--border);
+      position: fixed; top: 0; left: -280px; width: 270px; height: 100vh;
+      background: var(--color-lodo);
+      transition: left 0.3s ease;
+      z-index: 1200; overflow-y: auto;
+      border-right: 1px solid var(--borde);
+      padding-top: 64px;
     }
+    .side-menu.open { left: 0; }
 
-    .side-menu.open {
-      left: 0;
-    }
-
-    .side-menu nav {
-      padding: 2rem 1rem;
-    }
-
+    .side-menu nav { padding: 1.5rem 1rem; }
     .side-menu a {
-      display: block;
-      padding: 0.8rem 1.25rem;
-      color: var(--muted);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.78rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      border-radius: 4px;
-      margin-bottom: 0.2rem;
+      display: block; padding: 0.85rem 1.1rem; color: var(--color-niebla);
+      text-decoration: none; font-weight: 600; font-size: 0.85rem;
+      letter-spacing: 0.06em; text-transform: uppercase; border-radius: 4px;
       transition: color 0.2s, background 0.2s;
     }
-
-    .side-menu a:hover {
-      color: var(--text);
-      background: rgba(255, 255, 255, 0.05);
-    }
-
-    .side-menu-divider {
-      height: 1px;
-      background: var(--border);
-      margin: 0.75rem 1.25rem;
-    }
+    .side-menu a:hover { color: var(--color-texto); background: rgba(246,239,243,0.06); }
 
     .menu-overlay {
-      position: fixed;
-      top: 70px;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.65);
-      display: none;
-      z-index: 998;
+      position: fixed; inset: 0; background: rgba(8,4,18,0.7);
+      display: none; z-index: 1100;
     }
-
-    .menu-overlay.active {
-      display: block;
-    }
+    .menu-overlay.active { display: block; }
 
     /* ===========================
-       HERO CAROUSEL
+       HERO
     =========================== */
     .hero {
-      margin-top: 70px;
-      height: calc(100vh - 70px);
       position: relative;
+      margin-top: 64px;
+      aspect-ratio: 16 / 20;
+      max-height: calc(100vh - 64px);
       overflow: hidden;
-      max-width: none;
-      padding: 0;
+    }
+    @media (min-width: 640px) { .hero { aspect-ratio: 16 / 12; } }
+    @media (min-width: 1000px) { .hero { aspect-ratio: 16 / 8; } }
+
+    .hero picture, .hero img {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: 60% center;
     }
 
-    .carousel-container {
-      position: relative;
-      width: 100%;
-      height: 100%;
+    .hero-scrim {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top,
+        rgba(23,11,46,0.95) 0%,
+        rgba(23,11,46,0.65) 38%,
+        rgba(23,11,46,0.1) 70%);
     }
 
-    /* Cinematic depth overlay */
-    .carousel-container::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse at 25% 60%, rgba(204, 18, 54, 0.06) 0%, transparent 60%),
-        linear-gradient(to bottom,
-          rgba(0, 0, 0, 0.25) 0%,
-          transparent 25%,
-          transparent 45%,
-          rgba(0, 0, 0, 0.92) 100%);
-      z-index: 2;
-      pointer-events: none;
+    .hero-content {
+      position: absolute; left: 0; right: 0; bottom: 0;
+      padding: 1.5rem 1.25rem 2.5rem;
+      max-width: 640px;
     }
 
-    .carousel-slide {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: opacity 1.2s ease-in-out;
+    .hero-kicker {
+      font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--color-oro); font-weight: 700; margin-bottom: 0.9rem;
     }
 
-    .carousel-slide.active {
-      opacity: 1;
-    }
-
-    .carousel-slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-    }
-
-    /* Hero text overlay */
-    .carousel-overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 4rem 3rem 5.5rem;
-      z-index: 3;
-    }
-
-    .hero-tag {
-      font-size: 0.72rem;
-      letter-spacing: 0.22em;
+    .hero h1 {
+      font-family: var(--font-display); font-weight: 900;
+      font-size: clamp(2.2rem, 9vw, 4.6rem);
+      line-height: 1.08; letter-spacing: -0.01em;
       text-transform: uppercase;
-      color: var(--gold);
-      font-weight: 700;
-      margin-bottom: 1.1rem;
+      text-wrap: balance;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.6);
     }
 
-    .carousel-overlay h1 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: clamp(3.2rem, 9vw, 7rem);
-      line-height: 0.92;
-      letter-spacing: -0.01em;
-      color: var(--text);
-      text-transform: uppercase;
-      margin-bottom: 1.25rem;
-      text-shadow: 0 4px 40px rgba(0, 0, 0, 0.7);
-    }
-
-    .hero-sub {
-      font-size: clamp(0.88rem, 1.4vw, 1.05rem);
-      color: rgba(240, 237, 232, 0.65);
-      max-width: 500px;
-      line-height: 1.65;
-      margin-bottom: 2.25rem;
-      font-weight: 400;
-    }
-
-    .carousel-dots {
-      position: absolute;
-      bottom: 2.5rem;
-      right: 3rem;
-      display: flex;
-      gap: 0.55rem;
-      z-index: 4;
-    }
-
-    .dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.28);
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-
-    .dot.active {
-      background: var(--gold);
-      width: 22px;
-      border-radius: 4px;
-    }
-
-    /* ===========================
-       BUTTONS
-    =========================== */
     .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      padding: 0.85rem 2rem;
-      background: var(--red);
-      color: var(--text);
-      text-decoration: none;
-      border: none;
-      border-radius: 3px;
-      font-family: 'Inter', sans-serif;
-      font-weight: 700;
-      font-size: 0.82rem;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.2s;
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      padding: 0.9rem 1.75rem; min-height: 44px;
+      background: var(--color-oro); color: var(--color-agua);
+      text-decoration: none; border: none; border-radius: 3px;
+      font-family: var(--font-body); font-weight: 700; font-size: 0.85rem;
+      letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer;
+      transition: transform 0.2s, background 0.2s;
     }
-
-    .btn-primary:hover {
-      background: var(--red-dk);
-      transform: translateY(-2px);
-    }
+    .btn-primary:hover { background: #ff8269; transform: translateY(-2px); }
 
     .btn-ghost {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      padding: 0.85rem 2rem;
-      background: transparent;
-      color: var(--text);
-      text-decoration: none;
-      border: 1px solid rgba(240, 237, 232, 0.28);
-      border-radius: 3px;
-      font-family: 'Inter', sans-serif;
-      font-weight: 600;
-      font-size: 0.82rem;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-
-    .btn-ghost:hover {
-      border-color: var(--text);
-      transform: translateY(-2px);
-    }
-
-    /* ===========================
-       SECTIONS — GENERAL
-    =========================== */
-    section {
-      padding: 5rem 2rem;
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-
-    .section-title {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 700;
-      font-size: clamp(2rem, 4vw, 2.8rem);
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-      margin-bottom: 0.6rem;
-      text-align: center;
-    }
-
-    .section-rule {
-      width: 36px;
-      height: 2px;
-      background: var(--red);
-      margin: 0 auto 3.5rem;
-    }
-
-    /* ===========================
-       LATEST RELEASE
-    =========================== */
-    .latest-section {
-      background: var(--surface);
-      padding: 6rem 2rem;
-    }
-
-    .latest-inner-wrap {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6rem;
-      align-items: center;
-    }
-
-    .latest-badge {
-      display: inline-block;
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--red);
-      border: 1px solid var(--red);
-      padding: 0.28rem 0.75rem;
-      border-radius: 2px;
-      margin-bottom: 1.5rem;
-    }
-
-    .latest-title {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: clamp(4rem, 8vw, 7rem);
-      line-height: 0.88;
-      text-transform: uppercase;
-      color: var(--text);
-      letter-spacing: -0.02em;
-      margin-bottom: 1.75rem;
-    }
-
-    .latest-desc {
-      font-size: 0.98rem;
-      line-height: 1.8;
-      color: var(--muted);
-      max-width: 420px;
-      margin-bottom: 2.5rem;
-    }
-
-    .latest-actions {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .latest-cover-wrap {
-      position: relative;
-    }
-
-    .latest-cover-wrap img {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      border-radius: 3px;
-      display: block;
-    }
-
-    .latest-cover-wrap::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border: 1px solid var(--border);
-      border-radius: 3px;
-      pointer-events: none;
-    }
-
-    /* ===========================
-       ARTIST STATEMENT
-    =========================== */
-    .statement-section {
-      background: var(--black);
-      padding: 7rem 2rem;
-      text-align: center;
-    }
-
-    .statement-inner {
-      max-width: 680px;
-      margin: 0 auto;
-      position: relative;
-    }
-
-    .statement-inner::before {
-      content: '\201C';
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: 11rem;
-      color: var(--gold);
-      opacity: 0.1;
-      position: absolute;
-      top: -3.5rem;
-      left: -1.5rem;
-      line-height: 1;
-      pointer-events: none;
-      user-select: none;
-    }
-
-    .statement-text {
-      font-size: clamp(1.05rem, 2vw, 1.3rem);
-      line-height: 1.85;
-      color: var(--text);
-      position: relative;
-      z-index: 1;
-      font-weight: 300;
-    }
-
-    .statement-sig {
-      display: block;
-      margin-top: 2.25rem;
-      font-size: 0.75rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold);
-      font-weight: 700;
-    }
-
-    /* ===========================
-       VIDEO CAROUSEL
-    =========================== */
-    .video-carousel {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .video-track {
-      display: flex;
-      gap: 2rem;
-      transition: transform 0.5s ease;
-    }
-
-    .video-item {
-      min-width: calc(33.333% - 1.5rem);
-      aspect-ratio: 16 / 9;
-      background: var(--card);
-      border-radius: 4px;
-      overflow: hidden;
-      cursor: pointer;
-      position: relative;
-      transition: transform 0.3s;
-      border: 1px solid var(--border);
-      flex-shrink: 0;
-    }
-
-    .video-item:hover {
-      transform: scale(1.03);
-    }
-
-    .video-item iframe {
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      display: block;
-    }
-
-    .video-play-icon {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 56px;
-      height: 56px;
-      background: var(--red);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      color: var(--text);
-      opacity: 0;
-      transition: opacity 0.2s;
-      pointer-events: none;
-    }
-
-    .video-item:hover .video-play-icon {
-      opacity: 1;
-    }
-
-    /* Shared carousel buttons */
-    .carousel-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: var(--dark);
-      color: var(--text);
-      border: 1px solid var(--border);
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      font-size: 0.9rem;
-      cursor: pointer;
-      z-index: 10;
-      transition: background 0.2s, border-color 0.2s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .carousel-btn:hover {
-      background: var(--red);
-      border-color: var(--red);
-    }
-
-    .carousel-btn.prev { left: 0.5rem; }
-    .carousel-btn.next { right: 0.5rem; }
-
-    /* ===========================
-       VIDEO MODAL
-    =========================== */
-    .video-modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.97);
-      z-index: 2000;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem;
-    }
-
-    .video-modal.active {
-      display: flex;
-    }
-
-    .video-modal-content {
-      position: relative;
-      width: 100%;
-      max-width: 1100px;
-      aspect-ratio: 16 / 9;
-    }
-
-    .video-modal iframe {
-      width: 100%;
-      height: 100%;
-      border-radius: 4px;
-    }
-
-    .video-close {
-      position: absolute;
-      top: -3rem;
-      right: 0;
-      background: transparent;
-      color: var(--text);
-      border: 1px solid var(--border);
-      width: 40px;
-      height: 40px;
-      border-radius: 4px;
-      font-size: 1rem;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background 0.2s, border-color 0.2s;
-    }
-
-    .video-close:hover {
-      background: var(--red);
-      border-color: var(--red);
-    }
-
-    /* ===========================
-       SPOTIFY SECTION
-    =========================== */
-    .spotify-section {
-      background: var(--surface);
-      padding: 6rem 2rem;
-      text-align: center;
-    }
-
-    .spotify-inner {
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-
-    .spotify-note {
-      max-width: 760px;
-      margin: -1.5rem auto 2rem;
-      color: var(--muted);
-      font-size: 0.92rem;
-      line-height: 1.7;
-    }
-
-    .spotify-embed {
-      max-width: 760px;
-      margin: 0 auto;
-      border-radius: 6px;
-      overflow: hidden;
-    }
-
-    /* ===========================
-       ALBUMS CAROUSEL
-    =========================== */
-    .albums-carousel {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .albums-track {
-      display: flex;
-      gap: 2rem;
-      transition: transform 0.5s ease;
-      will-change: transform;
-    }
-
-    .albums-track .album-card {
-      min-width: calc(33.333% - 1.333rem);
-      background: var(--card);
-      border-radius: 4px;
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.3s;
-      display: flex;
-      flex-direction: column;
-      border: 1px solid var(--border);
-      flex-shrink: 0;
-    }
-
-    .albums-track .album-card:hover {
-      transform: translateY(-6px);
-    }
-
-    .albums-track .album-card img {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      display: block;
-    }
-
-    .albums-track .album-info {
-      padding: 1rem 1.25rem;
-    }
-
-    .albums-track .album-info h3 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 700;
-      font-size: 1.05rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 0.2rem;
-    }
-
-    .albums-track .album-info p {
-      color: var(--muted);
-      font-size: 0.82rem;
-    }
-
-    /* ===========================
-       SUBSCRIBE
-    =========================== */
-    .subscribe-section {
-      background: var(--dark);
-      padding: 6rem 2rem;
-      text-align: center;
-    }
-
-    .subscribe-inner {
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-
-    .subscribe-desc {
-      font-size: 0.95rem;
-      color: var(--muted);
-      max-width: 460px;
-      margin: 0 auto;
-    }
-
-    .subscribe-form {
-      max-width: 460px;
-      margin: 2rem auto 0;
-      display: flex;
-      gap: 0.75rem;
-    }
-
-    .subscribe-form input {
-      flex: 1;
-      padding: 0.9rem 1.25rem;
-      border: 1px solid var(--border);
-      background: var(--black);
-      color: var(--text);
-      border-radius: 3px;
-      font-size: 0.95rem;
-      font-family: 'Inter', sans-serif;
-      transition: border-color 0.2s;
-    }
-
-    .subscribe-form input::placeholder { color: var(--muted); }
-
-    .subscribe-form input:focus {
-      outline: none;
-      border-color: var(--red);
-    }
-
-    .subscribe-form button {
-      padding: 0.9rem 1.5rem;
-      background: var(--red);
-      color: var(--text);
-      border: none;
-      border-radius: 3px;
-      font-weight: 700;
-      font-size: 0.8rem;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      cursor: pointer;
-      white-space: nowrap;
-      font-family: 'Inter', sans-serif;
-      transition: background 0.2s;
-    }
-
-    .subscribe-form button:hover {
-      background: var(--red-dk);
-    }
-
-    /* ===========================
-       FOOTER
-    =========================== */
-    footer {
-      background: var(--surface);
-      padding: 5rem 2rem 3rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .footer-content {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-    }
-
-    .footer-label {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 700;
-      font-size: 1.2rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1.5rem;
-    }
-
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      padding: 0.85rem 1rem;
-      background: var(--black);
-      border: 1px solid var(--border);
-      color: var(--text);
-      border-radius: 3px;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.95rem;
-      transition: border-color 0.2s;
-    }
-
-    .contact-form input::placeholder,
-    .contact-form textarea::placeholder { color: var(--muted); }
-
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-      outline: none;
-      border-color: var(--red);
-    }
-
-    .contact-form textarea { resize: vertical; }
-
-    .contact-form button {
-      padding: 0.9rem;
-      background: var(--red);
-      color: var(--text);
-      border: none;
-      border-radius: 3px;
-      font-weight: 700;
-      font-size: 0.82rem;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      cursor: pointer;
-      font-family: 'Inter', sans-serif;
-      transition: background 0.2s;
-    }
-
-    .contact-form button:hover {
-      background: var(--red-dk);
-    }
-
-    .footer-info {
-      display: flex;
-      flex-direction: column;
-      gap: 2.5rem;
-    }
-
-    .footer-detail {
-      font-size: 0.92rem;
-      color: var(--muted);
-      line-height: 1.9;
-    }
-
-    .social-label {
-      font-size: 0.68rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    .social-links {
-      display: flex;
-      gap: 0.65rem;
-      flex-wrap: wrap;
-    }
-
-    .social-links a {
-      width: 44px;
-      height: 44px;
-      background: var(--card);
-      color: var(--muted);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 3px;
-      font-size: 1.05rem;
-      text-decoration: none;
-      border: 1px solid var(--border);
-      transition: background 0.2s, color 0.2s, border-color 0.2s;
-    }
-
-    .social-links a:hover {
-      background: var(--red);
-      color: var(--text);
-      border-color: var(--red);
-    }
-
-    .footer-copy {
-      color: var(--muted);
-      font-size: 0.78rem;
-    }
-
-    /* ===========================
-       FLOATING SCROLL-TO-TOP
-    =========================== */
-    .float-btn {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      width: 44px;
-      height: 44px;
-      background: var(--dark);
-      color: var(--text);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      font-size: 0.95rem;
-      cursor: pointer;
-      z-index: 999;
-      transition: background 0.2s, border-color 0.2s, opacity 0.3s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      pointer-events: none;
-    }
-
-    .float-btn:hover {
-      background: var(--red);
-      border-color: var(--red);
-    }
-
-    /* ===========================
-       RESPONSIVE
-    =========================== */
-    @media (max-width: 1024px) {
-      .albums-track .album-card { min-width: calc(50% - 1rem); }
-      .latest-inner-wrap { grid-template-columns: 1fr; gap: 3rem; }
-      .latest-cover-wrap { max-width: 420px; }
-    }
-
-    @media (max-width: 768px) {
-      section { padding: 4rem 1.5rem; }
-
-      .latest-section,
-      .statement-section,
-      .subscribe-section,
-      .spotify-section { padding: 4rem 1.5rem; }
-
-      footer { padding: 4rem 1.5rem 3rem; }
-
-      .video-item { min-width: calc(100% - 2rem); }
-      .albums-track .album-card { min-width: calc(100% - 2rem); }
-
-      .footer-content { grid-template-columns: 1fr; gap: 3rem; }
-      .subscribe-form { flex-direction: column; }
-
-      .carousel-overlay { padding: 2.5rem 1.5rem 4.5rem; }
-      .carousel-dots { right: 1.5rem; bottom: 2rem; }
-
-      .latest-actions { flex-direction: column; }
-      .latest-actions .btn-primary,
-      .latest-actions .btn-ghost { justify-content: center; text-align: center; }
-
-      .statement-inner::before { font-size: 7rem; left: -0.5rem; }
-    }
-
-    @media (max-width: 480px) {
-      .top-nav { padding: 0 1rem; }
-      .latest-title { font-size: clamp(3rem, 14vw, 5rem); }
-    }
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      padding: 0.85rem 1.6rem; min-height: 44px;
+      background: transparent; color: var(--color-texto);
+      text-decoration: none; border: 1px solid rgba(246,239,243,0.3); border-radius: 3px;
+      font-family: var(--font-body); font-weight: 600; font-size: 0.85rem;
+      letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .btn-ghost:hover { border-color: var(--color-texto); transform: translateY(-2px); }
 
     @media (prefers-reduced-motion: reduce) {
-      .carousel-slide { transition: none; }
-      .btn-primary:hover,
-      .btn-ghost:hover { transform: none; }
+      .btn-primary:hover, .btn-ghost:hover { transform: none; }
     }
+
+    /* ===========================
+       SECCIONES GENERALES
+    =========================== */
+    section, .band { padding: 4rem 1.25rem; }
+    @media (min-width: 700px) { section, .band { padding: 5.5rem 2rem; } }
+
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-inner-narrow { max-width: 680px; margin: 0 auto; }
+
+    .section-title {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: clamp(1.7rem, 6vw, 2.5rem);
+      color: var(--color-oro); text-transform: uppercase; letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+    .section-rule { width: 32px; height: 2px; background: var(--acento-2); margin-bottom: 2rem; }
+
+    .band-lodo { background: var(--color-lodo); }
+
+    /* ===========================
+       QUIÉN ES LOTUS
+    =========================== */
+    .bio-grid {
+      display: grid; gap: 2rem; align-items: center;
+    }
+    @media (min-width: 760px) {
+      .bio-grid { grid-template-columns: 0.85fr 1.15fr; gap: 3rem; }
+    }
+    .bio-portrait {
+      width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 4px;
+      border: 1px solid var(--borde);
+    }
+    .bio-text p { color: var(--color-niebla); font-size: 1rem; max-width: 62ch; }
+
+    /* ===========================
+       EL PANTANO (concepto)
+    =========================== */
+    .pantano-grid { display: grid; gap: 2rem; align-items: center; }
+    @media (min-width: 760px) {
+      .pantano-grid { grid-template-columns: 1.15fr 0.85fr; gap: 3rem; }
+    }
+    .pantano-cover {
+      width: 100%; max-width: 420px; aspect-ratio: 1/1; object-fit: cover;
+      border-radius: 4px; border: 1px solid var(--borde); margin: 0 auto;
+    }
+    .pantano-text p {
+      font-size: 1.05rem; line-height: 1.85; color: var(--color-texto);
+      max-width: 60ch; margin-bottom: 1.25rem;
+    }
+
+    /* ===========================
+       MÚSICA — catálogo
+    =========================== */
+    .catalog-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem;
+    }
+    @media (min-width: 700px) { .catalog-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 1000px) { .catalog-grid { grid-template-columns: repeat(5, 1fr); } }
+
+    .catalog-card {
+      background: var(--color-lodo); border: 1px solid var(--borde); border-radius: 4px;
+      overflow: hidden;
+    }
+    .catalog-card img { width: 100%; aspect-ratio: 1/1; object-fit: cover; }
+    .catalog-meta { padding: 0.75rem 0.9rem; }
+    .catalog-meta h3 {
+      font-family: var(--font-display); font-weight: 700; font-size: 1rem;
+      letter-spacing: 0.03em; text-transform: uppercase; color: var(--color-texto);
+      margin-bottom: 0.15rem;
+    }
+    .catalog-meta p { font-size: 0.78rem; color: var(--color-niebla); }
+    .catalog-card.upcoming { border-color: var(--color-oro); }
+    .catalog-card.upcoming .catalog-meta p { color: var(--color-oro); font-weight: 600; }
+
+    .catalog-actions {
+      display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;
+    }
+
+    .spotify-embed-wrap {
+      margin-top: 2.5rem; max-width: 760px; border-radius: 6px; overflow: hidden;
+      min-height: 352px; background: var(--color-lodo); border: 1px solid var(--borde);
+    }
+
+    /* ===========================
+       VIDEO
+    =========================== */
+    .video-grid {
+      display: grid; grid-template-columns: 1fr; gap: 1.25rem;
+    }
+    @media (min-width: 640px) { .video-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1000px) { .video-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .video-card {
+      position: relative; aspect-ratio: 16/9; background: var(--color-lodo);
+      border-radius: 4px; overflow: hidden; border: 1px solid var(--borde);
+    }
+    .video-play {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      background: none; border: none; padding: 0; cursor: pointer;
+    }
+    .video-play img { width: 100%; height: 100%; object-fit: cover; }
+    .video-play-icon {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      width: 52px; height: 52px; min-width: 44px; min-height: 44px;
+      background: var(--color-oro); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--color-agua); font-size: 1.1rem;
+    }
+    .video-card-title {
+      position: absolute; left: 0; right: 0; bottom: 0; padding: 0.6rem 0.75rem;
+      font-size: 0.78rem; color: var(--color-texto);
+      background: linear-gradient(to top, rgba(23,11,46,0.9), transparent);
+      pointer-events: none;
+    }
+    .video-card.unavailable .video-card-title { color: var(--color-niebla); }
+    .video-card iframe { width: 100%; height: 100%; border: 0; position: absolute; inset: 0; }
+
+    /* ===========================
+       SUSCRIBIRSE
+    =========================== */
+    .subscribe-form {
+      display: flex; flex-direction: column; gap: 0.75rem; max-width: 460px; margin-top: 1.75rem;
+    }
+    @media (min-width: 500px) { .subscribe-form { flex-direction: row; } }
+
+    .subscribe-form input {
+      flex: 1; padding: 0.9rem 1.1rem; min-height: 44px;
+      border: 1px solid var(--borde); background: var(--color-agua); color: var(--color-texto);
+      border-radius: 3px; font-size: 0.95rem; font-family: var(--font-body);
+    }
+    .subscribe-form input::placeholder { color: var(--color-niebla); }
+    .subscribe-form input:focus { outline: none; border-color: var(--color-oro); }
+
+    .subscribe-form button {
+      padding: 0.9rem 1.5rem; min-height: 44px;
+      background: var(--color-oro); color: var(--color-agua); border: none; border-radius: 3px;
+      font-weight: 700; font-size: 0.82rem; letter-spacing: 0.05em; text-transform: uppercase;
+      cursor: pointer; white-space: nowrap; font-family: var(--font-body);
+    }
+    .subscribe-form button:hover { background: #ff8269; }
+    .form-note { font-size: 0.82rem; color: var(--color-niebla); margin-top: 0.9rem; }
+
+    /* ===========================
+       CONTACTO / FOOTER
+    =========================== */
+    footer {
+      background: var(--color-lodo); padding: 4rem 1.25rem 2.5rem;
+      border-top: 1px solid var(--borde);
+    }
+    @media (min-width: 700px) { footer { padding: 5rem 2rem 3rem; } }
+
+    .footer-grid { display: grid; gap: 3rem; max-width: 1100px; margin: 0 auto; }
+    @media (min-width: 760px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 4rem; } }
+
+    .footer-label {
+      font-family: var(--font-display); font-weight: 700; font-size: 1.1rem;
+      letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-oro);
+      margin-bottom: 1.25rem;
+    }
+
+    .contact-form { display: flex; flex-direction: column; gap: 0.75rem; }
+    .contact-form input, .contact-form textarea {
+      padding: 0.85rem 1rem; min-height: 44px;
+      background: var(--color-agua); border: 1px solid var(--borde); color: var(--color-texto);
+      border-radius: 3px; font-family: var(--font-body); font-size: 0.95rem;
+    }
+    .contact-form input::placeholder, .contact-form textarea::placeholder { color: var(--color-niebla); }
+    .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--color-oro); }
+    .contact-form textarea { resize: vertical; min-height: 110px; }
+    .contact-form button {
+      padding: 0.9rem; min-height: 44px;
+      background: var(--color-oro); color: var(--color-agua); border: none; border-radius: 3px;
+      font-weight: 700; font-size: 0.82rem; letter-spacing: 0.05em; text-transform: uppercase;
+      cursor: pointer; font-family: var(--font-body);
+    }
+    .contact-form button:hover { background: #ff8269; }
+
+    .footer-info { display: flex; flex-direction: column; gap: 2rem; }
+    .footer-detail { font-size: 0.92rem; color: var(--color-niebla); line-height: 1.9; }
+    .footer-detail a { color: var(--color-texto); text-decoration: underline; text-underline-offset: 3px; }
+
+    .social-label {
+      font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--color-niebla); font-weight: 700; margin-bottom: 0.9rem;
+    }
+    .social-links { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+    .social-links a {
+      width: 44px; height: 44px; background: var(--color-agua); color: var(--color-niebla);
+      display: flex; align-items: center; justify-content: center; border-radius: 3px;
+      border: 1px solid var(--borde); text-decoration: none; transition: background 0.2s, color 0.2s;
+    }
+    .social-links a:hover { background: var(--color-oro); color: var(--color-agua); }
+    .social-links svg { width: 19px; height: 19px; }
+
+    .footer-copy { color: var(--color-niebla); font-size: 0.78rem; margin-top: 2rem; }
+
+    /* ===========================
+       FLOATING SCROLL TOP
+    =========================== */
+    .float-btn {
+      position: fixed; bottom: 1.5rem; right: 1.5rem; width: 44px; height: 44px;
+      background: var(--color-lodo); color: var(--color-texto); border: 1px solid var(--borde);
+      border-radius: 4px; cursor: pointer; z-index: 900;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none; transition: opacity 0.3s, background 0.2s;
+    }
+    .float-btn.visible { opacity: 1; pointer-events: auto; }
+    .float-btn:hover { background: var(--acento-2); }
   </style>
 </head>
 
 <body>
 
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
   <!-- ===== TOP NAV ===== -->
   <header class="top-nav">
-    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación">
-      <i class="fas fa-bars"></i>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="sideMenu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
     </button>
-
     <a href="#hero" class="logo-center" aria-label="Lotus DLC — inicio">
-      <img src="/lotus-logo-transparent.png" alt="Lotus DLC">
+      <img src="/lotus-logo-transparent.png" alt="Lotus DLC" width="164" height="32">
     </a>
-
-    <div style="width: 44px;"></div>
+    <div class="nav-spacer" aria-hidden="true"></div>
   </header>
 
-  <!-- ===== SIDE MENU ===== -->
-  <div class="menu-overlay" id="menuOverlay" aria-hidden="true"></div>
+  <div class="menu-overlay" id="menuOverlay"></div>
   <aside class="side-menu" id="sideMenu" aria-label="Navegación principal">
     <nav>
       <a href="#hero">Inicio</a>
-      <a href="#latest">El Pantano</a>
-      <a href="#about">Sobre Lotus</a>
-      <div class="side-menu-divider"></div>
-      <a href="#videos">Videos</a>
-      <a href="#spotify">Escuchar</a>
-      <a href="#albums">Discografía</a>
-      <div class="side-menu-divider"></div>
-      <a href="#subscribe">Suscribirse</a>
-      <a href="#contact">Contacto</a>
+      <a href="#quien-es-lotus">Quién es Lotus</a>
+      <a href="#el-pantano">El Pantano</a>
+      <a href="#musica">Música</a>
+      <a href="#video">Video</a>
+      <a href="#suscribir">Suscribirse</a>
+      <a href="#contacto">Contacto</a>
     </nav>
   </aside>
 
-  <!-- ===== HERO CAROUSEL ===== -->
-  <section class="hero" id="hero" aria-label="Galería principal">
-    <div class="carousel-container">
+  <main id="main">
 
-      <div class="carousel-slide">
-        <img src="/images/lotus-dlc-hero-image-4-2121x1193.jpg" alt="Lotus DLC en vivo" loading="eager">
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero" aria-label="Portada: El Pantano">
+      <picture>
+        <source type="image/avif"
+          srcset="/images/hero/el-pantano-640.avif 640w, /images/hero/el-pantano-960.avif 960w, /images/hero/el-pantano-1280.avif 1280w, /images/hero/el-pantano-1920.avif 1920w"
+          sizes="100vw">
+        <source type="image/webp"
+          srcset="/images/hero/el-pantano-640.webp 640w, /images/hero/el-pantano-960.webp 960w, /images/hero/el-pantano-1280.webp 1280w, /images/hero/el-pantano-1920.webp 1920w"
+          sizes="100vw">
+        <img src="/images/hero/el-pantano-960.webp" alt="Flor de loto brillando sobre el agua oscura del pantano al atardecer, con un jaguar asomando entre el follaje — arte de El Pantano"
+          width="1920" height="960" fetchpriority="high" decoding="async">
+      </picture>
+      <div class="hero-scrim" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="hero-kicker">Lotus DLC · Rap desde Chiapas</p>
+        <h1>No soy solo la flor.<br>Soy el pantano entero.</h1>
+        <a href="#musica" class="btn-primary">Escuchar</a>
       </div>
-      <div class="carousel-slide active">
-        <img src="/images/lotus-dlc-hero-image-2121x1193.jpg" alt="Lotus DLC" loading="eager">
-      </div>
-      <div class="carousel-slide">
-        <img src="/images/lotus-dlc-hero-image-5-2121x1193.jpg" alt="Lotus DLC" loading="lazy">
-      </div>
-      <div class="carousel-slide">
-        <img src="/images/lotus-dlc-hero-image-3-2121x1193.jpg" alt="Lotus DLC" loading="lazy">
-      </div>
+    </section>
 
-      <div class="carousel-overlay">
-        <p class="hero-tag">Rap de autor &middot; Chiapas, México</p>
-        <h1>Barras con<br>propósito.</h1>
-        <p class="hero-sub">Técnica, conciencia y canciones memorables que revelan algo nuevo en cada escucha.</p>
-        <a href="#spotify" class="btn-primary">
-          <i class="fas fa-play"></i> Escuchar catálogo
-        </a>
+    <!-- ===== QUIÉN ES LOTUS ===== -->
+    <section id="quien-es-lotus">
+      <div class="section-inner">
+        <h2 class="section-title">Quién es Lotus</h2>
+        <div class="section-rule"></div>
+        <div class="bio-grid">
+          <picture>
+            <source type="image/avif" srcset="/images/lotus-retrato.avif">
+            <source type="image/webp" srcset="/images/lotus-retrato.webp">
+            <img class="bio-portrait" src="/images/lotus-retrato.jpg" alt="Lotus DLC en sesión de estudio"
+              width="800" height="450" loading="lazy" decoding="async">
+          </picture>
+          <div class="bio-text">
+            <p>
+              Lotus DLC creció entre Las Chicharras y Comitán, Chiapas, y desde ahí construye un rap
+              que no necesita impostar acento ni pedir permiso. Escribe con técnica, pero no le canta
+              a la técnica: le canta a lo que pesa. En el escenario conviven dos versiones de la misma
+              persona — Lotus, el que escribe baladas, y El Jaguar, el que sale
+              cuando hay que sacar los dientes. No son personajes opuestos: son la misma raíz vista
+              desde dos ángulos distintos. También forma, junto con Big Joe y El Eyson, el grupo Estilo DLC. Todo lo
+              que hace parte del mismo territorio: el sur, lo que se siente de verdad, lo que no se
+              dice a la primera.
+            </p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="carousel-dots" id="carouselDots" aria-label="Controles de carrusel">
-        <span class="dot active" data-slide="0" role="button" aria-label="Imagen 1" tabindex="0"></span>
-        <span class="dot" data-slide="1" role="button" aria-label="Imagen 2" tabindex="0"></span>
-        <span class="dot" data-slide="2" role="button" aria-label="Imagen 3" tabindex="0"></span>
-        <span class="dot" data-slide="3" role="button" aria-label="Imagen 4" tabindex="0"></span>
+    <!-- ===== EL PANTANO ===== -->
+    <section id="el-pantano" class="band-lodo">
+      <div class="section-inner">
+        <h2 class="section-title">El Pantano</h2>
+        <div class="section-rule"></div>
+        <div class="pantano-grid">
+          <div class="pantano-text">
+            <p>
+              El Pantano es el proyecto en el que Lotus deja de esconder la mitad de la historia.
+              La flor siempre fue lo fácil de mirar — lo que crece hacia arriba, lo que se ve bonito
+              desde la orilla. Pero una flor de loto no flota sola: debajo hay agua oscura, raíces
+              enredadas, todo lo que la corriente arrastró y nunca devolvió.
+            </p>
+            <p>
+              Ese es el pantano — el ecosistema completo, no solo lo que asoma en la superficie.
+              El agua que lo llena son lágrimas guardadas por años. Ahí conviven Lotus y El Jaguar,
+              y ninguno de los dos es la historia completa por separado.
+            </p>
+          </div>
+          <picture>
+            <source type="image/avif" srcset="/images/el-pantano-cover.avif">
+            <source type="image/webp" srcset="/images/el-pantano-cover.webp">
+            <img class="pantano-cover" src="/images/el-pantano-cover.jpg"
+              alt="Portada de El Pantano, próximo álbum conceptual de Lotus DLC"
+              width="700" height="700" loading="lazy" decoding="async">
+          </picture>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== UPCOMING ALBUM: EL PANTANO ===== -->
-  <div class="latest-section" id="latest">
-    <div class="latest-inner-wrap">
-
-      <div>
-        <span class="latest-badge">Próximo álbum</span>
-        <h2 class="latest-title">El<br>Pantano</h2>
-        <p class="latest-desc">
-          Un proyecto en camino. Líricas construidas en capas, estructuras precisas
-          y un sonido nacido en Chiapas. Próximamente.
+    <!-- ===== MÚSICA ===== -->
+    <section id="musica">
+      <div class="section-inner">
+        <h2 class="section-title">Música</h2>
+        <div class="section-rule"></div>
+        <p style="color:var(--color-niebla); max-width:60ch; margin-bottom:2rem;">
+          Todo lo que Lotus ha lanzado hasta ahora — en Spotify y YouTube.
         </p>
-        <div class="latest-actions">
-          <a href="https://open.spotify.com/artist/1WH0H8I8T7mZof5gDXUilp" target="_blank" rel="noopener noreferrer"
-            class="btn-primary">
-            <i class="fab fa-spotify"></i> Escuchar en Spotify
+
+        <div class="catalog-grid">
+
+          <article class="catalog-card upcoming">
+            <picture>
+              <source type="image/avif" srcset="/images/cat-escrituras-animadas.avif">
+              <source type="image/webp" srcset="/images/cat-escrituras-animadas.webp">
+              <img src="/images/cat-escrituras-animadas.jpg"
+                alt="Portada de Escrituras Animadas de Ayer y Hoy, recopilación de sencillos de Lotus DLC"
+                width="500" height="500" loading="lazy" decoding="async">
+            </picture>
+            <div class="catalog-meta">
+              <h3>Escrituras Animadas de Ayer y Hoy</h3>
+              <p>Próximamente</p>
+            </div>
+          </article>
+
+          <article class="catalog-card">
+            <picture>
+              <source type="image/avif" srcset="/images/cat-suenos-y-sombras.avif">
+              <source type="image/webp" srcset="/images/cat-suenos-y-sombras.webp">
+              <img src="/images/cat-suenos-y-sombras.jpg" alt="Portada de Sueños y Sombras, álbum de Lotus DLC, 2024"
+                width="500" height="500" loading="lazy" decoding="async">
+            </picture>
+            <div class="catalog-meta"><h3>Sueños y Sombras</h3><p>2024</p></div>
+          </article>
+
+          <article class="catalog-card">
+            <picture>
+              <source type="image/avif" srcset="/images/cat-livin-the-dream.avif">
+              <source type="image/webp" srcset="/images/cat-livin-the-dream.webp">
+              <img src="/images/cat-livin-the-dream.jpg" alt="Portada de Livin The Dream, álbum de Lotus DLC, 2016"
+                width="500" height="500" loading="lazy" decoding="async">
+            </picture>
+            <div class="catalog-meta"><h3>Livin The Dream</h3><p>2016</p></div>
+          </article>
+
+          <article class="catalog-card">
+            <picture>
+              <source type="image/avif" srcset="/images/cat-metamorflowsis.avif">
+              <source type="image/webp" srcset="/images/cat-metamorflowsis.webp">
+              <img src="/images/cat-metamorflowsis.jpg" alt="Portada de Metamorflowsis, álbum de Lotus DLC, 2010"
+                width="500" height="500" loading="lazy" decoding="async">
+            </picture>
+            <div class="catalog-meta"><h3>Metamorflowsis</h3><p>2010</p></div>
+          </article>
+
+          <article class="catalog-card">
+            <picture>
+              <source type="image/avif" srcset="/images/cat-esto-es-flowtastico.avif">
+              <source type="image/webp" srcset="/images/cat-esto-es-flowtastico.webp">
+              <img src="/images/cat-esto-es-flowtastico.jpg" alt="Portada de Esto es: Flowtastico, álbum de Lotus DLC, 2008"
+                width="500" height="488" loading="lazy" decoding="async">
+            </picture>
+            <div class="catalog-meta"><h3>Esto es: Flowtastico</h3><p>2008</p></div>
+          </article>
+
+        </div>
+
+        <div class="catalog-actions">
+          <a href="https://open.spotify.com/artist/1WH0H8I8T7mZof5gDXUilp" target="_blank" rel="noopener noreferrer" class="btn-primary">
+            Escuchar en Spotify
           </a>
           <a href="https://www.youtube.com/@LotusDLC" target="_blank" rel="noopener noreferrer" class="btn-ghost">
-            <i class="fab fa-youtube"></i> Ver en YouTube
+            Ver en YouTube
           </a>
         </div>
+
+        <div class="spotify-embed-wrap" id="spotifyEmbed" role="region" aria-label="Reproductor de Spotify de Lotus DLC"></div>
       </div>
+    </section>
 
-      <div class="latest-cover-wrap">
-        <img src="/images/el-pantano-cover-lotus-dlc.jpg" alt="Portada de El Pantano, próximo álbum de Lotus DLC" loading="lazy">
+    <!-- ===== VIDEO ===== -->
+    <section id="video" class="band-lodo">
+      <div class="section-inner">
+        <h2 class="section-title">Video</h2>
+        <div class="section-rule"></div>
+
+        <div class="video-grid">
+
+          <article class="video-card" data-video-id="Qt_e0taMDU0" data-video-title="Malos Hábitos | Video Oficial | DLC Rap">
+            <button class="video-play" type="button" aria-label="Reproducir video: Malos Hábitos">
+              <picture>
+                <source type="image/webp" srcset="/images/video-thumbs/Qt_e0taMDU0.webp">
+                <img src="/images/video-thumbs/Qt_e0taMDU0.jpg" alt="Miniatura del video: Malos Hábitos" width="480" height="360" loading="lazy" decoding="async">
+              </picture>
+              <span class="video-play-icon" aria-hidden="true">▶</span>
+            </button>
+            <span class="video-card-title">Malos Hábitos</span>
+          </article>
+
+          <article class="video-card" data-video-id="R8IzoiWW5zI" data-video-title="Fé | DLC | Video Oficial">
+            <button class="video-play" type="button" aria-label="Reproducir video: Fé">
+              <picture>
+                <source type="image/webp" srcset="/images/video-thumbs/R8IzoiWW5zI.webp">
+                <img src="/images/video-thumbs/R8IzoiWW5zI.jpg" alt="Miniatura del video: Fé" width="480" height="360" loading="lazy" decoding="async">
+              </picture>
+              <span class="video-play-icon" aria-hidden="true">▶</span>
+            </button>
+            <span class="video-card-title">Fé</span>
+          </article>
+
+          <article class="video-card" data-video-id="psLeAg61-pI" data-video-title="Luces en el horizonte | DLC | Visualizer">
+            <button class="video-play" type="button" aria-label="Reproducir video: Luces en el horizonte">
+              <picture>
+                <source type="image/webp" srcset="/images/video-thumbs/psLeAg61-pI.webp">
+                <img src="/images/video-thumbs/psLeAg61-pI.jpg" alt="Miniatura del video: Luces en el horizonte" width="480" height="360" loading="lazy" decoding="async">
+              </picture>
+              <span class="video-play-icon" aria-hidden="true">▶</span>
+            </button>
+            <span class="video-card-title">Luces en el horizonte</span>
+          </article>
+
+          <article class="video-card" data-video-id="LAClA_QS4qQ" data-video-title="Sueños y Sombras | DLC | Video oficial">
+            <button class="video-play" type="button" aria-label="Reproducir video: Sueños y Sombras">
+              <picture>
+                <source type="image/webp" srcset="/images/video-thumbs/LAClA_QS4qQ.webp">
+                <img src="/images/video-thumbs/LAClA_QS4qQ.jpg" alt="Miniatura del video: Sueños y Sombras" width="480" height="360" loading="lazy" decoding="async">
+              </picture>
+              <span class="video-play-icon" aria-hidden="true">▶</span>
+            </button>
+            <span class="video-card-title">Sueños y Sombras</span>
+          </article>
+
+          <article class="video-card" data-video-id="CuCgTqvYu_g" data-video-title="Enfocado | DLC | Visual">
+            <button class="video-play" type="button" aria-label="Reproducir video: Enfocado">
+              <picture>
+                <source type="image/webp" srcset="/images/video-thumbs/CuCgTqvYu_g.webp">
+                <img src="/images/video-thumbs/CuCgTqvYu_g.jpg" alt="Miniatura del video: Enfocado" width="480" height="360" loading="lazy" decoding="async">
+              </picture>
+              <span class="video-play-icon" aria-hidden="true">▶</span>
+            </button>
+            <span class="video-card-title">Enfocado</span>
+          </article>
+
+          <article class="video-card" data-video-id="3xYeWdn9Bzw" data-video-title="Sacrificios - DLC">
+            <button class="video-play" type="button" aria-label="Reproducir video: Sacrificios">
+              <picture>
+                <source type="image/webp" srcset="/images/video-thumbs/3xYeWdn9Bzw.webp">
+                <img src="/images/video-thumbs/3xYeWdn9Bzw.jpg" alt="Miniatura del video: Sacrificios" width="480" height="360" loading="lazy" decoding="async">
+              </picture>
+              <span class="video-play-icon" aria-hidden="true">▶</span>
+            </button>
+            <span class="video-card-title">Sacrificios</span>
+          </article>
+
+          <article class="video-card" data-video-id="FkiL4xLnlP0" data-video-title="Me sabe querer - DLC">
+            <button class="video-play" type="button" aria-label="Reproducir video: Me sabe querer">
+              <picture>
+                <source type="image/webp" srcset="/images/video-thumbs/FkiL4xLnlP0.webp">
+                <img src="/images/video-thumbs/FkiL4xLnlP0.jpg" alt="Miniatura del video: Me sabe querer" width="480" height="360" loading="lazy" decoding="async">
+              </picture>
+              <span class="video-play-icon" aria-hidden="true">▶</span>
+            </button>
+            <span class="video-card-title">Me sabe querer</span>
+          </article>
+
+          <article class="video-card" data-video-id="KD0BC_PiVX8" data-video-title="Estamos Aquí - DLC">
+            <button class="video-play" type="button" aria-label="Reproducir video: Estamos Aquí">
+              <picture>
+                <source type="image/webp" srcset="/images/video-thumbs/KD0BC_PiVX8.webp">
+                <img src="/images/video-thumbs/KD0BC_PiVX8.jpg" alt="Miniatura del video: Estamos Aquí" width="480" height="360" loading="lazy" decoding="async">
+              </picture>
+              <span class="video-play-icon" aria-hidden="true">▶</span>
+            </button>
+            <span class="video-card-title">Estamos Aquí</span>
+          </article>
+
+          <!-- xhfMHRZogTI: YouTube devuelve LOGIN_REQUIRED (posible restricción de edad).
+               No se pudo recuperar título ni miniatura real — ver [PENDIENTE] en el reporte. -->
+          <article class="video-card unavailable" data-video-id="xhfMHRZogTI" data-video-title="Video oficial de Lotus DLC">
+            <button class="video-play" type="button" aria-label="Reproducir video oficial de Lotus DLC" style="background:var(--color-lodo);">
+              <span class="video-play-icon" aria-hidden="true">▶</span>
+            </button>
+            <span class="video-card-title">Video oficial</span>
+          </article>
+
+          <article class="video-card" data-video-id="0WbevTPRP50" data-video-title="Ella se ve muy bien | Lotus | Visualizer">
+            <button class="video-play" type="button" aria-label="Reproducir video: Ella se ve muy bien">
+              <picture>
+                <source type="image/webp" srcset="/images/video-thumbs/0WbevTPRP50.webp">
+                <img src="/images/video-thumbs/0WbevTPRP50.jpg" alt="Miniatura del video: Ella se ve muy bien" width="480" height="360" loading="lazy" decoding="async">
+              </picture>
+              <span class="video-play-icon" aria-hidden="true">▶</span>
+            </button>
+            <span class="video-card-title">Ella se ve muy bien</span>
+          </article>
+
+        </div>
       </div>
+    </section>
 
-    </div>
-  </div>
-
-  <!-- ===== ARTIST STATEMENT ===== -->
-  <div class="statement-section" id="about">
-    <div class="statement-inner">
-      <p class="statement-text">
-        Rap de autor desde Chiapas: técnica al servicio de la emoción, conciencia callejera
-        y canciones capaces de conectar desde la primera escucha y quedarse mucho después.
-      </p>
-      <span class="statement-sig">— Lotus DLC</span>
-    </div>
-  </div>
-
-  <!-- ===== VIDEOS ===== -->
-  <section id="videos">
-    <h2 class="section-title">Videos</h2>
-    <div class="section-rule"></div>
-    <div class="video-carousel">
-      <button class="carousel-btn prev" id="videoPrev" aria-label="Video anterior">
-        <i class="fas fa-chevron-left"></i>
-      </button>
-
-      <div class="video-track" id="videoTrack">
-
-        <div class="video-item" data-video="Qt_e0taMDU0">
-          <iframe src="https://www.youtube.com/embed/Qt_e0taMDU0?si=STEICIL_NjIV5XQv"
-            title="Lotus DLC — video oficial" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-          <div class="video-play-icon" aria-hidden="true"><i class="fas fa-play"></i></div>
-        </div>
-
-        <div class="video-item" data-video="R8IzoiWW5zI">
-          <iframe src="https://www.youtube.com/embed/R8IzoiWW5zI?si=zVw13tMTgxrrQYJP"
-            title="Lotus DLC — video oficial" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-          <div class="video-play-icon" aria-hidden="true"><i class="fas fa-play"></i></div>
-        </div>
-
-        <div class="video-item" data-video="psLeAg61-pI">
-          <iframe src="https://www.youtube.com/embed/psLeAg61-pI?si=Gj_o1a78jMF5wf4Z&amp;controls=0"
-            title="Lotus DLC — video oficial" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-          <div class="video-play-icon" aria-hidden="true"><i class="fas fa-play"></i></div>
-        </div>
-
-        <div class="video-item" data-video="LAClA_QS4qQ">
-          <iframe src="https://www.youtube.com/embed/LAClA_QS4qQ?si=zch7Z__QdYVCsdOZ"
-            title="Lotus DLC — video oficial" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-          <div class="video-play-icon" aria-hidden="true"><i class="fas fa-play"></i></div>
-        </div>
-
-        <div class="video-item" data-video="CuCgTqvYu_g">
-          <iframe src="https://www.youtube.com/embed/CuCgTqvYu_g?si=slDTCbxtY1QwsbVH"
-            title="Lotus DLC — video oficial" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-          <div class="video-play-icon" aria-hidden="true"><i class="fas fa-play"></i></div>
-        </div>
-
-        <div class="video-item" data-video="3xYeWdn9Bzw">
-          <iframe src="https://www.youtube.com/embed/3xYeWdn9Bzw?si=mkDG89yg7B4GYZLh"
-            title="Lotus DLC — video oficial" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-          <div class="video-play-icon" aria-hidden="true"><i class="fas fa-play"></i></div>
-        </div>
-
-        <div class="video-item" data-video="FkiL4xLnlP0">
-          <iframe src="https://www.youtube.com/embed/FkiL4xLnlP0?si=ckZ4OOrTPgVAcm3G"
-            title="Lotus DLC — video oficial" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-          <div class="video-play-icon" aria-hidden="true"><i class="fas fa-play"></i></div>
-        </div>
-
-        <div class="video-item" data-video="KD0BC_PiVX8">
-          <iframe src="https://www.youtube.com/embed/KD0BC_PiVX8?si=awWWabnz3MUUjGyT"
-            title="Lotus DLC — video oficial" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-          <div class="video-play-icon" aria-hidden="true"><i class="fas fa-play"></i></div>
-        </div>
-
-        <div class="video-item" data-video="xhfMHRZogTI">
-          <iframe src="https://www.youtube.com/embed/xhfMHRZogTI?si=mKXo5WASBRyikmWU"
-            title="Lotus DLC — video oficial" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-          <div class="video-play-icon" aria-hidden="true"><i class="fas fa-play"></i></div>
-        </div>
-
-        <div class="video-item" data-video="0WbevTPRP50">
-          <iframe src="https://www.youtube.com/embed/0WbevTPRP50?si=Op1lngvyhTzIXY3Z"
-            title="Lotus DLC — video oficial" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-          <div class="video-play-icon" aria-hidden="true"><i class="fas fa-play"></i></div>
-        </div>
-
-      </div>
-
-      <button class="carousel-btn next" id="videoNext" aria-label="Siguiente video">
-        <i class="fas fa-chevron-right"></i>
-      </button>
-    </div>
-  </section>
-
-  <!-- ===== VIDEO MODAL ===== -->
-  <div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-label="Reproductor de video">
-    <div class="video-modal-content">
-      <button class="video-close" id="videoClose" aria-label="Cerrar video">
-        <i class="fas fa-times"></i>
-      </button>
-      <iframe id="videoFrame" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen
-        title="Video de Lotus DLC"></iframe>
-    </div>
-  </div>
-
-  <!-- ===== SPOTIFY ===== -->
-  <div class="spotify-section" id="spotify">
-    <div class="spotify-inner">
-      <h2 class="section-title">Escuchar</h2>
-      <div class="section-rule"></div>
-      <p class="spotify-note">
-        Catálogo actualizado en Spotify, con “14 de Febrero”, “Me Sabe Querer”,
-        “Bohemios por afición”, “Cypher 3” y “Mishita”.
-      </p>
-      <div class="spotify-embed">
-        <iframe data-testid="embed-iframe" style="border-radius:6px"
-          src="https://open.spotify.com/embed/artist/1WH0H8I8T7mZof5gDXUilp?utm_source=generator" width="100%"
-          height="352" frameBorder="0" allowfullscreen=""
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy" title="Lotus DLC en Spotify"></iframe>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===== ALBUMS & MIXTAPES ===== -->
-  <section id="albums">
-    <h2 class="section-title">Discografía</h2>
-    <div class="section-rule"></div>
-
-    <div class="albums-carousel">
-      <button class="carousel-btn prev" id="albumsPrev" aria-label="Álbum anterior">
-        <i class="fas fa-chevron-left"></i>
-      </button>
-
-      <div class="albums-track" id="albumsTrack">
-
-        <article class="album-card">
-          <img src="/images/el-pantano-cover-lotus-dlc.jpg" alt="Portada de El Pantano, próximo álbum de Lotus DLC" loading="lazy">
-          <div class="album-info">
-            <h3>El Pantano</h3>
-            <p>Próximamente</p>
-          </div>
-        </article>
-
-        <article class="album-card">
-          <img src="/images/suenos-y-sombras-cover.jpg" alt="Sueños y Sombras — Lotus DLC (2024)" loading="lazy">
-          <div class="album-info">
-            <h3>Sueños y Sombras</h3>
-            <p>2024</p>
-          </div>
-        </article>
-
-        <article class="album-card">
-          <img src="/images/artworks-000325703420-1080x1080.jpg" alt="Livin The Dream — Lotus DLC (2016)" loading="lazy">
-          <div class="album-info">
-            <h3>Livin The Dream</h3>
-            <p>2016</p>
-          </div>
-        </article>
-
-        <article class="album-card">
-          <img src="/images/metamorflowsis-lotus-cover.jpg" alt="Metamorflowsis — Lotus DLC (2010)" loading="lazy">
-          <div class="album-info">
-            <h3>Metamorflowsis</h3>
-            <p>2010</p>
-          </div>
-        </article>
-
-        <article class="album-card">
-          <img src="/images/esto-es-flowtastico-cover-lotus-fr.jpg" alt="Esto es: Flowtastico — Lotus DLC (2008)"
-            loading="lazy">
-          <div class="album-info">
-            <h3>Esto es: Flowtastico</h3>
-            <p>2008</p>
-          </div>
-        </article>
-
-      </div>
-
-      <button class="carousel-btn next" id="albumsNext" aria-label="Siguiente álbum">
-        <i class="fas fa-chevron-right"></i>
-      </button>
-    </div>
-  </section>
-
-  <!-- ===== SUBSCRIBE ===== -->
-  <div class="subscribe-section" id="subscribe">
-    <div class="subscribe-inner">
-      <h2 class="section-title">Mantenerse al día</h2>
-      <div class="section-rule"></div>
-      <p class="subscribe-desc">Lanzamientos, fechas de shows y contenido exclusivo. Sin spam.</p>
-      <form class="subscribe-form">
-        <input type="email" placeholder="tu@email.com" required aria-label="Correo electrónico">
-        <button type="submit">
-          <i class="fas fa-bell"></i> Suscribirse
-        </button>
-      </form>
-    </div>
-  </div>
-
-  <!-- ===== FOOTER / CONTACT ===== -->
-  <footer id="contact">
-    <div class="footer-content">
-
-      <div>
-        <p class="footer-label">Booking &amp; Contacto</p>
-        <form class="contact-form">
-          <input type="text" placeholder="Nombre" required aria-label="Tu nombre">
-          <input type="email" placeholder="Email" required aria-label="Tu email">
-          <textarea rows="5" placeholder="Mensaje..." required aria-label="Tu mensaje"></textarea>
-          <button type="submit">Enviar Mensaje</button>
+    <!-- ===== SUSCRIBIRSE ===== -->
+    <section id="suscribir">
+      <div class="section-inner-narrow" style="text-align:left;">
+        <h2 class="section-title">Entérate primero</h2>
+        <div class="section-rule"></div>
+        <p style="color:var(--color-niebla); max-width:56ch;">
+          Deja tu correo para que te avise en cuanto El Pantano esté listo. Todavía no hay fecha —
+          cuando la haya, la sabrás por aquí antes que en cualquier otro lado. Nada de spam, nada de
+          correos de relleno.
+        </p>
+        <form class="subscribe-form" id="subscribeForm">
+          <label class="visually-hidden" for="subscribeEmail">Correo electrónico</label>
+          <input type="email" id="subscribeEmail" placeholder="tu@email.com" required autocomplete="email">
+          <button type="submit">Avísame</button>
         </form>
       </div>
+    </section>
 
-      <div class="footer-info">
+    <!-- ===== CONTACTO ===== -->
+    <footer id="contacto">
+      <div class="footer-grid">
+
         <div>
-          <p class="footer-label">Lotus DLC</p>
-          <p class="footer-detail">
-            Rap de autor desde Chiapas, México.<br>
-            Booking: info@estudiosunset.com<br>
-            WhatsApp: +1 (772) 940-6244
+          <h2 class="footer-label">Booking y contacto</h2>
+          <p style="color:var(--color-niebla); margin-bottom:1.25rem; max-width:50ch;">
+            Para shows, colaboraciones o prensa, escribe directo.
           </p>
+          <form class="contact-form" id="contactForm">
+            <label class="visually-hidden" for="contactName">Nombre</label>
+            <input type="text" id="contactName" placeholder="Nombre" required autocomplete="name">
+            <label class="visually-hidden" for="contactEmail">Email</label>
+            <input type="email" id="contactEmail" placeholder="Email" required autocomplete="email">
+            <label class="visually-hidden" for="contactMessage">Mensaje</label>
+            <textarea id="contactMessage" rows="5" placeholder="Mensaje..." required></textarea>
+            <button type="submit">Enviar mensaje</button>
+          </form>
         </div>
 
-        <div>
-          <p class="social-label">Sígueme</p>
-          <div class="social-links">
-            <a href="https://www.instagram.com/lotus_dlc/" target="_blank" rel="noopener noreferrer"
-              aria-label="Instagram de Lotus DLC"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.youtube.com/@LotusDLC" target="_blank" rel="noopener noreferrer"
-              aria-label="YouTube de Lotus DLC"><i class="fab fa-youtube"></i></a>
-            <a href="https://open.spotify.com/artist/1WH0H8I8T7mZof5gDXUilp" target="_blank"
-              rel="noopener noreferrer" aria-label="Spotify de Lotus DLC"><i class="fab fa-spotify"></i></a>
-            <a href="https://www.tiktok.com/@lotus.dlc" target="_blank" rel="noopener noreferrer"
-              aria-label="TikTok de Lotus DLC"><i class="fab fa-tiktok"></i></a>
-            <a href="https://www.facebook.com/lotusdlc" target="_blank" rel="noopener noreferrer"
-              aria-label="Facebook de Lotus DLC"><i class="fab fa-facebook"></i></a>
+        <div class="footer-info">
+          <div>
+            <p class="footer-label">Lotus DLC</p>
+            <p class="footer-detail">
+              Rap de autor desde Chiapas, México.<br>
+              Booking: <a href="mailto:info@estudiosunset.com">info@estudiosunset.com</a><br>
+              WhatsApp: <a href="https://wa.me/17729406244" target="_blank" rel="noopener noreferrer">+1 (772) 940-6244</a>
+            </p>
           </div>
+
+          <div>
+            <p class="social-label">Sígueme</p>
+            <div class="social-links">
+              <a href="https://www.instagram.com/lotus_dlc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Lotus DLC">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="3.5"/><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"/></svg>
+              </a>
+              <a href="https://www.youtube.com/@LotusDLC" target="_blank" rel="noopener noreferrer" aria-label="YouTube de Lotus DLC">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="3"/><path d="M10.5 9.3v5.4l4.7-2.7z" fill="currentColor" stroke="none"/></svg>
+              </a>
+              <a href="https://open.spotify.com/artist/1WH0H8I8T7mZof5gDXUilp" target="_blank" rel="noopener noreferrer" aria-label="Spotify de Lotus DLC">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="M7 10.2c3-.7 6.6-.4 9 1M7.3 13c2.5-.6 5.4-.3 7.4.8M7.7 15.6c2-.4 4.3-.2 5.9.7" stroke-linecap="round"/></svg>
+              </a>
+              <a href="https://www.tiktok.com/@lotus.dlc" target="_blank" rel="noopener noreferrer" aria-label="TikTok de Lotus DLC">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14 4v9.6a3.4 3.4 0 1 1-3.4-3.4M14 4c.4 2 1.9 3.5 4 3.8V10c-1.5 0-3-.5-4-1.4"/></svg>
+              </a>
+              <a href="https://www.facebook.com/lotusdlc" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Lotus DLC">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="M14 8.5h-1.5c-.8 0-1.5.7-1.5 1.5v10M9.5 13.5h4"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <p class="footer-copy">© 2026 Lotus DLC. Todos los derechos reservados.</p>
         </div>
 
-        <p class="footer-copy">© 2025 Lotus DLC. Todos los derechos reservados.</p>
       </div>
+    </footer>
 
-    </div>
-  </footer>
+  </main>
 
-  <!-- ===== FLOATING SCROLL-TO-TOP ===== -->
-  <button class="float-btn" id="floatBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})"
-    aria-label="Volver al inicio">
-    <i class="fas fa-arrow-up"></i>
+  <button class="float-btn" id="floatBtn" aria-label="Volver al inicio">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="12" y1="19" x2="12" y2="5"></line><polyline points="6 11 12 5 18 11"></polyline>
+    </svg>
   </button>
 
-  <!-- ===== ALBUMS CAROUSEL JS ===== -->
   <script>
-    const albumsTrack = document.getElementById('albumsTrack');
-    const albumsPrev  = document.getElementById('albumsPrev');
-    const albumsNext  = document.getElementById('albumsNext');
-    let albumsPosition = 0;
-
-    function albumStep() {
-      const item = albumsTrack.querySelector('.album-card');
-      if (!item) return 0;
-      const gap = parseFloat(getComputedStyle(albumsTrack).gap) || 32;
-      return item.offsetWidth + gap;
-    }
-
-    function albumsMaxScroll() {
-      return -(albumsTrack.scrollWidth - albumsTrack.parentElement.offsetWidth);
-    }
-
-    function moveAlbums(dir) {
-      const step = albumStep();
-      if (!step) return;
-      albumsPosition += dir * step;
-      const minPos = albumsMaxScroll();
-      if (albumsPosition < minPos) albumsPosition = 0;
-      if (albumsPosition > 0) albumsPosition = minPos || 0;
-      albumsTrack.style.transform = `translateX(${albumsPosition}px)`;
-    }
-
-    albumsNext.addEventListener('click', () => moveAlbums(-1));
-    albumsPrev.addEventListener('click', () => moveAlbums(1));
-
-    window.addEventListener('resize', () => {
-      albumsPosition = 0;
-      albumsTrack.style.transform = 'translateX(0px)';
-    });
-  </script>
-
-  <!-- ===== MAIN JS ===== -->
-  <script>
-    // MENU TOGGLE
-    const menuToggle  = document.getElementById('menuToggle');
-    const sideMenu    = document.getElementById('sideMenu');
-    const menuOverlay = document.getElementById('menuOverlay');
-
-    menuToggle.addEventListener('click', () => {
-      const isOpen = sideMenu.classList.toggle('open');
-      menuOverlay.classList.toggle('active', isOpen);
-    });
-
-    menuOverlay.addEventListener('click', closeMenu);
-
-    document.querySelectorAll('.side-menu a').forEach(link => {
-      link.addEventListener('click', closeMenu);
-    });
+    // MENU
+    var menuToggle = document.getElementById('menuToggle');
+    var sideMenu = document.getElementById('sideMenu');
+    var menuOverlay = document.getElementById('menuOverlay');
 
     function closeMenu() {
       sideMenu.classList.remove('open');
       menuOverlay.classList.remove('active');
+      menuToggle.setAttribute('aria-expanded', 'false');
     }
-
-    // HERO CAROUSEL
-    let currentSlide = 0;
-    const slides      = document.querySelectorAll('.carousel-slide');
-    const dots        = document.querySelectorAll('.dot');
-    const totalSlides = slides.length;
-
-    function showSlide(index) {
-      slides.forEach(s => s.classList.remove('active'));
-      dots.forEach(d => d.classList.remove('active'));
-      currentSlide = (index + totalSlides) % totalSlides;
-      slides[currentSlide].classList.add('active');
-      dots[currentSlide].classList.add('active');
-    }
-
-    function nextSlide() { showSlide(currentSlide + 1); }
-
-    let carouselInterval = setInterval(nextSlide, 5500);
-
-    dots.forEach((dot, i) => {
-      dot.addEventListener('click', () => {
-        showSlide(i);
-        clearInterval(carouselInterval);
-        carouselInterval = setInterval(nextSlide, 5500);
-      });
-      dot.addEventListener('keydown', e => {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); dot.click(); }
-      });
+    menuToggle.addEventListener('click', function () {
+      var isOpen = sideMenu.classList.toggle('open');
+      menuOverlay.classList.toggle('active', isOpen);
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+    menuOverlay.addEventListener('click', closeMenu);
+    document.querySelectorAll('.side-menu a').forEach(function (link) {
+      link.addEventListener('click', closeMenu);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeMenu();
     });
 
-    // VIDEO CAROUSEL
-    const videoTrack = document.getElementById('videoTrack');
-    const videoPrev  = document.getElementById('videoPrev');
-    const videoNext  = document.getElementById('videoNext');
-    let videoPosition = 0;
-
-    function getVideoStep() {
-      const item = videoTrack.querySelector('.video-item');
-      return item ? item.offsetWidth + 32 : 0;
-    }
-
-    videoNext.addEventListener('click', () => {
-      const step      = getVideoStep();
-      const maxScroll = -(videoTrack.scrollWidth - videoTrack.parentElement.offsetWidth);
-      videoPosition  -= step;
-      if (videoPosition < maxScroll) videoPosition = 0;
-      videoTrack.style.transform = `translateX(${videoPosition}px)`;
-    });
-
-    videoPrev.addEventListener('click', () => {
-      const step    = getVideoStep();
-      videoPosition += step;
-      if (videoPosition > 0) videoPosition = -(videoTrack.scrollWidth - videoTrack.parentElement.offsetWidth);
-      videoTrack.style.transform = `translateX(${videoPosition}px)`;
-    });
-
-    window.addEventListener('resize', () => {
-      videoPosition = 0;
-      videoTrack.style.transform = 'translateX(0px)';
-    });
-
-    // VIDEO MODAL
-    const videoModal = document.getElementById('videoModal');
-    const videoFrame = document.getElementById('videoFrame');
-    const videoClose = document.getElementById('videoClose');
-
-    document.querySelectorAll('.video-item').forEach(item => {
-      item.addEventListener('click', () => {
-        const videoId = item.dataset.video;
-        videoFrame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-        videoModal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-        videoClose.focus();
+    // VIDEO FACADE — carga el iframe de YouTube solo al hacer clic
+    document.querySelectorAll('.video-card').forEach(function (card) {
+      var btn = card.querySelector('.video-play');
+      btn.addEventListener('click', function () {
+        var id = card.dataset.videoId;
+        var title = card.dataset.videoTitle || 'Video oficial de Lotus DLC';
+        var iframe = document.createElement('iframe');
+        iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1';
+        iframe.title = title;
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.allowFullscreen = true;
+        iframe.loading = 'lazy';
+        card.innerHTML = '';
+        card.style.position = 'relative';
+        card.appendChild(iframe);
       });
     });
 
-    videoClose.addEventListener('click', closeVideoModal);
-
-    videoModal.addEventListener('click', e => {
-      if (e.target === videoModal) closeVideoModal();
-    });
-
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') closeVideoModal();
-    });
-
-    function closeVideoModal() {
-      videoModal.classList.remove('active');
-      videoFrame.src = '';
-      document.body.style.overflow = '';
+    // SPOTIFY — carga el embed solo cuando entra al viewport
+    var spotifyWrap = document.getElementById('spotifyEmbed');
+    if ('IntersectionObserver' in window && spotifyWrap) {
+      var spotifyObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var iframe = document.createElement('iframe');
+            iframe.src = 'https://open.spotify.com/embed/artist/1WH0H8I8T7mZof5gDXUilp?utm_source=generator';
+            iframe.width = '100%';
+            iframe.height = '352';
+            iframe.frameBorder = '0';
+            iframe.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
+            iframe.loading = 'lazy';
+            iframe.title = 'Lotus DLC en Spotify';
+            iframe.style.borderRadius = '6px';
+            iframe.style.display = 'block';
+            spotifyWrap.innerHTML = '';
+            spotifyWrap.appendChild(iframe);
+            spotifyObserver.disconnect();
+          }
+        });
+      }, { rootMargin: '200px' });
+      spotifyObserver.observe(spotifyWrap);
     }
 
-    // SMOOTH SCROLL
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    // SMOOTH SCROLL con offset del header fijo
+    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
       anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) window.scrollTo({ top: target.offsetTop - 70, behavior: 'smooth' });
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          window.scrollTo({ top: target.offsetTop - 64, behavior: 'smooth' });
+        }
       });
     });
 
-    // FORMS
-    document.querySelectorAll('form').forEach(form => {
-      form.addEventListener('submit', e => {
+    // FORMULARIOS (sin backend todavía — ver [PENDIENTE] en el reporte)
+    document.querySelectorAll('form').forEach(function (form) {
+      form.addEventListener('submit', function (e) {
         e.preventDefault();
         alert('¡Gracias! Te contactaremos pronto.');
         form.reset();
       });
     });
 
-    // FLOATING BUTTON
-    const floatBtn = document.getElementById('floatBtn');
-    window.addEventListener('scroll', () => {
-      const visible = window.scrollY > 400;
-      floatBtn.style.opacity      = visible ? '1' : '0';
-      floatBtn.style.pointerEvents = visible ? 'auto' : 'none';
+    // BOTÓN FLOTANTE
+    var floatBtn = document.getElementById('floatBtn');
+    floatBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    window.addEventListener('scroll', function () {
+      floatBtn.classList.toggle('visible', window.scrollY > 500);
+    }, { passive: true });
+
+    // TRACKING DIFERIDO — se carga después del evento load o de la primera
+    // interacción del usuario, lo que ocurra primero. Los IDs existentes
+    // NO se modifican.
+    var trackingLoaded = false;
+    function loadTracking() {
+      if (trackingLoaded) return;
+      trackingLoaded = true;
+
+      // Microsoft Clarity (ID real existente, sin cambios)
+      (function (c, l, a, r, i, t, y) {
+        c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+        t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
+        y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+      })(window, document, 'clarity', 'script', 'txjrdx8yc1');
+
+      // GA4 — pendiente de Measurement ID real. Cuando lo tengas, descomenta
+      // y reemplaza GA_MEASUREMENT_ID:
+      //
+      // var gaScript = document.createElement('script');
+      // gaScript.async = true;
+      // gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
+      // document.head.appendChild(gaScript);
+      // window.dataLayer = window.dataLayer || [];
+      // function gtag(){ dataLayer.push(arguments); }
+      // gtag('js', new Date());
+      // gtag('config', 'GA_MEASUREMENT_ID');
+
+      // Meta Pixel — pendiente de Pixel ID real. Cuando lo tengas, descomenta
+      // y reemplaza META_PIXEL_ID:
+      //
+      // !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      // n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      // n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      // t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      // document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      // fbq('init', 'META_PIXEL_ID');
+      // fbq('track', 'PageView');
+    }
+    window.addEventListener('load', loadTracking, { once: true });
+    ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach(function (evt) {
+      window.addEventListener(evt, loadTracking, { once: true, passive: true });
     });
   </script>
 
 </body>
-
 </html>
