@@ -493,6 +493,10 @@
 
 <body>
 
+  <!-- Meta Pixel (noscript fallback — inerte si JS está activo, el pixel real se carga diferido) -->
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1626040378830082&ev=PageView&noscript=1" alt="" /></noscript>
+
   <a class="skip-link" href="#main">Saltar al contenido</a>
 
   <!-- ===== TOP NAV ===== -->
@@ -997,28 +1001,27 @@
         y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
       })(window, document, 'clarity', 'script', 'txjrdx8yc1');
 
-      // GA4 — pendiente de Measurement ID real. Cuando lo tengas, descomenta
-      // y reemplaza GA_MEASUREMENT_ID:
-      //
-      // var gaScript = document.createElement('script');
-      // gaScript.async = true;
-      // gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
-      // document.head.appendChild(gaScript);
-      // window.dataLayer = window.dataLayer || [];
-      // function gtag(){ dataLayer.push(arguments); }
-      // gtag('js', new Date());
-      // gtag('config', 'GA_MEASUREMENT_ID');
+      // Google tag (gtag.js) — GA4 (ID real existente, sin cambios)
+      var gaScript = document.createElement('script');
+      gaScript.async = true;
+      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-NZP0N6VFYE';
+      document.head.appendChild(gaScript);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-NZP0N6VFYE');
 
-      // Meta Pixel — pendiente de Pixel ID real. Cuando lo tengas, descomenta
-      // y reemplaza META_PIXEL_ID:
-      //
-      // !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      // n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-      // n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-      // t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-      // document,'script','https://connect.facebook.net/en_US/fbevents.js');
-      // fbq('init', 'META_PIXEL_ID');
-      // fbq('track', 'PageView');
+      // Meta Pixel (ID real existente, sin cambios)
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1626040378830082');
+      fbq('track', 'PageView');
     }
     window.addEventListener('load', loadTracking, { once: true });
     ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach(function (evt) {
